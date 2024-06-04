@@ -1,0 +1,94 @@
+/*ELEMENTS FIRST PAGE*/
+.content-first-page {
+	font-size: 60px;
+}
+
+/*NAVBAR*/
+.my_navbar li {
+	list-style-type: none;
+}
+
+.nav_element {
+	text-decoration: none;
+	color: white;
+	letter-spacing: 0.2em;
+}
+/*NAVBAR*/
+
+.content-first-page {
+	letter-spacing: 0.6em;
+	text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
+}
+
+.first-span {
+	color: #A41C4E;
+}
+
+.second-span {
+	color: #6EB2C1;
+}
+
+.third-span {
+	color: #EDAE35;
+}
+/*ELEMENTS FIRST PAGE*/
+
+/*ELEMENTS CARDS*/
+.card h3 {
+	font-weight: bolder;
+	color: #A41C4E;
+	text-shadow: 2px 2px 4px rgba(174, 38, 88, 1);
+}
+
+.card p {
+	color: #EDAE35;
+	letter-spacing: 0.1em;
+}
+
+.card a {
+	color: #6EB2C1;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+}
+
+.card a:hover {
+	color: #A41C4E;
+	text-shadow: 2px 2px 4px rgba(174, 38, 88, 0.5);
+}
+/*ELEMENTS CARDS*/
+
+/*ELEMENTS THIRD PAGE*/
+.container-third-page h2 {
+	color: #A41C4E;
+	font-weight: bolder;
+	font-size: 30px;
+}
+/*ELEMENTS THIRD PAGE*/
+
+/*ELEMENTS FORM*/
+form h2 {
+	font-size: 2.5em;
+	letter-spacing: 0.2em;
+	font-weight: bolder;
+	color: #A41C4E;
+}
+
+input {
+	font-size: 20px;
+	color: #6EB2C1;
+}
+
+input[type="submit"] {
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+}
+
+input:focus {
+	text-indent: 10px;
+}
+
+input:not(:focus) {
+	text-indent: 10px;
+}
+/*ELEMENTS FORM*/

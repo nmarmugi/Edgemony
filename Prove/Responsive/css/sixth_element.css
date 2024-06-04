@@ -1,0 +1,84 @@
+.container-sixth-element {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.container-content-sixth-element {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.container-text-sixth-element, .container-cards-sixth-element {
+	text-align: center;
+}
+
+.container-text-sixth-element h2 {
+	letter-spacing: 0.5em;
+	margin-bottom: 20px;
+}
+
+.container-text-sixth-element p {
+	margin-bottom: 40px;
+}
+
+.container-cards-sixth-element {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 50px;
+	width: 100%;
+}
+
+.card-sixth-element {
+	box-shadow: 6px 6px 10px #00000026;
+	border-radius: 20px;
+	padding-bottom: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	transition: transform 0.35s ease;
+}
+
+.card-sixth-element:hover {
+	transform: scale(1.1);
+	box-shadow: -2px -2px 2px #00000026;
+}
+
+.card-sixth-element h3 {
+	letter-spacing: 0.2em;
+	padding-top: 40px;
+	margin-bottom: 40px;
+}
+
+.card-sixth-element .first-p {
+	font-size: 25px;
+	color: rgb(104, 104, 104);
+	margin-bottom: 40px;
+}
+
+.card-sixth-element .second-p {
+	margin-bottom: 40px;
+}
+
+.card-sixth-element .button-sixth {
+	text-decoration: none;
+	border: 1px solid rgba(114, 114, 114, 0.473);
+	color: black;
+	box-shadow: 4px 4px 5px #00000026;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 20px;
+	transition: font-size 0.35s ease;
+}
+
+.card-sixth-element .button-sixth:hover {
+	background-color: rgb(255, 255, 255);
+	box-shadow: -2px -2px 2px #00000026;
+	border: none;
+}
+
+@media (min-width: 1024px) {
+	.container-cards-sixth-element {
+		gap: 100px;
+	}
+}

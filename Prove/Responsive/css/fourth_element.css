@@ -1,0 +1,85 @@
+.container-fourth-element {
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.conteiner-img-fourth-element img {
+	width: 100%;
+	height: 100%;
+	margin-top: 60px;
+}
+
+.container-text-fourth-element img {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+	padding: 3px;
+}
+
+.container-text-fourth-element h3 {
+	font-size: 25px;
+	letter-spacing: 0.5em;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.container-text-fourth-element p {
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+.container-text-fourth-element a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	border: 2px solid black;
+	padding: 10px;
+	border-radius: 20px;
+	margin-left: 20px;
+	transition: font-size 0.35s ease;
+}
+
+.container-text-fourth-element a:hover {
+	font-size: 24px;
+	color: white;
+	background-color: black;
+}
+
+@media (min-width: 1024px) {
+	.container-line {
+		display: flex;
+	}
+
+	.dispari {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.conteiner-img-fourth-element {
+		width: 50%;
+	}
+
+	.container-text-fourth-element {
+		width: 50%;
+		margin: auto 0;
+	}
+
+	.conteiner-img-fourth-element img {
+		margin: 0;
+	}
+
+	.container-text-fourth-element img {
+		margin: 0 0 5px 20px;
+	}
+
+	.container-text-fourth-element h3 {
+		margin-bottom: 10px;
+	}
+
+	.container-fourth-element {
+		margin-top: 100px;
+		margin-bottom: 0;
+	}
+}

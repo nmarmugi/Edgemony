@@ -1,0 +1,13 @@
+@import url(./css/reset.css);
+@import url(./css/keyframe.css);
+@import url(./css/hero.css);
+@import url(./css/second_element.css);
+@import url(./css/third_element.css);
+@import url(./css/fourth_element.css);
+@import url(./css/fifth_element.css);
+@import url(./css/sixth_element.css);
+@import url(./css/seventh_element.css);
+
+body {
+	font-family: "Chivo Mono", monospace;
+}

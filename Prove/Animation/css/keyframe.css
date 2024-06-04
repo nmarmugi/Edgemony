@@ -1,0 +1,71 @@
+@keyframes rotate {
+	from {
+		transform: rotate(0) translateX(-100vh) scale(10);
+	}
+	to {
+		transform: rotate(360deg) translateX(0) scale(1);
+	}
+}
+
+@keyframes rotateY {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes fromTop {
+	from {
+		transform: translateY(-100vh);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fromBottom {
+	from {
+		transform: translateY(100vh);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slash {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-20deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes slashMore {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-50deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(50deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

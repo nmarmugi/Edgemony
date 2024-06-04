@@ -1,0 +1,58 @@
+.container-scroll-img {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.position-title {
+	text-align: center;
+	color: var(--white);
+	letter-spacing: 0.1em;
+}
+
+.position-title h2 span {
+	color: var(--yellow);
+}
+
+.img-scroll-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.img-scroll-img img {
+	margin: 0 -20px;
+	border-radius: 10px;
+	object-fit: cover;
+	max-width: 300px;
+}
+
+.container-scroll-img button {
+	padding: 8px 15px;
+	font-size: 30px;
+	border-radius: 50%;
+	color: var(--black);
+	background-color: var(--yellow);
+	border: 2px solid var(--white);
+	z-index: 1;
+	cursor: pointer;
+}
+
+#myImage {
+	transition: opacity 0.5s ease-in-out;
+}
+
+#prevButton, #nextButton {
+    transition: transform 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 1024px) {
+	.img-scroll-img img {
+		min-width: 450px;
+	}
+
+	.position-title {
+		letter-spacing: 0.5em;
+	}
+}

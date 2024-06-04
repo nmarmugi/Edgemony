@@ -1,0 +1,179 @@
+@import url(./variables.css);
+
+.container-hero {
+	width: 100%;
+	height: 100vh;
+}
+
+.position-hero {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.background-hero {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.background-hero img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.hero-text {
+	display: flex;
+	align-items: center;
+	height: 60%;
+	justify-content: center;
+}
+
+.hero-text h1 {
+	color: var(--white);
+	font-size: 0;
+}
+
+.hero-text h1 span {
+	font-size: 20px;
+}
+
+.dot {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: var(--white);
+	animation: rotate 1.35s ease-out forwards;
+	position: relative;
+}
+
+.dot::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: var(--yellow);
+	animation: rotate 1.35s ease-out forwards;
+}
+
+.i {
+	animation: rotateY 1s linear forwards;
+	display: inline-block;
+}
+
+.i::before {
+	content: 'o';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: var(--yellow);
+	animation: rotateY 1s ease-out forwards;
+}
+
+.a {
+	display: inline-block;
+	animation: fromTop 1.2s linear forwards;
+}
+
+.a::before {
+	content: 'm';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: var(--yellow);
+	animation: fromTop 1.5s ease-out forwards;
+}
+
+.slash {
+	display: inline-block;
+	text-align: center;
+	animation: slash 1.3s linear forwards;
+}
+
+.m {
+	display: inline-block;
+	animation: fromBottom 1.5s linear forwards;
+}
+
+.m::before {
+	content: 'i';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: var(--yellow);
+	animation: fromBottom 1.8s ease-out forwards;
+}
+
+.container-img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+}
+
+.container-img img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.container-img::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--cover-black);
+}
+
+
+@media only screen and (min-width: 430px) {
+	.hero-text h1 span {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 650px) {
+	.hero-text h1 span {
+		font-size: 37.5px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.container-img {
+		width: 50%;
+		right: 0;
+		left: auto;
+	}
+
+	.hero-text {
+		width: 50%;
+	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.hero-text h1 span {
+		font-size: 45px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.hero-text h1 span {
+		font-size: 60px;
+	}
+}

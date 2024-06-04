@@ -1,0 +1,279 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+}
+
+/*----------NAVBAR----------*/
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	background-color: rgb(48, 138, 255);
+	top: 0;
+	z-index: 3;
+}
+
+.my_navbar {
+	display: flex;
+	justify-content: space-around;
+}
+
+.my_navbar li {
+	list-style-type: none;
+}
+
+.nav_element {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	transition: color 1s ease;
+}
+
+.nav_element:hover {
+	color: yellow;
+}
+
+/*----------/NAVBAR----------*/
+
+.main_page {
+	height: 100%;
+}
+
+/*----------TITLE----------*/
+
+.title {
+	font-size: 150px;
+	position: absolute;
+	top: 150px;
+	left: 100px;
+}
+
+.first-couple-words, .fourth-couple-words {
+	opacity: 0;
+	animation: opacityFirstPage 5s ease forwards;
+}
+
+.second-couple-words, .last-word {
+	color: rgb(48, 138, 255);
+}
+
+.third-couple-words {
+	color: yellow;
+	opacity: 0;
+	animation: opacityFirstPage 3s ease forwards;
+}
+
+/*----------/TITLE----------*/
+
+/*----------FIRST_PARAGRAPH----------*/
+
+.main_paragraph {
+	letter-spacing: 0.1em;
+	font-size: 30px;
+	position: absolute;
+	top: 650px;
+	right: 100px;
+	opacity: 0;
+	animation: opacityFirstPage 7s ease forwards;
+}
+
+/*----------/FIRST_PARAGRAPH----------*/
+
+@keyframes opacityFirstPage {
+	from {
+			opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.second-page {
+	width: 100%;
+	height: 100vh;
+}
+
+/*----------SECOND_TITLE----------*/
+
+.title_second_page {
+	position: relative;
+	top: 100px;
+	font-size: 30px;
+	letter-spacing: 0.2em;
+	text-align: center;
+}
+
+/*----------/SECOND_TITLE----------*/
+
+/*----------CARDS----------*/
+
+.container_cards {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 2%;
+}
+
+.card {
+	height: 500px;
+	width: 20%;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+	margin-left: 10px;
+	font-weight: 300;
+}
+
+.container_img {
+	display: flex;
+	justify-content: center;
+}
+
+.container_img img {
+	margin-top: 10px;
+	filter: invert(20%) sepia(100%) saturate(1500%) brightness(150%) contrast(88%) hue-rotate(210deg);
+}
+
+.card p {
+	margin-left: 10px;
+	letter-spacing: 0.1em;
+}
+
+.card a {
+	margin-left: 10px;
+	padding-bottom: 10px;
+	color: black;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+	transition: color 1s ease;
+}
+
+.card a:hover {
+	color: rgb(48, 138, 255);
+}
+
+/*----------/CARDS----------*/
+
+.third-page {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+/*----------THIRD_TITLE----------*/
+
+.title_third_page {
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	left: 200px;
+	font-size: 60px;
+	letter-spacing: 0.2em;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/*----------/THIRD_TITLE----------*/
+
+/*---------PARAGRAPH_THIRD_PAGE-----------*/
+
+.third-page p {
+	position: absolute;
+	z-index: 2;
+	font-size: 25px;
+}
+
+.first-paragraph {
+	top: 200px;
+	left: 360px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.second-paragraph {
+	top: 400px;
+	left: 360px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.third-paragraph {
+	top: 600px;
+	left: 360px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.fourth-paragraph {
+	top: 100px;
+	left: 930px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.fifth-paragraph {
+	top: 300px;
+	left: 930px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.last-paragraph {
+	top: 680px;
+	left: 930px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+/*---------/PARAGRAPH_THIRD_PAGE-----------*/
+
+.last-page {
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*---------FORM-----------*/
+
+form {
+	width: 90%;
+	height: 90%;
+	text-align: center;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+	width: 50%;
+	margin: 35px auto;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+	font-size: 20px;
+}
+
+input[type="submit"] {
+	border: none;
+	border-radius: 25px;
+	background-color: rgb(48, 138, 255);
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+	transition: color 1s ease;
+}
+
+input[type="submit"]:hover {
+	color: yellow;
+}
+
+/*---------/FORM-----------*/

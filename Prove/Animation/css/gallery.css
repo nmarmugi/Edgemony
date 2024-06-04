@@ -1,0 +1,62 @@
+@import url(./variables.css);
+
+.container-gallery {
+	width: 100%;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.container-gallery h2 {
+	margin-bottom: 50px;
+	color: var(--white);
+	letter-spacing: 0.5em;
+}
+
+.container-gallery h2 span {
+	color: var(--yellow);
+}
+
+.card-gallery {
+	margin-bottom: 50px;
+}
+
+.container-img-gallery {
+	margin-bottom: 35px;
+	position: relative;
+	transition: transform 0.35s ease-out;
+}
+
+.container-img-gallery::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--cover-black);
+	opacity: 0;
+	transition: opacity 0.35s ease-out;
+}
+
+.container-img-gallery:hover::before {
+	opacity: 1;
+}
+
+.container-img-gallery:hover {
+	transform: scale(1.1);
+}
+
+.card-gallery a {
+	text-decoration: none;
+	color: var(--white);
+	text-decoration: underline var(--yellow);
+}
+
+@media only screen and (min-width: 1024px) {
+	.position-gallery {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 50px;
+	}
+}

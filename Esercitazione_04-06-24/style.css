@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Silkscreen", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: black;
+}
+
+.container {
+	text-align: center;
+	min-height: 410px;
+	min-width: 1335px;
+}
+
+.spanHour, .spanMinute, .spanSecond {
+	font-size: 100px;
+}
+
+.spanHour {
+	color: rgb(70, 70, 255);
+}
+
+.spanMinute {
+	color: yellow;
+}
+
+.spanSecond {
+	color: orange;
+}
+
+.doubleDots {
+	color: white;
+	font-size: 100px;
+}
+
+.paragraphTime {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 128px;
+}
+
+.containerButtons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.containerFirstButton {
+	background-color: rgb(25, 102, 25);
+}
+
+.containerSecondButton {
+	background-color: rgb(128, 25, 25);
+}
+
+.start, .stop {
+	margin: 20px;
+	font-family: "Silkscreen", sans-serif;
+	border: none;
+	padding: 30px;
+	font-size: 40px;
+	min-width: 240px;
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.4);
+	transition: all 0.35s ease;
+}
+
+.start {
+	background-color: rgb(32, 126, 32);
+}
+
+.stop {
+	background-color: rgb(170, 37, 37);
+}
+
+.start:hover, .stop:hover {
+	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+	font-size: 38px;
+	margin: 18px;
+}

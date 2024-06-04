@@ -1,0 +1,775 @@
+/*WIDTH*/
+@media only screen and (max-width: 1409px) {
+	.content-first-page {
+		font-size: 50px;
+	}
+}
+
+@media only screen and (max-width: 1175px) {
+	.content-first-page {
+		top: 10%;
+		left: 40%;
+	}
+}
+
+@media only screen and (max-width: 979px) {
+	.content-first-page {
+		top: 10%;
+		left: 30%;
+	}
+
+	input[id="phone"]::placeholder {
+		font-size: 15px;
+	}
+
+}
+
+@media only screen and (max-width: 841px) {
+	.content-first-page {
+		top: 10%;
+		left: 10%;
+	}
+
+	.container-third-page h2 {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 735px) {
+	input[id="phone"]::placeholder {
+		font-size: 13px;
+	}
+
+	input[id="email"]::placeholder, input[id="lastname"]::placeholder, input[id="firstname"]::placeholder {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 683px) {
+	.first-pair-img .first-img {
+		height: 200px;
+		width: 130px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 200px;
+		width: 100px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 200px;
+		width: 200px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 200px;
+		width: 200px;
+	}
+}
+
+@media only screen and (max-width: 653px) {
+	input[id="phone"]::placeholder {
+		font-size: 10px;
+	}
+
+	.content-first-page {
+		font-size: 40px;
+	}
+
+	.container-first-page, .container-second-page, .container-third-page {
+		height: 70vh;
+	}
+
+	.container-third-page h2 {
+		margin-bottom: 50px;
+	}
+}
+
+@media only screen and (max-width: 614px) {
+	.second-pair-img .first-img {
+		height: 170px;
+		width: 170px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 170px;
+		width: 170px;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.navbar {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 539px) {
+	.container-third-page h2 {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 521px) {
+	.second-pair-img .first-img {
+		height: 150px;
+		width: 150px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 150px;
+		width: 150px;
+	}
+
+	.content-first-page {
+		top: 10%;
+		left: 0;
+	}
+}
+
+@media only screen and (max-width: 493px) {
+	input[id="phone"]::placeholder {
+		font-size: 9px;
+	}
+
+	.content-first-page {
+		font-size: 30px;
+	}
+
+	.container-first-page {
+		height: 50vh;
+	}
+
+	.container-first-page a img {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media only screen and (max-width: 452px) {
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 80px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 80px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 100px;
+		width: 100px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.container-second-page {
+		height: 50vh;
+	}
+}
+
+@media only screen and (max-width: 447px) {
+	.container-third-page h2 {
+		font-size: 15px;
+	}
+
+	.deckstop-phone {
+		display: none;
+	}
+
+	.mobile-phone {
+		display: inline-block;
+	}
+
+	input[id="phone"]::placeholder {
+		font-size: 10px;
+	}
+
+	input[id="email"]::placeholder, input[id="lastname"]::placeholder, input[id="firstname"]::placeholder {
+		font-size: 13px;
+	}
+
+	.nav_element {
+		font-size: 15px;
+		letter-spacing: 0;
+	}
+}
+
+@media only screen and (max-width: 405px) {
+	.container-third-page h2 {
+		font-size: 10px;
+	}
+
+	form h2 {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	input {
+		margin: 20px auto;
+		height: 30px;
+	}
+}
+
+@media only screen and (max-width: 353px) {
+	input[id="phone"]::placeholder {
+		font-size: 8px;
+	}
+
+	.content-first-page {
+		font-size: 20px;
+	}
+}
+/*/WIDTH*/
+
+/*HEIGHT*/
+@media only screen and (max-height: 828px) {
+	.first-pair-img .first-img {
+		height: 230px;
+		width: 180px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 230px;
+		width: 180px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 200px;
+		width: 200px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 200px;
+		width: 200px;
+	}
+
+	input {
+		margin: 15px auto;
+		height: 30px;
+	}
+
+	.container-third-page h2 {
+		margin-bottom: 150px;
+	}
+}
+
+@media only screen and (max-height: 664px) {
+	.container-third-page h2 {
+		margin-bottom: 50px;
+	}
+}
+/*/HEIGHT*/
+
+/*WIDTH HEIGHT SE*/
+@media only screen and (max-height: 668px) and (max-width: 376px) {
+	.first-pair-img .first-img {
+		height: 130px;
+		width: 80px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 130px;
+		width: 80px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 130px;
+		width: 130px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 130px;
+		width: 130px;
+	}
+
+	.container-third-page h2 {
+		margin-bottom: 0;
+	}
+
+	.container-custom .first-img {
+		margin-bottom: 0;
+	}
+}
+/*/WIDTH HEIGHT SE*/
+
+/*WIDTH HEIGHT SURFACE DUO*/
+@media only screen and (max-height: 720px) and (max-width: 540px) {
+	.container-third-page h2 {
+		margin-bottom: 0;
+	}
+
+	.container-custom .first-img {
+		margin-bottom: 0;
+	}
+}
+/*/WIDTH HEIGHT SURFACE DUO*/
+
+/*WIDTH HEIGHT SAMSUNG GALAXY S8+*/
+@media only screen and (max-height: 740px) and (max-width: 360px) {
+	.first-pair-img .first-img {
+		height: 130px;
+		width: 80px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 130px;
+		width: 80px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 130px;
+		width: 130px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 130px;
+		width: 130px;
+	}
+	
+	.container-third-page h2 {
+		margin-bottom: 0;
+	}
+
+	.container-custom .first-img {
+		margin-bottom: 0;
+	}
+}
+/*WIDTH HEIGHT SAMSUNG GALAXY S8+*/
+
+/*WIDTH HEIGHT IPHONE 11*/
+@media only screen and (max-height: 1792px) and (max-width: 828px) {
+	.first-pair-img .first-img {
+		height: 200px;
+		width: 120px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 200px;
+		width: 120px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 130px;
+		width: 130px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 130px;
+		width: 130px;
+	}
+
+	.container-third-page h2 {
+		font-size: 13px;
+	}
+}
+/*WIDTH HEIGHT IPHONE 11*/
+
+/*WIDTH BLACKCERRY Z30*/
+@media only screen and (max-height: 640px) and (max-width: 360px) {
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 100px;
+		width: 100px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.container-third-page h2 {
+		font-size: 11px;
+	}
+}
+/*WIDTH BLACKCERRY Z30*/
+
+/*WIDTH GALAXY S8*/
+@media only screen and (max-height: 740px) and (max-width: 360px) {
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 80px;
+		width: 80px;
+	}
+
+	.container-third-page h2 {
+		font-size: 11px;
+	}
+}
+/*WIDTH GALAXY S8*/
+
+/*WIDTH LG OPTIMUS L70*/
+@media only screen and (max-height: 640px) and (max-width: 384px) {
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.second-pair-img .second-img {
+		height: 80px;
+		width: 80px;
+	}
+
+	.container-third-page h2 {
+		font-size: 11px;
+	}
+}
+/*WIDTH LG OPTIMUS L70*/
+
+/*WIDTH MICROSOFT LUMIA 550*/
+@media only screen and (max-height: 360px) and (max-width: 640px) {
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.second-pair-img .second-img {
+		margin: 0;
+		height: 80px;
+		width: 80px;
+	}
+
+	.content-first-page {
+		font-size: 30px;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	.container-third-page h2 {
+		margin: 0;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 100px;
+		height: 100px;
+	}
+
+	.container-last-page {
+		height: 130vh;
+	}
+}
+/*WIDTH MICROSOFT LUMIA 550*/
+
+/*WIDTH MOTO G POWER*/
+@media only screen and (max-height: 823px) and (max-width: 412px) {
+	.container-third-page h2 {
+		margin-bottom: 20px;
+	}
+}
+/*WIDTH MOTO G POWER*/
+
+/*WIDTH MOTO G4*/
+@media only screen and (max-height: 640px) and (max-width: 360px) {
+	.container-third-page h2 {
+		margin-bottom: 20px;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 100px;
+		height: 100px;
+	}
+}
+/*WIDTH MOTO G4*/
+
+/*WIDTH NEXUS 4*/
+@media only screen and (max-height: 640px) and (max-width: 384px) {
+	.container-third-page h2 {
+		margin-bottom: 20px;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 100px;
+		height: 100px;
+	}
+}
+/*WIDTH NEXUS 4*/
+
+/*WIDTH NEXUS 5X*/
+@media only screen and (max-height: 732px) and (max-width: 412px) {
+	.container-third-page h2 {
+		margin-bottom: 20px;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 100px;
+		height: 100px;
+	}
+
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.second-pair-img .second-img {
+		margin: 0;
+		height: 80px;
+		width: 80px;
+	}
+}
+/*WIDTH NEXUS 5X*/
+
+/*WIDTH PIXEL 4*/
+@media only screen and (max-height: 745px) and (max-width: 353px) {
+	.container-third-page h2 {
+		margin-bottom: 20px;
+		font-size: 10px;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 100px;
+		height: 100px;
+	}
+
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.second-pair-img .second-img {
+		margin: 0;
+		height: 80px;
+		width: 80px;
+	}
+}
+/*WIDTH PIXEL 4*/
+
+/*WIDTH JIOPHONE 2*/
+@media only screen and (max-height: 320px) and (max-width: 240px) {
+	.content-first-page {
+		font-size: 20px;
+	}
+
+	.nav_element {
+		font-size: 10px;
+		letter-spacing: 0;
+	}
+	
+	.container-third-page h2 {
+		font-size: 8px;
+		margin: 0;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 80px;
+		height: 80px;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 80px;
+		height: 80px;
+	}
+
+	.first-pair-img .first-img {
+		height: 80px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 80px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 50px;
+		width: 50px;
+	}
+	
+	.second-pair-img .second-img {
+		margin: 0;
+		height: 50px;
+		width: 50px;
+	}
+
+	.img-chat {
+		width: 20px;
+		height: 20px;
+	}
+
+	input[id="phone"]::placeholder {
+		font-size: 6px;
+	}
+
+	input[id="email"]::placeholder, input[id="lastname"]::placeholder, input[id="firstname"]::placeholder {
+		font-size: 9px;
+	}
+}
+/*WIDTH JIOPHONE 2*/
+
+/*WIDTH IPHONE 6/7/8 PLUS*/
+@media only screen and (max-height: 736px) and (max-width: 414px) {
+	.container-third-page h2 {
+		margin-bottom: 20px;
+		font-size: 10px;
+	}
+
+	.container-custom .first-img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	img[src="./img/custom1.png"] {
+		width: 100px;
+		height: 100px;
+	}
+
+	.first-pair-img .first-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.first-pair-img .second-img {
+		height: 100px;
+		width: 70px;
+	}
+	
+	.second-pair-img .first-img {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.second-pair-img .second-img {
+		margin: 0;
+		height: 80px;
+		width: 80px;
+	}
+}
+/*WIDTH IPHONE 6/7/8 PLUS*/
+
+/*WIDTH FACEBOOK ON ANDROID*/
+@media only screen and (max-height: 892px) and (max-width: 414px) {
+	.container-last-page {
+		height: 90vh;
+	}
+}
+/*WIDTH FACEBOOK ON ANDROID*/
+
+/*WIDTH IPHONE X*/
+@media only screen and (max-height: 812px) and (max-width: 375px) {
+	.container-last-page {
+		height: 50vh;
+	}
+}
+/*WIDTH IPHONE X*/
+
+/*WIDTH IPHONE 6/7/8*/
+@media only screen and (max-height: 667px) and (max-width: 375px) {
+	.container-last-page {
+		height: 75vh;
+	}
+}
+/*WIDTH IPHONE 4*/
+
+/*WIDTH IPHONE 6/7/8*/
+@media only screen and (max-height: 480px) and (max-width: 320px) {
+	.container-last-page {
+		height: 80vh;
+	}
+}
+/*WIDTH IPHONE 4*/
+
+/*WIDTH GALAXY A51/71*/
+@media only screen and (max-height: 914px) and (max-width: 412px) {
+	.container-last-page {
+		height: 85vh;
+	}
+}
+/*WIDTH GALAXY A51/71*/

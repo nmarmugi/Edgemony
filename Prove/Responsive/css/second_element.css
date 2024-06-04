@@ -1,0 +1,70 @@
+.container-second-element {
+	width: 100%;
+	position: relative;
+}
+
+.container-content-second-element {
+	width: 100%;
+	position: relative;
+	max-width: 1024px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.container-text-second-element h2, .container-text-second-element p, .container-card {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.container-text-second-element h2 {
+	font-size: 30px;
+	letter-spacing: 0.4em;
+}
+
+.container-card h3, .container-card p {
+	margin-top: 20px;
+}
+
+.container-card h3 {
+	letter-spacing: 1.1em;
+}
+
+.container-buttons-second-element {
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.container-buttons-second-element a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	border: 2px solid black;
+	padding: 10px;
+	border-radius: 20px;
+	transition: font-size 0.35s ease;
+}
+
+.container-buttons-second-element .reverse-button {
+	color: white;
+	background-color: black;
+}
+
+.reverse-button:hover {
+	font-size: 24px;
+	color: black;
+	background-color: white;
+}
+
+a:hover {
+	font-size: 24px;
+	color: white;
+	background-color: black;
+}
+
+@media (min-width: 1024px) {
+	.container-cards-second-element {
+		display: flex;
+	}
+}

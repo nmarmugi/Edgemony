@@ -1,0 +1,93 @@
+@import url(./css/reset_and_for_all.css);
+@import url(./css/hamburger.css);
+@import url(./css/page_size_position.css);
+@import url(./css/text.css);
+@import url(./css/keyframe.css);
+@import url(./css/media.css);
+
+/*ELEMENTS FIRST PAGE*/
+/*NAVBAR*/
+.navbar {
+	background-color: #6EB2C1;
+}
+/*NAVBAR*/
+
+.container-first-page {
+	background-image: url(./img/icecream.jpg);
+}
+
+.img-chat {
+	animation: rotate 5s linear infinite;
+}
+/*ELEMENTS FIRST PAGE*/
+
+/*ELEMENTS CARDS*/
+.container-cards {
+	background-color: #ffffff;
+}
+
+.card {
+	border: 2px solid #6EB2C1;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(110, 178, 193, 0.5)
+}
+
+.card a {
+	transition: color 1s ease;
+}
+/*ELEMENTS CARDS*/
+
+/*ELEMENTS SECOND PAGE*/
+.container-second-page {
+	background-image: url(./img/alotof.jpg);
+}
+
+.first-pair-img .first-img, .second-pair-img .second-img {
+	border-radius: 60px 20px 0 20px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+}
+
+.first-pair-img .second-img, .second-pair-img .first-img {
+	border-radius: 0 20px 60px 20px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+}
+/*ELEMENTS SECOND PAGE*/
+
+/*ELEMENTS THIRD PAGE*/
+.container-third-page {
+	background-image: url(./img/custom-icecream.jpg);
+}
+
+.container-third-page h2 {
+	background-color: #ffffff;
+	border-radius: 10px 0 10px 0;
+}
+
+.container-custom .first-img:hover {
+	animation: rotateSize 0.5s linear forwards;
+}
+/*ELEMENTS THIRD PAGE*/
+
+/*ELEMENTS FORM*/
+.container-last-page {
+	background-color: #6EB2C1;
+}
+
+input {
+	border: none;
+	border-bottom: 2px solid black;
+	border-radius: 25px;
+}
+
+input[type="submit"] {
+	border: none;
+	border-radius: 25px;
+	background-color: #EDAE35;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+	transition: 1s ease;
+}
+/*ELEMENTS FORM*/
