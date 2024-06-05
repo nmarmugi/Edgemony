@@ -20,7 +20,7 @@ containerButtonsEl.addEventListener('click', function(event) {
 	}
 	if (target.id === 'openModalButton') {
 		console.log('MODALE');
-		textModalEl.textContent = '';
+		textModalEl.textContent = 'I tasti sotto non fanno nulla!';
 		modalEl.style.display = "block";
 		timeCloseModalEl.textContent = time; 
 		countdown = setInterval(function() {
@@ -38,7 +38,7 @@ containerButtonsEl.addEventListener('click', function(event) {
 		}
 		else {
 			const value = inputEl.value;
-			textModalEl.textContent = `Benvenuto ${value}`;
+			textModalEl.innerHTML = `Benvenuto ${value}!<br>P.S. I tasti sotto non fanno niente!`;
 			modalEl.style.display = "block";
 			timeCloseModalEl.textContent = time; 
 			countdown = setInterval(function() {
