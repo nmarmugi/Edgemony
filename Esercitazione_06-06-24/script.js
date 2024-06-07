@@ -63,8 +63,8 @@ function createCard(product) {
 	return cardEl;
 }
 
-function filterProducts(category) {
-	const filteredProducts = resData.filter(product => product.category.toLowerCase().includes(category));
+function filterProducts(title) {
+	const filteredProducts = resData.filter(product => product.title.toLowerCase().includes(title));
 
 	containerCardsEl.innerHTML = '';
 
