@@ -1,0 +1,163 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+	height: auto;
+	min-height: 100vh;
+	font-family: "Roboto", sans-serif;
+}
+
+.container-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 100px;
+	padding-top: 100px;
+	background-color: black;
+}
+
+.container-input h1 {
+	background-color: white;
+	color: rgb(255, 0, 0);
+	letter-spacing: 1em;
+	padding: 50px;
+	font-size: 50px;
+	border-radius: 50px;
+}
+
+input {
+	height: 30px;
+	border: none;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+::placeholder {
+	color: red;
+}
+
+.container-cards {
+	position: relative;
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+
+.container-cards::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.card {
+	position: relative;
+	width: 350px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 20px;
+	animation: opacity 1s linear;
+	box-shadow: 6px 6px 10px #00000026;
+	text-align: center;
+}
+
+.card:hover {
+	box-shadow: -2px -2px 2px #00000026;
+}
+
+.card-title {
+	text-decoration: underline;
+}
+
+.card-img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	max-height: 500px;
+}
+
+.card-rate, .card-price {
+	font-weight: bolder;
+	background-color: red;
+	padding: 10px;
+	color: black;
+	border-radius: 10px;
+	display: inline-block;
+	box-shadow: 6px 6px 10px #00000026;
+}
+
+.card-rate:hover, .card-price:hover {
+	box-shadow: -2px -2px 2px #00000026;
+}
+
+.card-rate {
+	font-size: 25px;
+}
+
+.card-description {
+	font-weight: bold;
+	letter-spacing: 0.2em;
+}
+
+.card-price {
+	font-size: 10px;
+}
+
+.container-all-buttons {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+button {
+	font-weight: bolder;
+	font-size: 20px;
+	border: none;
+	border-radius: 25px;
+	padding: 25px;
+	background-color: red;
+	transition: color 0.35s ease;
+}
+
+button:hover {
+	cursor: pointer;
+	color: white;
+}
+
+#button1, #button2, #button3 {
+	background-color: white;
+	transition: color 0.35s ease;
+	padding: 10px;
+}
+
+#button1:hover, #button2:hover, #button3:hover {
+	color: red;
+}
+
+#avanti, #indietro {
+	border-radius: 50%;
+	font-size: 10px;
+	padding: 2px 6px;
+	height: 20px;
+}
