@@ -41,24 +41,18 @@ function filterProducts(original_title) {
 function createCard(product) {
 	const cardEl = document.createElement('div');
 	cardEl.className = 'card';
-	const titleCardEl = document.createElement('h2');
-	titleCardEl.className = 'card-title';
-	titleCardEl.textContent = product.original_title;
+	const containerImgEl = document.createElement('div');
+	containerImgEl.className = 'container-img';
 	const imgCardEl = document.createElement('img');
 	imgCardEl.className = 'card-img';
 	imgCardEl.src = `https://image.tmdb.org/t/p/original${product.poster_path}`;
 	imgCardEl.alt = 'Immagine';
 	imgCardEl.width = 200;
-	const rateCardEl = document.createElement('p');
-	rateCardEl.className = 'card-rate';
-	rateCardEl.textContent = `${product.vote_average} / 10`;
 	const descriptionCardEl = document.createElement('p');
 	descriptionCardEl.className = 'card-description';
 	descriptionCardEl.textContent = product.overview;
-	const priceCardEl = document.createElement('p');
-	priceCardEl.className = 'card-price';
-	priceCardEl.textContent = `Original language: ${product.original_language}`;
-	cardEl.append(imgCardEl, titleCardEl, rateCardEl, descriptionCardEl, priceCardEl);
+	containerImgEl.append(imgCardEl);
+	cardEl.append(containerImgEl, descriptionCardEl);
 	return cardEl;
 }
 

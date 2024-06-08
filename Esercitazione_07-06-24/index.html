@@ -6,14 +6,25 @@
 	<link rel="stylesheet" href="./style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<script type="module" src="./script.js"></script>
 	<title>Document</title>
 </head>
 <body>
 	<div class="container-input">
-		<h1>Search our films</h1>
-		<input id="input" type="text" placeholder="Search...">
+		<div class="container-category-buttons">
+			<img src="./img/realistic-broadway-font-text-effect.png" alt="Immagine titolo" width="250">
+			<button class="category" id="popular">POPULAR</button>
+			<button class="category" id="now_playing">NOW PLAYING</button>
+			<button class="category" id="top_rated">TOP RATED</button>
+			<button class="category" id="upcoming">UPCOMING</button>
+		</div>
+		<div class="searchbar">
+			<div class="content-searchbar">
+				<img src="./img/loupe_14105756.png" alt="Lente" width="25">
+				<input id="input" type="text" placeholder="Search...">
+			</div>
+		</div>
 	</div>
 	<div class="container-cards">
 
@@ -26,10 +37,6 @@
 			<button id="button3" class="number"></button>
 		</div>
 		<button id="avanti">></button>
-		<button class="category" id="popular">Go to Popular Section!</button>
-		<button class="category" id="now_playing">Go to Now Playing Section!</button>
-		<button class="category" id="top_rated">Go to Top Rated Section!</button>
-		<button class="category" id="upcoming">Go to Upcoming Section!</button>
 	</div>
 </body>
 </html>
