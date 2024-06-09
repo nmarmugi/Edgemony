@@ -1,5 +1,6 @@
 import { API_KEY } from "./keys.js";
 
+const bodyEl = document.querySelector('body');
 const inputEl = document.querySelector('#input');
 const containerCardsEl = document.querySelector('.container-cards');
 let btn1El = document.querySelector('#button1');
@@ -36,6 +37,21 @@ function filterProducts(original_title) {
 		const cardEl = createCard(product);
 		containerCardsEl.append(cardEl);
 	});
+}
+
+function createErrorPage(){
+	const containerErrorEl = document.createElement('div');
+	containerErrorEl.className = 'container-error';
+	const imgErrorEl = document.createElement('img');
+	imgErrorEl.className = 'error-img';
+	imgErrorEl.src = `./img/close-up-film-texture-details.jpg`;
+	imgErrorEl.alt = 'Immagine';
+	imgErrorEl.width = 200;
+	const titleErrorEl = document.createElement('h1');
+	titleErrorEl.className = 'title-error';
+	titleErrorEl.textContent = 'Error, reload page to return to home page!';
+	containerErrorEl.append(imgErrorEl, titleErrorEl);
+	bodyEl.append(containerErrorEl);
 }
 
 function createCard(product) {
@@ -108,6 +124,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	});
@@ -123,6 +140,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	});
@@ -138,6 +156,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	});
@@ -153,6 +172,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	});
@@ -167,6 +187,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	})
@@ -181,6 +202,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	})
@@ -195,6 +217,7 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 			containerCardsEl.innerHTML = '';
 			displayProducts(resData);
 		}).catch((err) => {
+			createErrorPage();
 			console.error(err);
 		})
 	})
@@ -215,5 +238,6 @@ fetch(`https://api.themoviedb.org/3/movie/${arrayButtonsID[index]}?language=en-U
 		btn3El.textContent = Number(btn1El.textContent) + 2;
 	})
 }).catch((err) => {
+	createErrorPage();
 	console.error(err);
 })
