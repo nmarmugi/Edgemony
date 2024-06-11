@@ -116,6 +116,7 @@ input {
 	text-align: center;
 	overflow: hidden;
 	transition: transform 0.35s ease;
+	height: 530px;
 }
 
 .card:hover {
