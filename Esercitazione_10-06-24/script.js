@@ -18,6 +18,7 @@ const btnPopularTV = document.querySelector(`.popular`);
 const btnTopRatedTV = document.querySelector(`.top_rated`);
 const btnOnTheAir = document.querySelector('.on_the_air');
 const btnTV = document.querySelector('#tv');
+const selectGen = document.querySelector('select');
 
 let resData = [];
 let page = 1;
@@ -27,7 +28,8 @@ const arrayButtonsID = movieID();
 const arrayButtonsClass = tvClass();
 let classBtn = buttonClass(btnPopular);
 let btnID;
-let type = [];
+let type = [classBtn];
+let currentGenre = '';
 
 btn1El.textContent = 1;
 btn2El.textContent = Number(btn1El.textContent) + 1;
@@ -127,13 +129,60 @@ function buttonIndexID(element) {
 	}
 }
 
+async function loadMovies(endpoint, page = 1) {
+	if (currentGenre) {
+		if (type[0] === classBtn) {
+			const response = await fetch(`https://api.themoviedb.org/3/discover/${classBtn}?page=${page}&with_genres=${currentGenre}`, options);
+			const data = await response.json();
+			inputEl.value = '';
+			resData = data.results;
+			maxPage = data.total_pages;
+			containerCardsEl.innerHTML = '';
+			displayProducts(resData);
+		}
+		if (type[0] === btnID) {
+			const response = await fetch(`https://api.themoviedb.org/3/discover/${btnID}?page=${page}&with_genres=${currentGenre}`, options);
+			const data = await response.json();
+			inputEl.value = '';
+			resData = data.results;
+			maxPage = data.total_pages;
+			containerCardsEl.innerHTML = '';
+			displayProducts(resData);
+		}
+	}
+}
+
+async function loadGenres() {
+	if (type[0] === classBtn) {
+		const url = `https://api.themoviedb.org/3/genre/${classBtn}/list`;
+		const response = await fetch(url, options);
+		const data = await response.json();
+		populateGenreSelect(data.genres);
+	}
+	if (type[0] === btnID) {
+		const url = `https://api.themoviedb.org/3/genre/${btnID}/list`;
+		const response = await fetch(url, options);
+		const data = await response.json();
+		populateGenreSelect(data.genres);
+	}
+}
+
+function populateGenreSelect(genres) {
+	genres.forEach(genre => {
+		const option = document.createElement('option');
+		option.value = genre.id;
+		option.textContent = genre.name;
+		selectGen.appendChild(option);
+	});
+}
+
 const options = {
 	headers: {
 		Authorization: `Bearer ${API_KEY}`
 	}
 };
 
-const GET = async (endpoint, page) => {
+const GET = async () => {
 	const response = await fetch(`https://api.themoviedb.org/3/${classBtn}/${arrayButtonsID[index]}?language=en-US&page=${page}`, options);
 	const data = await response.json();
 	resData = data.results;
@@ -144,6 +193,18 @@ const GET = async (endpoint, page) => {
         filterProducts(inputValue);
     });
 }
+selectGen.addEventListener('change', async () => {
+	if (selectGen.options[0].selected) {
+		inputEl.value = '';
+		containerCardsEl.innerHTML = '';
+		await GET();
+		return;
+	}
+	if (type[0] === classBtn || type[0] === btnID) {
+		currentGenre = selectGen.value;
+		loadMovies(arrayButtonsClass[index], page);
+	}
+});
 btnType.addEventListener('click', async (e) => {
 	const target = e.target;
 	if (target.className === 'movie') {
@@ -166,6 +227,7 @@ btnType.addEventListener('click', async (e) => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(classBtn);
+		selectGen.selectedIndex = 0;
 	}
 	if (target.id === 'tv') {
 		resetButtons();
@@ -187,12 +249,13 @@ btnType.addEventListener('click', async (e) => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(btnID);
-		console.log(resData);
+		selectGen.selectedIndex = 0;
 		inputEl.addEventListener('input', (event) => {
 			const inputValue = event.target.value.toLowerCase();
 			filterProductsTV(inputValue);
 		});
 	}
+	
 })
 btnPopularTV.addEventListener('click', async () => {
 	resetButtons();
@@ -206,6 +269,7 @@ btnPopularTV.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(btnID);
+	selectGen.selectedIndex = 0;
 });
 btnTopRatedTV.addEventListener('click', async () => {
 	resetButtons();
@@ -219,6 +283,7 @@ btnTopRatedTV.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(btnID);
+	selectGen.selectedIndex = 0;
 });
 btnAiringToday.addEventListener('click', async () => {
 	resetButtons();
@@ -232,6 +297,7 @@ btnAiringToday.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(btnID);
+	selectGen.selectedIndex = 0;
 });
 btnOnTheAir.addEventListener('click', async () => {
 	resetButtons();
@@ -245,6 +311,7 @@ btnOnTheAir.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(btnID);
+	selectGen.selectedIndex = 0;
 });
 btnPopular.addEventListener('click', async () => {
 	resetButtons();
@@ -258,6 +325,7 @@ btnPopular.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(classBtn);
+	selectGen.selectedIndex = 0;
 });
 btnTopRated.addEventListener('click', async () => {
 	resetButtons();
@@ -271,6 +339,7 @@ btnTopRated.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(classBtn);
+	selectGen.selectedIndex = 0;
 });
 btnUpcoming.addEventListener('click', async () => {
 	resetButtons();
@@ -284,6 +353,7 @@ btnUpcoming.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(classBtn);
+	selectGen.selectedIndex = 0;
 });
 btnNowPlaying.addEventListener('click', async () => {
 	resetButtons();
@@ -297,6 +367,7 @@ btnNowPlaying.addEventListener('click', async () => {
 	containerCardsEl.innerHTML = '';
 	displayProducts(resData);
 	type = Array(classBtn);
+	selectGen.selectedIndex = 0;
 });
 btn1El.addEventListener('click', async () => {
 	if (type[0] === classBtn) {
@@ -309,6 +380,7 @@ btn1El.addEventListener('click', async () => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(classBtn);
+		selectGen.selectedIndex = 0;
 	}
 	if (type[0] === btnID) {
 		page = btn1El.textContent;
@@ -320,6 +392,7 @@ btn1El.addEventListener('click', async () => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(btnID);
+		selectGen.selectedIndex = 0;
 	}
 });
 btn2El.addEventListener('click', async () => {
@@ -333,6 +406,7 @@ btn2El.addEventListener('click', async () => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(classBtn);
+		selectGen.selectedIndex = 0;
 	}
 	if (type[0] === btnID) {
 		page = btn2El.textContent;
@@ -344,6 +418,7 @@ btn2El.addEventListener('click', async () => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(btnID);
+		selectGen.selectedIndex = 0;
 	}
 });
 btn3El.addEventListener('click', async () => {
@@ -357,6 +432,7 @@ btn3El.addEventListener('click', async () => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(classBtn);
+		selectGen.selectedIndex = 0;
 	}
 	if (type[0] === btnID) {
 		page = btn3El.textContent;
@@ -368,6 +444,7 @@ btn3El.addEventListener('click', async () => {
 		containerCardsEl.innerHTML = '';
 		displayProducts(resData);
 		type = Array(btnID);
+		selectGen.selectedIndex = 0;
 	}
 });
 btnAvanti.addEventListener('click', () => {
@@ -387,4 +464,6 @@ btnIndietro.addEventListener('click', () => {
 	btn3El.textContent = Number(btn1El.textContent) + 2;
 })
 
-await GET(arrayButtonsID[index], page);
+await GET();
+loadGenres();
+loadMovies(arrayButtonsID[index], page);
