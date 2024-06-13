@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<script src="./script.js" type="module"></script>
+	<title>Document</title>
+</head>
+<body>
+	<form>
+		<input class="title" type="text" placeholder="Title" />
+		<p class="p-title"></p>
+		<input class="price" type="number" placeholder="Price" />
+		<p class="p-price"></p>
+		<input class="description" type="text" placeholder="Description" />
+		<p class="p-description"></p>
+		<input class="category-id" type="number" placeholder="Category id" />
+		<p class="p-category-id"></p>
+		<input class="images" type="text" placeholder="Images" />
+		<p class="p-images"></p>
+		<button class="button-send">SEND</button>
+		<input type="text" class="delete-id" placeholder="Enter ID to delete" />
+		<button class="button-delete">DELETE</button>
+		<input class="search-and-edit-id" type="number" placeholder="Enter ID to search and then edit" />
+		<div class="search-and-edit">
+			<button class="button-search">SEARCH</button>
+			<button class="button-edit">EDIT</button>
+		</div>
+		<button class="button-reset">RESET</button>
+	</form>
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="container-message">
+				<p class="text-modal"></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
