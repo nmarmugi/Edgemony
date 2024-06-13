@@ -34,8 +34,30 @@ function clearP() {
 }
 
 function errorMessage(array) {
-	if (array.length === 4) {
+	if (array.length >= 1) {
+		if (array[0].includes('Category')) {
+			pCategoryEl.textContent = 'Could not find any entity of type \"Category\" matching: {\n    \"id\": 0\n}';
+			return;
+		}
 		array.push('Could not find any entity of type \"Category\" matching: {\n    \"id\": 0\n}');
+		if (inputCategoryEl.value) {
+			array.pop('Could not find any entity of type \"Category\" matching: {\n    \"id\": 0\n}');
+			array.forEach(message => {
+				if (message.toLowerCase().includes('title')) {
+					pTitleEl.textContent = 'Title should not be empty';
+				}
+				if (message.toLowerCase().includes('price')) {
+					pPriceEl.textContent = "Price must be a positive number";
+				}
+				if (message.toLowerCase().includes('description')) {
+					pDescriptionEl.textContent = 'Description should not be empty';
+				}
+				if (message.toLowerCase().includes('images')) {
+					pImagesEl.textContent = 'Each value in images must be a URL address"';
+				}
+			})
+			return;
+		}
 		array.forEach(message => {
 			if (message.toLowerCase().includes('title')) {
 				pTitleEl.textContent = 'Title should not be empty';
@@ -54,11 +76,6 @@ function errorMessage(array) {
 			}
 		});
 		array.pop('Could not find any entity of type \"Category\" matching: {\n    \"id\": 0\n}');
-		return;
-	} else {
-		if (array[0].includes('Category')) {
-			pCategoryEl.textContent = 'Could not find any entity of type \"Category\" matching: {\n    \"id\": 0\n}';
-		}
 	}
 }
 
@@ -120,6 +137,7 @@ const POST = async (obj) => {
 			modal.style.display = "none";
 		}, 3000);
 		clearP();
+		console.log('ciao', err)
 		if (Array.isArray(err.message)) {
 			errorMessage(err.message);
 			return;
