@@ -9,13 +9,23 @@
 </head>
 <body>
 	<form>
-		<input class="title" type="text" placeholder="title" />
-		<input class="price" type="number" placeholder="price" />
-		<input class="description" type="text" placeholder="description" />
-		<input class="category-id" type="number" placeholder="category id" />
-		<input class="images" type="text" placeholder="images" />
-		<button class="button-send">send</button>
-		<button class="button-delete">delete</button>
+		<input class="title" type="text" placeholder="Title" />
+		<input class="price" type="number" placeholder="Price" />
+		<input class="description" type="text" placeholder="Description" />
+		<input class="category-id" type="number" placeholder="Category id" />
+		<input class="images" type="text" placeholder="Images" />
+		<button class="button-send">SEND</button>
+		<input type="text" class="delete-id" placeholder="Enter ID to delete">
+		<button class="button-delete">DELETE</button>
+		<button class="button-reset">RESET</button>
 	</form>
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="container-message">
+				<p>Oggetto rimosso</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
