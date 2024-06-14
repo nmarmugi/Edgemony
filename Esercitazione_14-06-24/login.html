@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<script async src="./script-login.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container-login">
+		<h2>REGISTRATI</h2>
+		<form class="login registrati">
+			<input class="usernameReg" type="text" placeholder="Username" required>
+			<input class="passwordReg" type="password" placeholder="Password" required>
+			<input class="passwordRegConfirm" type="password" placeholder="Conferma password" required>
+			<button class="buttonReg" type="submit">INVIA</button>
+		</form>
+		<h2>LOGIN</h2>
+		<form class="login accedi">
+			<input class="username" type="text" placeholder="Username" required>
+			<input class="password" type="password" placeholder="Password" required>
+			<button class="buttonLogin" type="submit">LOGIN</button>
+		</form>
+		<a href="./index.html"><button class="home">RITORNA ALLA HOME</button></a>
+	</div>
+	<div class="container-second">
+		<h1></h1>
+		<button class="buttonReturn">LOGOUT</button>
+		<h3>RIMUOVI ACCOUNT</h3>
+		<form class="login rimuovi">
+			<input class="usernameDel" type="text" placeholder="Username" required>
+			<input class="passwordDel" type="password" placeholder="Password" required>
+			<input class="passwordDelConfirm" type="password" placeholder="Conferma password" required>
+			<button class="buttonDel" type="submit">ELIMINA</button>
+		</form>
+	</div>
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="container-message">
+				<p class="text-modal"></p>
+				<button class="btnModal">TORNA ALLA HOME</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
