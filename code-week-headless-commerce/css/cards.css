@@ -1,0 +1,84 @@
+.background {
+	background-color: white;
+}
+
+.background-dd {
+	background-color: white;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-filter {
+	width: 100%;
+	background-color: var(--background);
+	padding-top: 100px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+	max-width: 1440px;
+}
+
+.container-filter input {
+	padding: 10px;
+	border: none;
+	border-radius: 20px;
+	color: var(--deep-blue);
+	outline: none;
+}
+
+.container-filter input:focus {
+	border: 2px solid var(--deep-blue);
+}
+
+.container-filter input::placeholder {
+	transition: color 0.3s ease;
+}
+
+.container-filter input:focus::placeholder {
+	color: var(--deep-blue);
+}
+
+.container-cards {
+	max-width: 1440px;
+	width: 100%;
+	background-color: var(--background);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	padding: 30px;
+	min-height: 100vh;
+}
+
+.card {
+	width: 250px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	border-radius: 20px;
+	padding: 20px;
+	min-height: 400px;
+	max-height: 400px;
+	transition: transform 0.35s ease;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card-title {
+	text-align: center;
+	font-size: 15px;
+}

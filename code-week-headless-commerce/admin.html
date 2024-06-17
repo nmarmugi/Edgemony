@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap" rel="stylesheet">
+	<script type="module" src="./js/script-admin.js"></script>
+	<title>Headless Commerce | ADMIN</title>
+</head>
+<body>
+	<!--NAVBAR-->
+	<section class="container-hamburger-menu background">
+		<header class="container-logo-hamburger">
+			<h1 class="logo-hamburger">Headless Commerce</h1>
+		</header>
+		<nav class="container-menu">
+			<button class="container-span">
+				<span class="hamburger"></span>
+				<span class="hamburger"></span>
+				<span class="hamburger"></span>
+			</button>
+			<div class="dropdown-menu background-dd">
+				<div class="container-close">
+					<span class="close-menu">&times;</span>
+				</div>
+				<button class="option-hamburger products" title="Prodotti">Prodotti</button>
+				<button class="option-hamburger" title="Personalizza">Personalizza</button>
+				<button class="option-hamburger logout" title="Logout">Logout</button>
+			</div>
+		</nav>
+	</section>
+	<nav class="container-navbar background">
+		<h1 class="logo-navbar">Headless Commerce</h1>
+		<button class="option-navbar products" title="Prodotti">Prodotti</button>
+		<button class="option-navbar" title="Personalizza">Personalizza</button>
+		<button class="option-navbar logout" title="Logout">Logout</button>
+	</nav>
+	<!--/NAVBAR-->
+	<!--CARDS SECTION-->
+	<section class="container">
+		<div class="container-filter">
+			<input class="filter" type="text" placeholder="Cerca tra i prodotti...">
+		</div>
+		<div class="container-cards">
+
+		</div>
+	</section>
+	<!--/CARDS SECTION-->
+	<!--MODALE-->
+	<section id="logout" class="modal">
+		<div class="modal-content">
+			<div class="container-modal-close">
+				<span class="close logout-span">&times;</span>
+			</div>
+			<h2>Sei sicuro di voler effettuare il Logout?</h2>
+			<div class="container-choices">
+				<a class="yes" href="./index.html">SI</a>
+				<a class="no" href="./admin.html">NO</a>
+			</div>
+		</div>
+	</section>
+	<!--/MODALE-->
+</body>
+</html>

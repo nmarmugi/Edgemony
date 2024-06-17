@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap" rel="stylesheet">
+	<script type="module" src="./js/script.js"></script>
+	<title>Headless Commerce</title>
+</head>
+<body>
+	<!--NAVBAR-->
+	<section class="container-hamburger-menu">
+		<header class="container-logo-hamburger">
+			<h1 class="logo-hamburger">Headless Commerce</h1>
+		</header>
+		<nav class="container-menu">
+			<button class="container-span">
+				<span class="hamburger"></span>
+				<span class="hamburger"></span>
+				<span class="hamburger"></span>
+			</button>
+			<div class="dropdown-menu">
+				<div class="container-close">
+					<span class="close-menu">&times;</span>
+				</div>
+				<button class="option-hamburger registrati" title="Registrati">Registrati</button>
+				<button class="option-hamburger login" title="Login">Login</button>
+			</div>
+		</nav>
+	</section>
+	<nav class="container-navbar">
+		<h1 class="logo-navbar">Headless Commerce</h1>
+		<button class="option-navbar registrati" title="Registrati">Registarti</button>
+		<button class="option-navbar login" title="Login">Login</button>
+	</nav>
+	<!--/NAVBAR-->
+	<!--HERO-->
+	<section class="hero">
+		<div class="img-scroll">
+			<img class="img-hero" src="./img/first-img.jpg" alt="Immagine background" width="300">
+		</div>
+		<section class="header header1 active">
+			<h2>CHI SIAMO?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Nemo, eum voluptatum consectetur asperiores officia iusto optio
+				expedita vitae accusantium iste.
+			</p>
+		</section>
+		<section class="header header2">
+			<h2>REGISTRATI</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Nemo, eum voluptatum consectetur asperiores officia iusto optio
+				expedita vitae accusantium iste.
+			</p>
+			<button class="registrati" title="Registrati">Registrati</button>
+		</section>
+		<section class="header header3">
+			<h2>EFFETTUA IL LOGIN</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Nemo, eum voluptatum consectetur asperiores officia iusto optio
+				expedita vitae accusantium iste.
+			</p>
+			<button class="login" title="Login">Login</button>
+		</section>
+	</section>
+	<!--/HERO-->
+	<!--MODALE REGISTRATI-->
+	<section id="registrati" class="modal">
+		<div class="modal-content">
+			<div class="container-modal-close">
+				<span class="close">&times;</span>
+			</div>
+			<h2>Registrati</h2>
+			<form class="registra">
+				<input name="username" class="usernameReg" type="text" placeholder="Username">
+				<input name="password" class="passwordReg" type="password" placeholder="Password">
+				<input name="confirmPassword" class="passwordRegConfirm" type="password" placeholder="Conferma password">
+				<p class="textReg"></p>
+				<select name="role" id="role">
+					<option value="">Seleziona il ruolo...</option>
+					<option value="admin">ADMIN</option>
+					<option value="user">USER</option>
+				</select>
+				<button class="buttonReg" type="submit">INVIA</button>
+			</form>
+		</div>
+	</section>
+	<!--/MODALE REGISTRATI-->
+	<!--MODALE LOGIN-->
+	<section id="login" class="modal">
+		<div class="modal-content">
+			<div class="container-modal-close">
+				<span class="close login-span">&times;</span>
+			</div>
+			<h2>Login</h2>
+			<form class="registra">
+				<input name="username" class="usernameLogin" type="text" placeholder="Username">
+				<input name="password" class="passwordLogin" type="password" placeholder="Password">
+				<p class="textLogin"></p>
+				<select name="role" id="role-login">
+					<option value="">Seleziona il ruolo...</option>
+					<option value="admin">ADMIN</option>
+					<option value="user">USER</option>
+				</select>
+				<a class="buttonLogin" href="#">ACCEDI</a>
+			</form>
+		</div>
+	</section>
+	<!--/MODALE LOGIN-->
+</body>
+</html>
