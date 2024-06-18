@@ -78,7 +78,43 @@
 	transform: scale(1.05);
 }
 
+.card:hover .card-title, .card:hover .card-price, .card:hover .card-img {
+	display: none;
+}
+
+.card:hover .card-description {
+	display: block;
+}
+
 .card-title {
 	text-align: center;
 	font-size: 15px;
+}
+
+.card-description {
+	display: none;
+	overflow-y: scroll;
+	width: 100%;
+}
+
+.card-description::-webkit-scrollbar {
+	width: 12px;
+}
+
+.card-description::-webkit-scrollbar-thumb {
+	background-color: var(--deep-blue);
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+
+.card-description::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+.searchbar {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: center;
 }

@@ -34,6 +34,12 @@ export const MODAL = function() {
 			inputPasswordReg.value &&
 			inputPasswordRegConfirm.value &&
 			inputUsernameReg.value && selectRole.selectedIndex !== 0) {
+			
+			if (inputUsernameReg.value.includes('/')) {
+				e.preventDefault();
+				textReg.textContent = 'L\'Username ha un carattere non valido "/"!';
+				return;
+			}
 			if (localStorage.getItem(inputUsernameReg.value)) {
 				e.preventDefault();
 				textReg.textContent = 'L\'Username è già esistente!';

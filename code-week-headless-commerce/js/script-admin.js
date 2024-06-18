@@ -1,12 +1,30 @@
 import { HOME } from "./home-admin.js";
 import { createCard, FETCH, displayProducts } from "./cards-admin.js";
 import { MODAL } from "./modals-admin.js";
+import { createShops } from "./shops-user.js";
 
 const inputFilter = document.querySelector('.filter');
 const btnProducts = document.querySelectorAll('.products');
 
 HOME();	//RICHIAMO HOME DA HOME-ADMIN.JS
 MODAL(); //RICHIAMO MODAL DA MODALS-ADMIN.JS
+
+document.addEventListener('DOMContentLoaded', function() {
+    const pageId = document.body.id;
+    if (pageId === 'page1') {
+        createShops();
+		const containerCards = document.querySelector('.container-cards');
+		containerCards.style.display = 'none';
+		const linkToAdmin = document.querySelectorAll('.link-to-admin');
+		linkToAdmin.forEach(link => {
+			link.addEventListener('click', () => {
+				const removeShops = document.querySelector('.container-shops');
+				removeShops.style.display = 'none';
+				containerCards.style.display = 'flex';
+			})
+		})
+    }
+})
 
 const BASE_URL = 'https://fakestoreapi.com/';
 let end_point = 'products';

@@ -32,6 +32,10 @@ export function createCard(product) {
 	priceCardEl.className = 'card-price';
 	priceCardEl.textContent = `${product.price} euro`;
 
-	cardEl.append(imgCardEl, titleCardEl, priceCardEl);
+	const descriptionCardEl = document.createElement('p');
+	descriptionCardEl.className = 'card-description';
+	descriptionCardEl.textContent = product.description;
+
+	cardEl.append(imgCardEl, titleCardEl, priceCardEl, descriptionCardEl);
 	return cardEl;
 }

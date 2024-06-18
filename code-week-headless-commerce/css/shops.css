@@ -1,0 +1,62 @@
+.container-shops {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-shops h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+.column-shop {
+	width: 100%;
+	height: auto;
+	max-width: 1440px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 50px;
+	background-color: var(--background);
+	padding-top: 50px;
+}
+
+.card-shop {
+	width: 450px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	border-radius: 20px;
+	padding: 20px;
+	min-height: 400px;
+	max-height: 400px;
+	transition: transform 0.35s ease;
+}
+
+.card-shop:hover {
+	transform: scale(1.03);
+}
+
+.link-to-admin {
+	background-color: white;
+	border: 1px solid var(--black);
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.link-to-admin:hover {
+	background-color: var(--deep-blue);
+	color: white;
+	border: none;
+}
