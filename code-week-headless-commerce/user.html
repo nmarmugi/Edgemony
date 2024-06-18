@@ -11,12 +11,12 @@
 	<title>Headless Commerce | USER</title>
 </head>
 <body>
-	<div class="container-shops">
+	<section class="container-shops">
 		<h2>Visita i nostri negozi</h2>
 		<div class="column-shop">
 
 		</div>
-	</div>
+	</section>
 	<!--NAVBAR-->
 	<section class="container-hamburger-menu background">
 		<header class="container-logo-hamburger">
@@ -33,7 +33,7 @@
 					<span class="close-menu">&times;</span>
 				</div>
 				<button class="option-hamburger products" title="Prodotti">Prodotti</button>
-				<button class="option-hamburger" title="Carrello">Carrello</button>
+				<button class="option-hamburger carrello" title="Carrello">Carrello <span class="number">0</span></button>
 				<button class="option-hamburger logout" title="Logout">Logout</button>
 			</div>
 		</nav>
@@ -41,7 +41,7 @@
 	<nav class="container-navbar background">
 		<h1 class="logo-navbar">Headless Commerce</h1>
 		<button class="option-navbar products" title="Prodotti">Prodotti</button>
-		<button class="option-navbar" title="Carrello">Carrello</button>
+		<button class="option-navbar carrello" title="Carrello">Carrello <span class="number">0</span></button>
 		<button class="option-navbar logout" title="Logout">Logout</button>
 	</nav>
 	<!--/NAVBAR-->
@@ -67,10 +67,15 @@
 			<h2>Sei sicuro di voler effettuare il Logout?</h2>
 			<div class="container-choices">
 				<a class="yes" href="./index.html">SI</a>
-				<a class="no" href="./admin.html">NO</a>
+				<a class="no" href="./user.html">NO</a>
 			</div>
 		</div>
 	</section>
 	<!--/MODALE-->
+	<section class="container-cart">
+		<div class="cart">
+
+		</div>
+	</section>
 </body>
 </html>

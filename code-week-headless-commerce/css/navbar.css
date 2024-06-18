@@ -140,6 +140,11 @@
 .option-navbar:hover {
 	color: var(--deep-blue);
 }
+
+.number {
+	margin-left: 5px;
+	color: red;
+}
 /* NAVBAR */
 
 @media only screen and (min-width: 1024px) {

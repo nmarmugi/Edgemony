@@ -134,3 +134,7 @@
 	color: white;
 	border: none;
 }
+
+.card-id {
+	display: none;
+}
