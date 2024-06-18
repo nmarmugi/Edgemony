@@ -26,6 +26,7 @@
 	gap: 50px;
 	background-color: var(--background);
 	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .card-shop {

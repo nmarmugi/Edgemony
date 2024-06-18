@@ -1,6 +1,21 @@
-import { HOME } from "./home-admin.js";
-import { createCard, FETCH, displayProducts } from "./cards-admin.js";
+import { createShops } from "./shops-user.js";
+import { createCard, FETCH, displayProducts } from "./cards-user.js";
 import { MODAL } from "./modals-admin.js";
+import { HOME } from "./home-admin.js";
+
+createShops();
+
+const containerCards = document.querySelector('.container-cards');
+containerCards.style.display = 'none';
+
+const linkToAdmin = document.querySelectorAll('.link-to-admin');
+linkToAdmin.forEach(link => {
+	link.addEventListener('click', () => {
+		const removeShops = document.querySelector('.container-shops');
+		removeShops.style.display = 'none';
+		containerCards.style.display = 'flex';
+	})
+})
 
 const inputFilter = document.querySelector('.filter');
 const btnProducts = document.querySelectorAll('.products');

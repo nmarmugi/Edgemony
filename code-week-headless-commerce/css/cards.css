@@ -20,7 +20,7 @@
 .container-filter {
 	width: 100%;
 	background-color: var(--background);
-	padding-top: 100px;
+	padding-top: 120px;
 	display: flex;
 	justify-content: center;
 	padding-bottom: 20px;
@@ -82,7 +82,7 @@
 	display: none;
 }
 
-.card:hover .card-description {
+.card:hover .card-description, .card:hover .button-cart {
 	display: block;
 }
 
@@ -117,4 +117,20 @@
 	align-items: center;
 	gap: 20px;
 	justify-content: center;
+}
+
+.button-cart {
+	display: none;
+	padding: 5px;
+	background-color: white;
+	border: 1px solid var(--black);
+	transition: all 0.35s ease;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.button-cart:hover {
+	background-color: var(--deep-blue);
+	color: white;
+	border: none;
 }
