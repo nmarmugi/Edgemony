@@ -122,4 +122,62 @@ export const MODAL = function() {
 		}
 	})
 	//APERTURA DEL LOGIN
+	//MODALE RIMUOVI ACCOUNT
+	const modalRemove = document.getElementById('remove');
+	const spanCloseModalRemove = document.querySelector('.close-remove');
+
+	spanCloseModalRemove.onclick = function() {
+		modalRemove.style.display = 'none';
+		inputPasswordRemove.value = '';
+		inputPasswordRemoveConfirm.value = '';
+		inputUsernameRemove.value = '';
+		textRemove.textContent = '';
+		textRemove.style.color = 'red';
+	}
+	//MODALE REGISTRATI
+
+	//APERTURA DEL REGISTRATI
+	const openRemove = document.querySelectorAll('.remove');
+
+	openRemove.forEach(button => {
+		button.addEventListener('click', () => {
+			modalRemove.style.display = 'block';
+		})
+	})
+
+	const inputUsernameRemove = document.querySelector('.usernameRemove');
+	const inputPasswordRemove = document.querySelector('.passwordRemove');
+	const inputPasswordRemoveConfirm = document.querySelector('.passwordRemoveConfirm');
+	const buttonRemove = document.querySelector('.buttonRemove');
+	const textRemove = document.querySelector('.textRemove');
+
+	buttonRemove.addEventListener('click', (e) => {
+		if (!inputUsernameRemove.value) {
+			e.preventDefault();
+			textRemove.textContent = 'Inserire Username!!';
+			return;
+		}
+		const res = localStorage.getItem(inputUsernameRemove.value);
+		const resSplit = res.split('/');
+		if (res) {
+			if (resSplit[1] === 'admin' || resSplit[1] === 'user') {
+				if (resSplit[0] !== inputPasswordRemove.value || inputPasswordRemove.value !== inputPasswordRemoveConfirm.value) {
+					e.preventDefault();
+					textRemove.textContent = 'La Password non è corretta o non corrisponde!';
+				} else {
+					e.preventDefault();
+					localStorage.removeItem(inputUsernameRemove.value);
+					textRemove.style.color = 'green';
+					textRemove.textContent = 'Account eliminato!';
+					inputUsernameRemove.value = '';
+					inputPasswordRemove.value = '';
+					inputPasswordRemoveConfirm.value = '';
+				}
+			}
+		} else {
+			e.preventDefault();
+			textRemove.textContent = 'L\'Username non è corretto!';
+		}
+	})
+	//APERTURA RIMUOVI ACCOUNT
 }

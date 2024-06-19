@@ -28,6 +28,7 @@
 				</div>
 				<button class="option-hamburger registrati" title="Registrati">Registrati</button>
 				<button class="option-hamburger login" title="Login">Login</button>
+				<button class="option-hamburger remove" title="Rimuovi account">Rimuovi account</button>
 			</div>
 		</nav>
 	</section>
@@ -35,6 +36,7 @@
 		<h1 class="logo-navbar">Headless Commerce</h1>
 		<button class="option-navbar registrati" title="Registrati">Registarti</button>
 		<button class="option-navbar login" title="Login">Login</button>
+		<button class="option-navbar remove" title="Rimuovi account">Rimuovi account</button>
 	</nav>
 	<!--/NAVBAR-->
 	<!--HERO-->
@@ -100,7 +102,7 @@
 			</div>
 			<h2>Login</h2>
 			<form class="registra">
-				<input name="username" class="usernameLogin" type="text" placeholder="Username">
+				<input name="username" class="usernameLogin" type="text" placeholder="Username ('/' non consentito)">
 				<input name="password" class="passwordLogin" type="password" placeholder="Password">
 				<p class="textLogin"></p>
 				<select name="role" id="role-login">
@@ -113,5 +115,22 @@
 		</div>
 	</section>
 	<!--/MODALE LOGIN-->
+	<!--MODALE RIMUOVI ACCOUNT-->
+	<section id="remove" class="modal">
+		<div class="modal-content">
+			<div class="container-modal-close">
+				<span class="close close-remove">&times;</span>
+			</div>
+			<h2>Rimuovi account</h2>
+			<form class="registra">
+				<input name="username" class="usernameRemove" type="text" placeholder="Username ('/' non consentito)">
+				<input name="password" class="passwordRemove" type="password" placeholder="Password">
+				<input name="confirmPassword" class="passwordRemoveConfirm" type="password" placeholder="Conferma password">
+				<p class="textRemove"></p>
+				<button class="buttonRemove" type="submit">ELIMINA</button>
+			</form>
+		</div>
+	</section>
+	<!--/MODALE RIMUOVI ACCOUNT-->
 </body>
 </html>

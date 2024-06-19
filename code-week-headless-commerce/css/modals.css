@@ -131,4 +131,21 @@
 	color: white;
 	border: none;
 }
+
+.buttonRemove {
+	text-decoration: none;
+	color: var(--black);
+	border: 1px solid var(--black);
+	padding: 10px;
+	background-color: white;
+	transition: all 0.35s ease;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.buttonRemove:hover {
+	background-color: red;
+	color: white;
+	border: none;
+}
 /*MODALI*/
