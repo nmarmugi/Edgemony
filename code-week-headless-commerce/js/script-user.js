@@ -66,6 +66,26 @@ function filterProducts(title) {
 	filteredProducts.forEach(product => {
 		const cardEl = createCard(product);
 		containerCardsEl.append(cardEl);
+		const buttonCart = document.querySelectorAll('.button-cart');
+		buttonCart.forEach(button => {
+			button.addEventListener('click', async (e) => {
+			console.log('cioa')
+			numberCartNavbar.textContent = Number(numberCartNavbar.textContent) + 1;
+			numberCartDropdown.textContent = Number(numberCartDropdown.textContent) + 1;
+			numberCartDropdown.style.display = 'inline-block';
+			numberCartNavbar.style.display = 'inline-block';
+			let priceCard = e.target.parentNode.querySelector('.card-price').textContent.replace(/[^\d.]/g, '');
+        	let priceWithVAT = Number(priceCard) * 1.22;
+
+			let currentTotal = totalPrice.textContent.replace(/[^\d.]/g, '');
+			let newTotal = Number(currentTotal) + priceWithVAT;
+			totalPrice.textContent = newTotal.toFixed(2) + ' euro';
+			let idCard = e.target.parentNode.querySelector('.card-id').textContent;
+			let cardToCart = await GET(idCard);
+			cart.push(cardToCart);
+			displayProductsCart(cart);
+		})
+	})
 	});
 }
 
@@ -75,7 +95,28 @@ btnProducts.forEach(button => {
 		containerCart.style.display = 'none';
 		const containerSectionCard = document.querySelector('.container');
 		containerSectionCard.style.display = 'flex';
+		displayProducts(resData);
 		inputFilter.value = '';
+		const buttonCart = document.querySelectorAll('.button-cart');
+		buttonCart.forEach(button => {
+			button.addEventListener('click', async (e) => {
+			console.log('cioa')
+			numberCartNavbar.textContent = Number(numberCartNavbar.textContent) + 1;
+			numberCartDropdown.textContent = Number(numberCartDropdown.textContent) + 1;
+			numberCartDropdown.style.display = 'inline-block';
+			numberCartNavbar.style.display = 'inline-block';
+			let priceCard = e.target.parentNode.querySelector('.card-price').textContent.replace(/[^\d.]/g, '');
+        	let priceWithVAT = Number(priceCard) * 1.22;
+
+			let currentTotal = totalPrice.textContent.replace(/[^\d.]/g, '');
+			let newTotal = Number(currentTotal) + priceWithVAT;
+			totalPrice.textContent = newTotal.toFixed(2) + ' euro';
+			let idCard = e.target.parentNode.querySelector('.card-id').textContent;
+			let cardToCart = await GET(idCard);
+			cart.push(cardToCart);
+			displayProductsCart(cart);
+		})
+	})
 	})
 })
 
@@ -83,6 +124,7 @@ const totalPrice = document.querySelector('.total');
 const buttonCart = document.querySelectorAll('.button-cart');
 buttonCart.forEach(button => {
 	button.addEventListener('click', async (e) => {
+		console.log('cioa')
 		numberCartNavbar.textContent = Number(numberCartNavbar.textContent) + 1;
 		numberCartDropdown.textContent = Number(numberCartDropdown.textContent) + 1;
 		numberCartDropdown.style.display = 'inline-block';
