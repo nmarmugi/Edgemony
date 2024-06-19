@@ -55,18 +55,7 @@ cartDropdown.addEventListener('click', () => {
 inputFilter.addEventListener('input', (event) => {
 	const inputValue = event.target.value.toLowerCase();
 	filterProducts(inputValue);
-})
-
-function filterProducts(title) {
-	const filteredProducts = resData.filter(product => product.title.toLowerCase().includes(title));
-	
-	const containerCardsEl = document.querySelector('.container-cards');
-	containerCardsEl.innerHTML = '';
-	
-	filteredProducts.forEach(product => {
-		const cardEl = createCard(product);
-		containerCardsEl.append(cardEl);
-		const buttonCart = document.querySelectorAll('.button-cart');
+	const buttonCart = document.querySelectorAll('.button-cart');
 		buttonCart.forEach(button => {
 			button.addEventListener('click', async (e) => {
 			console.log('cioa')
@@ -86,7 +75,18 @@ function filterProducts(title) {
 			displayProductsCart(cart);
 		})
 	})
-	});
+})
+
+function filterProducts(title) {
+	const filteredProducts = resData.filter(product => product.title.toLowerCase().includes(title));
+	
+	const containerCardsEl = document.querySelector('.container-cards');
+	containerCardsEl.innerHTML = '';
+	
+	filteredProducts.forEach(product => {
+		const cardEl = createCard(product);
+		containerCardsEl.append(cardEl);
+	})
 }
 
 btnProducts.forEach(button => {
@@ -124,7 +124,6 @@ const totalPrice = document.querySelector('.total');
 const buttonCart = document.querySelectorAll('.button-cart');
 buttonCart.forEach(button => {
 	button.addEventListener('click', async (e) => {
-		console.log('cioa')
 		numberCartNavbar.textContent = Number(numberCartNavbar.textContent) + 1;
 		numberCartDropdown.textContent = Number(numberCartDropdown.textContent) + 1;
 		numberCartDropdown.style.display = 'inline-block';
@@ -141,3 +140,55 @@ buttonCart.forEach(button => {
 		displayProductsCart(cart);
 	})
 })
+
+function searchColorBackground() {
+	const savedColor = localStorage.getItem('backgroundColor');
+	if (savedColor) {
+		const background = document.querySelectorAll('.background-color');
+		background.forEach(page => {
+			page.style.backgroundColor = savedColor;
+		})
+	}
+}
+
+searchColorBackground();
+
+function searchLogo() {
+	const savedLogo = localStorage.getItem('logoContent');
+	const savedLogoColor = localStorage.getItem('logoColor');
+	if (savedLogo && savedLogoColor) {
+		const logos = document.querySelectorAll('.logo');
+		logos.forEach(page => {
+			page.textContent = savedLogo;
+			page.style.color = savedLogoColor;
+		})
+	}
+}
+
+searchLogo();
+
+function searchSecondColorBackground() {
+	const savedColor = localStorage.getItem('secondBackgroundColor');
+	if (savedColor) {
+		const background = document.querySelectorAll('.second-background');
+		background.forEach(page => {
+			page.style.backgroundColor = savedColor;
+		})
+	}
+}
+
+searchSecondColorBackground();
+
+function updateFromLocalStorage(key, selector) {
+	const value = localStorage.getItem(key);
+	if (value) {
+		document.querySelectorAll(selector).forEach(element => {
+			element.textContent = value;
+		});
+	}
+}
+
+updateFromLocalStorage('nameAdmin', '.nameAdmin');
+updateFromLocalStorage('where', '.where');
+updateFromLocalStorage('PIVA', '.PIVA');
+updateFromLocalStorage('CF', '.CF');

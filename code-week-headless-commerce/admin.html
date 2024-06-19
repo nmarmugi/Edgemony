@@ -14,7 +14,7 @@
 	<!--NAVBAR-->
 	<section class="container-hamburger-menu background">
 		<header class="container-logo-hamburger">
-			<h1 class="logo-hamburger">Headless Commerce</h1>
+			<h1 class="logo-hamburger logo">Headless Commerce</h1>
 		</header>
 		<nav class="container-menu">
 			<button class="container-span">
@@ -33,25 +33,63 @@
 		</nav>
 	</section>
 	<nav class="container-navbar background">
-		<h1 class="logo-navbar">Headless Commerce</h1>
+		<h1 class="logo-navbar logo">Headless Commerce</h1>
 		<button class="option-navbar products" title="Prodotti">Prodotti</button>
 		<button class="option-navbar personalizza" title="Personalizza">Personalizza</button>
 		<button class="option-navbar logout" title="Logout">Logout</button>
 	</nav>
 	<!--/NAVBAR-->
 	<!--CARDS SECTION-->
-	<section class="container">
-		<div class="container-filter">
+	<section class="container background-color">
+		<div class="container-filter second-background">
 			<div class="searchbar">
 				<img src="./img/loupe_14105756.png" alt="Lente d'ingrandimento" width="30">
 				<input class="filter" type="text" placeholder="Cerca tra i prodotti...">
 			</div>
 		</div>
-		<div class="container-cards">
+		<div class="container-cards second-background">
 
 		</div>
 	</section>
 	<!--/CARDS SECTION-->
+	<!--CUSTOM SECTION-->
+	<section class="container-custom background-color">
+		<div class="content-custom second-background">
+			<button class="openClose">Impostazioni schermo</button>
+			<div class="backgroundColorCustom">
+				<label for="colorPicker">Scegli un colore di sfondo</label>
+				<input type="color" id="colorPicker">
+				<button class="sendColor">Invia</button>
+			</div>
+			<div class="secondBackgroundColorCustom">
+				<label for="secondColorPicker">Scegli un colore per il secondo sfondo</label>
+				<input type="color" id="secondColorPicker">
+				<button class="sendSecondColor">Invia</button>
+			</div>
+			<div class="logoCustom">
+				<label for="customLogo">Cambia il nome e il colore del negozio</label>
+				<input type="color" id="colorLogo">
+				<input type="text" id="customLogo" placeholder="Inserisci il testo per il nuovo logo..." maxlength="15">
+				<button class="sendLogo">Invia</button>
+			</div>
+			<div class="datesCustom">
+				<h2>Dati negozio</h2>
+				<label class="nameAdmin" for="nameAdmin">Laura Tromba</label>
+				<input type="text" id="nameAdmin" placeholder="Modifica il nome e cognome...">
+				<button class="sendNameAdmin">Modifica</button>
+				<label class="where" for="where">Bologna</label>
+				<input type="text" id="where" placeholder="Modifica città..">
+				<button class="sendWhere">Modifica</button>
+				<label class="PIVA" for="PIVA">P.IVA IT03556049093</label>
+				<input type="text" id="PIVA" placeholder="Modifica P.IVA...">
+				<button class="sendPIVA">Modifica</button>
+				<label class="CF" for="CF">C.F. TRMLRA84S499341J</label>
+				<input type="text" id="CF" placeholder="Modifica CF...">
+				<button class="sendCF">Modifica</button>
+			</div>
+		</div>
+	</section>
+	<!--/CUSTOM SECTION-->
 	<!--MODALE-->
 	<section id="logout" class="modal">
 		<div class="modal-content">

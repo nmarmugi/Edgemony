@@ -17,7 +17,7 @@ export const createShops = function() {
 			
 			const titleCardEl = document.createElement('h2');
 			titleCardEl.className = 'card-title';
-			titleCardEl.textContent = `Admin-name: ${localStorage.key(i)}`;
+			titleCardEl.textContent = `SHOP: ${localStorage.key(i)}`;
 
 			const linkToShop = document.createElement('button');
 			linkToShop.title = 'Vai allo SHOP!';

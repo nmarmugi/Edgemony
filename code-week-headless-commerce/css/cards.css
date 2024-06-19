@@ -138,3 +138,9 @@
 .card-id {
 	display: none;
 }
+
+footer {
+	background-color: white;
+	text-align: center;
+	padding: 5px;
+}
