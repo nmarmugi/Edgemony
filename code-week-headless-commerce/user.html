@@ -11,12 +11,14 @@
 	<title>Headless Commerce | USER</title>
 </head>
 <body>
+	<!--SHOPS-->
 	<section class="container-shops">
 		<h2>Visita i nostri negozi</h2>
 		<div class="column-shop">
 
 		</div>
 	</section>
+	<!--/SHOPS-->
 	<!--NAVBAR-->
 	<section class="container-hamburger-menu background">
 		<header class="container-logo-hamburger">
@@ -64,7 +66,7 @@
 			<div class="container-modal-close">
 				<span class="close logout-span">&times;</span>
 			</div>
-			<h2>Sei sicuro di voler effettuare il Logout?</h2>
+			<h2>Sei sicuro di voler effettuare il Logout?<br>Se hai prodotti nel carrello verranno persi!</h2>
 			<div class="container-choices">
 				<a class="yes" href="./index.html">SI</a>
 				<a class="no" href="./user.html">NO</a>
@@ -72,10 +74,37 @@
 		</div>
 	</section>
 	<!--/MODALE-->
+	<!--CARRELLO-->
 	<section class="container-cart">
 		<div class="cart">
 
 		</div>
+		<div class="total-price">
+			<h2>Totale più iva già inclusa</h2>
+			<h2 class="total">0.00 euro</h2>
+			<p>Iva al 22%</p>
+			<button>Invia il pagamento</button>
+		</div>
 	</section>
+	<!--/CARRELLO-->
+	<!--MODALE PAGAMENTO-->
+	<section id="pay" class="modal">
+		<div class="modal-content">
+			<div class="container-modal-close">
+				<span class="close pay-span">&times;</span>
+			</div>
+			<h2>Dati pagamento</h2>
+			<form class="registra">
+				<input name="username" class="usernamePay" type="text" placeholder="Username">
+				<input name="password" class="passwordPay" type="password" placeholder="Password">
+				<input type="number" id="cardNumber" name="cardNumber" placeholder="Numero della carta" required>
+				<input type="text" id="cardCvv" name="cardCvv" placeholder="CVV" pattern="[0-9]{3}" title="Inserisci un CVV valido (esattamente 3 cifre)" maxlength="3" required>
+				<input type="text" id="cardExpiration" name="cardExpiration" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/([0-9]{2})" title="Inserisci una data di scadenza valida (MM/YY)" required>
+				<p class="textPay"></p>
+				<button class="buttonPay">INVIA</button>
+			</form>
+		</div>
+	</section>
+	<!--/MODALE PAGAMENTO-->
 </body>
 </html>

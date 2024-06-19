@@ -1,6 +1,6 @@
 import { createShops } from "./shops-user.js";
 import { createCard, FETCH, displayProducts, displayProductsCart, GET, cart } from "./cards-user.js";
-import { MODAL } from "./modals-admin.js";
+import { MODAL, modalPay } from "./modals-admin.js";
 import { HOME } from "./home-admin.js";
 
 createShops();
@@ -22,6 +22,7 @@ const btnProducts = document.querySelectorAll('.products');
 
 HOME();	//RICHIAMO HOME DA HOME-ADMIN.JS
 MODAL(); //RICHIAMO MODAL DA MODALS-ADMIN.JS
+modalPay();
 
 const BASE_URL = 'https://fakestoreapi.com/';
 let end_point = 'products';
@@ -78,6 +79,7 @@ btnProducts.forEach(button => {
 	})
 })
 
+const totalPrice = document.querySelector('.total');
 const buttonCart = document.querySelectorAll('.button-cart');
 buttonCart.forEach(button => {
 	button.addEventListener('click', async (e) => {
@@ -85,6 +87,12 @@ buttonCart.forEach(button => {
 		numberCartDropdown.textContent = Number(numberCartDropdown.textContent) + 1;
 		numberCartDropdown.style.display = 'inline-block';
 		numberCartNavbar.style.display = 'inline-block';
+		let priceCard = e.target.parentNode.querySelector('.card-price').textContent.replace(/[^\d.]/g, '');
+        let priceWithVAT = Number(priceCard) * 1.22;
+
+        let currentTotal = totalPrice.textContent.replace(/[^\d.]/g, '');
+        let newTotal = Number(currentTotal) + priceWithVAT;
+        totalPrice.textContent = newTotal.toFixed(2) + ' euro';
 		let idCard = e.target.parentNode.querySelector('.card-id').textContent;
 		let cardToCart = await GET(idCard);
 		cart.push(cardToCart);

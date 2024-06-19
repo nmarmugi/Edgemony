@@ -9,6 +9,7 @@ export const MODAL = function() {
 		inputPasswordRegConfirm.value = '';
 		inputUsernameReg.value = '';
 		textReg.textContent = '';
+		textReg.style.color = 'red';
 		selectRole.selectedIndex = 0;
 	}
 	//MODALE REGISTRATI
@@ -52,11 +53,6 @@ export const MODAL = function() {
 				inputPasswordRegConfirm.value = '';
 				inputUsernameReg.value = '';
 				selectRole.selectedIndex = 0;
-				setTimeout(() => {
-					modalRegistrati.style.display = "none";
-					textReg.textContent = '';
-					textReg.style.color = 'red';
-				}, 3000);
 			}
 		} else {
 			e.preventDefault();

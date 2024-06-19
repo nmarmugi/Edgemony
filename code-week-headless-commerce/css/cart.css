@@ -1,6 +1,7 @@
 .container-cart {
 	padding-top: 80px;
 	width: 100%;
+	min-height: 100vh;
 	background-color: white;
 	flex-direction: column;
 	align-items: center;
@@ -14,8 +15,9 @@
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	gap: 20px;
 	padding: 30px;
-	min-height: 100vh;
+	min-height: 50vh;
 }
 
 .card-cart {
@@ -51,6 +53,57 @@
 
 .card-button-cart:hover {
 	background-color: red;
+	color: white;
+	border: none;
+}
+
+.total-price {
+	max-width: 1440px;
+	width: 100%;
+	background-color: white;
+	padding: 30px;
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+
+.total {
+	color: var(--deep-blue);
+}
+
+.total-price p {
+	font-weight: bolder;
+}
+
+.total-price button {
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid var(--black);
+	cursor: pointer;
+	font-size: 17px;
+	transition: all 0.35s ease;
+}
+
+.total-price button:hover {
+	background-color: green;
+	color: white;
+	border: none;
+}
+
+.buttonPay {
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid var(--black);
+	cursor: pointer;
+	transition: all 0.35s ease;
+}
+
+.buttonPay:hover {
+	background-color: green;
 	color: white;
 	border: none;
 }

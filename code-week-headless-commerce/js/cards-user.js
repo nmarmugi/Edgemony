@@ -73,6 +73,14 @@ export function createCardForCart(product) {
 		const numberCartDropdown = document.querySelector('.dropdown-menu .number');
 		numberCartNavbar.textContent = Number(numberCartNavbar.textContent) - 1;
 		numberCartDropdown.textContent = Number(numberCartDropdown.textContent) - 1;
+		const totalPrice = document.querySelector('.total');
+		let priceCard = e.target.parentNode.querySelector('.card-price-cart').textContent.replace(/[^\d.]/g, '');
+        let priceWithVAT = Number(priceCard) * 1.22;
+
+        let currentTotal = totalPrice.textContent.replace(/[^\d.]/g, '');
+        let newTotal = Number(currentTotal) - priceWithVAT;
+
+        totalPrice.textContent = newTotal.toFixed(2) + ' euro';
 		if (numberCartDropdown.textContent === '0' && numberCartNavbar.textContent === '0') {
 			numberCartDropdown.style.display = 'none';
 			numberCartNavbar.style.display = 'none';
