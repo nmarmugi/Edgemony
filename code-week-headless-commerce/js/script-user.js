@@ -192,3 +192,38 @@ updateFromLocalStorage('nameAdmin', '.nameAdmin');
 updateFromLocalStorage('where', '.where');
 updateFromLocalStorage('PIVA', '.PIVA');
 updateFromLocalStorage('CF', '.CF');
+
+const backToShops = document.querySelectorAll('.backTo');
+backToShops.forEach(button => {
+	button.addEventListener('click', () => {
+		const containerCart = document.querySelector('.container-cart');
+		containerCart.style.display = 'none';
+		const containerSectionCard = document.querySelector('.container');
+		containerSectionCard.style.display = 'flex';
+		const removeShops = document.querySelector('.container-shops');
+		removeShops.style.display = 'flex';
+		containerCards.style.display = 'none';
+		displayProducts(resData);
+		inputFilter.value = '';
+		const buttonCart = document.querySelectorAll('.button-cart');
+			buttonCart.forEach(button => {
+				button.addEventListener('click', async (e) => {
+				console.log('cioa')
+				numberCartNavbar.textContent = Number(numberCartNavbar.textContent) + 1;
+				numberCartDropdown.textContent = Number(numberCartDropdown.textContent) + 1;
+				numberCartDropdown.style.display = 'inline-block';
+				numberCartNavbar.style.display = 'inline-block';
+				let priceCard = e.target.parentNode.querySelector('.card-price').textContent.replace(/[^\d.]/g, '');
+				let priceWithVAT = Number(priceCard) * 1.22;
+	
+				let currentTotal = totalPrice.textContent.replace(/[^\d.]/g, '');
+				let newTotal = Number(currentTotal) + priceWithVAT;
+				totalPrice.textContent = newTotal.toFixed(2) + ' euro';
+				let idCard = e.target.parentNode.querySelector('.card-id').textContent;
+				let cardToCart = await GET(idCard);
+				cart.push(cardToCart);
+				displayProductsCart(cart);
+			})
+		})
+	})
+})

@@ -6,12 +6,27 @@
 	display: flex;
 	height: 50px;
 	z-index: 10;
+	height: 70px;
 }
 
 .container-logo-hamburger {
 	width: 70%;
 	display: flex;
 	align-items: center;
+}
+
+.container-logo-hamburger button {
+	background-color: transparent;
+	border: none;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.container-navbar .backTo {
+	background-color: transparent;
+	border: none;
+	margin-left: 20px;
+	cursor: pointer;
 }
 
 .logo-hamburger {
