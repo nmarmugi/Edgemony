@@ -4,6 +4,7 @@ import { HOME } from "./home.js";
 HOME();	//RICHIAMO HOME DA HOME.JS
 MODAL(); //RICHIAMO MODAL DA COMPONENTS.JSz
 
+// FUNZIONI PER LA TRADUZIONE DELLA HOMEPAGE
 function loadLanguage(language) {
 	fetch(`./translations_${language}.json`).then(response => {
 		return response.json();
@@ -42,3 +43,4 @@ en.forEach(button => {
 		loadLanguage('en');
 	})
 })
+// FUNZIONI PER LA TRADUZIONE DELLA HOMEPAGE

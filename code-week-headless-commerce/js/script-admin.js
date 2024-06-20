@@ -14,6 +14,7 @@ let end_point = 'products';
 let resData = await FETCH(BASE_URL, end_point); //RICHIAMO FETCH DA CARDS-ADMIN.JS
 displayProducts(resData); //RICHIAMO DISPLAYPRODUCTS DA CARDS-ADMIN.JS
 
+// FUNZIONE DI FILTRAGGIO IN INPUT
 inputFilter.addEventListener('input', (event) => {
 	const inputValue = event.target.value.toLowerCase();
 	filterProducts(inputValue);
@@ -30,7 +31,9 @@ function filterProducts(title) {
 		containerCardsEl.append(cardEl);
 	});
 }
+// FUNZIONE DI FILTRAGGIO IN INPUT
 
+// BOTTONE PRODOTTI
 btnProducts.forEach(button => {
 	button.addEventListener('click', async () => {
 		const containerCart = document.querySelector('.container-custom');
@@ -43,6 +46,7 @@ btnProducts.forEach(button => {
 		inputFilter.value = '';
 	})
 })
+// BOTTONE PRODOTTI
 
 const btnCustom = document.querySelectorAll('.personalizza');
 btnCustom.forEach(button => {
@@ -51,6 +55,8 @@ btnCustom.forEach(button => {
 	})
 })
 
+
+// FUNZIONI USANDO LOCALSTORAGE PER PASSARE INFO DI STYLE DA UN HTML ALL'ALTRO
 function searchColorBackground() {
 	const savedColor = localStorage.getItem('backgroundColor');
 	if (savedColor) {
@@ -190,3 +196,4 @@ saveAndUpdate('.sendNameAdmin', 'nameAdmin', '.nameAdmin', 'nameAdmin');
 saveAndUpdate('.sendWhere', 'where', '.where', 'where');
 saveAndUpdate('.sendPIVA', 'PIVA', '.PIVA', 'PIVA');
 saveAndUpdate('.sendCF', 'CF', '.CF', 'CF');
+// FUNZIONI USANDO LOCALSTORAGE PER PASSARE INFO DI STYLE DA UN HTML ALL'ALTRO

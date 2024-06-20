@@ -1,3 +1,5 @@
+//FUNZIONI PER LA CREAZIONE DELLE CARDS DALL'API E PER IL DISPLAY USER
+
 export async function FETCH(BASE_URL, end_point) {
 	const response = await fetch(`${BASE_URL}${end_point}`);
 	const data = await response.json();
@@ -14,6 +16,7 @@ export function displayProducts(products) {
 	});
 }
 
+//FUNZIONI PER LA CREAZIONE DEL CART E PER IL DISPLAY
 export function displayProductsCart(products) {
 	const containerCardsCartEl = document.querySelector('.cart');
 	containerCardsCartEl.innerHTML = '';
@@ -91,6 +94,7 @@ export function createCardForCart(product) {
 	cardEl.append(imgCardEl, titleCardEl, priceCardEl, idCardEl, btnCart);
 	return cardEl;
 }
+//FUNZIONI PER LA CREAZIONE DEL CART E PER IL DISPLAY
 
 export function createCard(product) {
 	const cardEl = document.createElement('div');

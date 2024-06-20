@@ -1,3 +1,4 @@
+// FUNZIONI PER LA CREAZIONE DELLE CARD DEGLI SHOPS REGISTRATI NEL LOCALSTORAGE
 export const createShops = function() {
 	for(let i = 0; i < localStorage.length; i++) {
 		let key = localStorage.key(i);
@@ -29,3 +30,4 @@ export const createShops = function() {
 		}
 	}
 }
+// FUNZIONI PER LA CREAZIONE DELLE CARD DEGLI SHOPS REGISTRATI NEL LOCALSTORAGE

@@ -30,6 +30,7 @@ let end_point = 'products';
 let resData = await FETCH(BASE_URL, end_point); //RICHIAMO FETCH DA CARDS-ADMIN.JS
 displayProducts(resData); //RICHIAMO DISPLAYPRODUCTS DA CARDS-ADMIN.JS
 
+//GESTIONE DEL CARRELLO
 const numberCartDropdown = document.querySelector('.dropdown-menu .number');
 numberCartDropdown.style.display = 'none';
 
@@ -51,7 +52,9 @@ cartDropdown.addEventListener('click', () => {
 	const containerCart = document.querySelector('.container-cart');
 	containerCart.style.display = 'flex';
 })
+//GESTIONE DEL CARRELLO
 
+// FILTRAGGIO DEI PRODOTTI
 inputFilter.addEventListener('input', (event) => {
 	const inputValue = event.target.value.toLowerCase();
 	filterProducts(inputValue);
@@ -88,7 +91,9 @@ function filterProducts(title) {
 		containerCardsEl.append(cardEl);
 	})
 }
+// FILTRAGGIO DEI PRODOTTI
 
+// BOTTONE PRODOTTI
 btnProducts.forEach(button => {
 	button.addEventListener('click', async () => {
 		const containerCart = document.querySelector('.container-cart');
@@ -119,7 +124,9 @@ btnProducts.forEach(button => {
 	})
 	})
 })
+// BOTTONE PRODOTTI
 
+// PREZZO CARRELLO
 const totalPrice = document.querySelector('.total');
 const buttonCart = document.querySelectorAll('.button-cart');
 buttonCart.forEach(button => {
@@ -140,7 +147,9 @@ buttonCart.forEach(button => {
 		displayProductsCart(cart);
 	})
 })
+// PREZZO CARRELLO
 
+// FUNZIONI PER PESCARE INFORMAZIONI DI STILE DAL LOCALSTORAGE
 function searchColorBackground() {
 	const savedColor = localStorage.getItem('backgroundColor');
 	if (savedColor) {
@@ -192,7 +201,9 @@ updateFromLocalStorage('nameAdmin', '.nameAdmin');
 updateFromLocalStorage('where', '.where');
 updateFromLocalStorage('PIVA', '.PIVA');
 updateFromLocalStorage('CF', '.CF');
+// FUNZIONI PER PESCARE INFORMAZIONI DI STILE DAL LOCALSTORAGE
 
+// BOTTONE PER TORNARE AI NEGOZI LETTI NEL LOCALSTORAGE REGISTRATI CON VARI RESET
 const backToShops = document.querySelectorAll('.backTo');
 backToShops.forEach(button => {
 	button.addEventListener('click', () => {
@@ -227,3 +238,4 @@ backToShops.forEach(button => {
 		})
 	})
 })
+// BOTTONE PER TORNARE AI NEGOZI LETTI NEL LOCALSTORAGE REGISTRATI CON VARI RESET

@@ -1,3 +1,5 @@
+//FUNZIONI PER LA CREAZIONE DELLE CARDS DALL'API E PER IL DISPLAY ADMIN
+
 export async function FETCH(BASE_URL, end_point) {
 	const response = await fetch(`${BASE_URL}${end_point}`);
 	const data = await response.json();
