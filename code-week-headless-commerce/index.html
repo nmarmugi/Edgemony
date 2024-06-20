@@ -15,6 +15,10 @@
 	<!--NAVBAR-->
 	<section class="container-hamburger-menu">
 		<header class="container-logo-hamburger">
+			<div id="language-switcher_hamburger">
+				<button title="Traduci in italiano" class="btn-italian"><img src="./img/italy.png" alt="Icona bandiera italiana" width="20"></button>
+				<button title="Traduci in inglese" class="btn-english"><img src="./img/united-kingdom.png" alt="Icona bandiera inglese" width="20"></button>
+			</div>
 			<h1 class="logo-hamburger">Headless Commerce</h1>
 		</header>
 		<nav class="container-menu">
@@ -27,17 +31,21 @@
 				<div class="container-close">
 					<span class="close-menu">&times;</span>
 				</div>
-				<button class="option-hamburger registrati" title="Registrati"><img src="./img/edit_3917361.png" alt="Icona registrati" width="10"> Registrati</button>
-				<button class="option-hamburger login" title="Login"><img src="./img/picpeople-filled_9291728.png" alt="Icona login" width="10"> Login</button>
-				<button class="option-hamburger remove" title="Rimuovi account"><img src="./img/trash_3917176.png" alt="Icona rimuovi account" width="10"> Rimuovi account</button>
+				<button id="registrati_hamburger" class="option-hamburger registrati" title="Registrati"><img src="./img/edit_3917361.png" alt="Icona registrati" width="10"> Registrati</button>
+				<button id="login_hamburger" class="option-hamburger login" title="Login"><img src="./img/picpeople-filled_9291728.png" alt="Icona login" width="10"> Login</button>
+				<button id="remove_hamburger" class="option-hamburger remove" title="Rimuovi account"><img src="./img/trash_3917176.png" alt="Icona rimuovi account" width="10"> Rimuovi account</button>
 			</div>
 		</nav>
 	</section>
 	<nav class="container-navbar">
+		<div id="language-switcher_navbar">
+			<button title="Traduci in italiano" class="btn-italian"><img src="./img/italy.png" alt="Icona bandiera italiana" width="25"></button>
+			<button title="Traduci in inglese" class="btn-english"><img src="./img/united-kingdom.png" alt="Icona bandiera inglese" width="25"></button>
+		</div>
 		<h1 class="logo-navbar">Headless Commerce</h1>
-		<button class="option-navbar registrati" title="Registrati"><img src="./img/edit_3917361.png" alt="Icona registrati" width="25"> Registrati</button>
-		<button class="option-navbar login" title="Login"><img src="./img/picpeople-filled_9291728.png" alt="Icona login" width="25"> Login</button>
-		<button class="option-navbar remove" title="Rimuovi account"><img src="./img/trash_3917176.png" alt="Icona rimuovi account" width="25"> Rimuovi account</button>
+		<button id="registrati_navbar" class="option-navbar registrati" title="Registrati"><img src="./img/edit_3917361.png" alt="Icona registrati" width="25"> Registrati</button>
+		<button id="login_navbar" class="option-navbar login" title="Login"><img src="./img/picpeople-filled_9291728.png" alt="Icona login" width="25"> Login</button>
+		<button id="remove_navbar" class="option-navbar remove" title="Rimuovi account"><img src="./img/trash_3917176.png" alt="Icona rimuovi account" width="25"> Rimuovi account</button>
 	</nav>
 	<!--/NAVBAR-->
 	<!--HERO-->
@@ -46,7 +54,7 @@
 			<img class="img-hero" src="./img/first-img.jpg" alt="Immagine background" width="300">
 		</div>
 		<section class="header header1 active">
-			<h2>CHI SIAMO?</h2>
+			<h2 id="chi_siamo">CHI SIAMO?</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 				Nemo, eum voluptatum consectetur asperiores officia iusto optio
@@ -54,16 +62,16 @@
 			</p>
 		</section>
 		<section class="header header2">
-			<h2>REGISTRATI</h2>
+			<h2 id="registrati_h2">REGISTRATI</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 				Nemo, eum voluptatum consectetur asperiores officia iusto optio
 				expedita vitae accusantium iste.
 			</p>
-			<button class="registrati" title="Registrati">Registrati</button>
+			<button id="registrati_button" class="registrati" title="Registrati">Registrati</button>
 		</section>
 		<section class="header header3">
-			<h2>EFFETTUA IL LOGIN</h2>
+			<h2 id="effettua_login_h2">EFFETTUA IL LOGIN</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 				Nemo, eum voluptatum consectetur asperiores officia iusto optio
@@ -79,18 +87,18 @@
 			<div class="container-modal-close">
 				<span class="close">&times;</span>
 			</div>
-			<h2>Registrati</h2>
+			<h2 id="modal_registrati_h2">Registrati</h2>
 			<form class="registra">
-				<input name="username" class="usernameReg" type="text" placeholder="Username ('/' non consentito)">
+				<input id="username_placeholder_registrati" name="username" class="usernameReg" type="text" placeholder="Username ('/' non consentito)">
 				<input name="password" class="passwordReg" type="password" placeholder="Password">
-				<input name="confirmPassword" class="passwordRegConfirm" type="password" placeholder="Conferma password">
+				<input id="confirm_password_placeholder_registrati" name="confirmPassword" class="passwordRegConfirm" type="password" placeholder="Conferma password">
 				<p class="textReg"></p>
 				<select name="role" id="role">
-					<option value="">Seleziona il ruolo...</option>
+					<option id="role_select_registrati" value="">Seleziona il ruolo...</option>
 					<option value="admin">ADMIN</option>
 					<option value="user">USER</option>
 				</select>
-				<button class="buttonReg" type="submit">INVIA</button>
+				<button id="button_invia" class="buttonReg" type="submit">INVIA</button>
 			</form>
 		</div>
 	</section>
@@ -103,15 +111,15 @@
 			</div>
 			<h2>Login</h2>
 			<form class="registra">
-				<input name="username" class="usernameLogin" type="text" placeholder="Username ('/' non consentito)">
+				<input id="username_placeholder_login" name="username" class="usernameLogin" type="text" placeholder="Username ('/' non consentito)">
 				<input name="password" class="passwordLogin" type="password" placeholder="Password">
 				<p class="textLogin"></p>
 				<select name="role" id="role-login">
-					<option value="">Seleziona il ruolo...</option>
+					<option id="role_select_login" value="">Seleziona il ruolo...</option>
 					<option value="admin">ADMIN</option>
 					<option value="user">USER</option>
 				</select>
-				<a class="buttonLogin" href="#">ACCEDI</a>
+				<a id="button_accedi" class="buttonLogin" href="#">ACCEDI</a>
 			</form>
 		</div>
 	</section>
@@ -122,13 +130,13 @@
 			<div class="container-modal-close">
 				<span class="close close-remove">&times;</span>
 			</div>
-			<h2>Rimuovi account</h2>
+			<h2 id="modal_rimuovi_h2">Rimuovi account</h2>
 			<form class="registra">
-				<input name="username" class="usernameRemove" type="text" placeholder="Username ('/' non consentito)">
+				<input id="username_placeholder_remove" name="username" class="usernameRemove" type="text" placeholder="Username ('/' non consentito)">
 				<input name="password" class="passwordRemove" type="password" placeholder="Password">
-				<input name="confirmPassword" class="passwordRemoveConfirm" type="password" placeholder="Conferma password">
+				<input id="confirm_password_placeholder_remove" name="confirmPassword" class="passwordRemoveConfirm" type="password" placeholder="Conferma password">
 				<p class="textRemove"></p>
-				<button class="buttonRemove" type="submit">ELIMINA</button>
+				<button id="button_elimina" class="buttonRemove" type="submit">ELIMINA</button>
 			</form>
 		</div>
 	</section>
