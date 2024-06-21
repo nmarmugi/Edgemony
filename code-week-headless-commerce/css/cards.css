@@ -34,6 +34,7 @@
 	border-radius: 20px;
 	color: var(--deep-blue);
 	outline: none;
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .container-filter input:focus {
@@ -72,11 +73,13 @@
 	padding: 20px;
 	min-height: 400px;
 	max-height: 400px;
-	transition: transform 0.35s ease;
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.1);
+	transition: all 0.35s ease;
 }
 
 .card:hover {
 	transform: scale(1.05);
+	box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover .card-title, .card:hover .card-price, .card:hover .card-img {

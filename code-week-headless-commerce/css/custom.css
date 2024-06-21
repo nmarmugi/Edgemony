@@ -32,14 +32,16 @@
 	font-size: 20px;
 	font-weight: bold;
 	cursor: pointer;
-	transition: all 0.35s ease;
 	color: var(--deep-blue);
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.1);
+	transition: all 0.35s ease;
 }
 
 .openClose:hover {
 	background-color: var(--deep-blue);
 	color: white;
 	border: none;
+	box-shadow: none;
 }
 
 .clickHere {
@@ -76,6 +78,7 @@
 
 .datesCustom {
 	display: flex;
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .backgroundColorCustom label,
