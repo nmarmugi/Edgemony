@@ -44,6 +44,12 @@ btnProducts.forEach(button => {
 		await FETCH(BASE_URL, end_point);
 		displayProducts(resData);
 		inputFilter.value = '';
+		const containerCustomFirst = document.querySelector('.backgroundColorCustom');
+		const containerCustomSecond = document.querySelector('.secondBackgroundColorCustom');
+		const containerCustomThird = document.querySelector('.logoCustom');
+		containerCustomFirst.style.display = 'none';
+		containerCustomSecond.style.display = 'none';
+		containerCustomThird.style.display = 'none';
 	})
 })
 // BOTTONE PRODOTTI

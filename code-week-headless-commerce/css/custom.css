@@ -21,153 +21,124 @@
 	min-height: 100vh;
 }
 
-.content-custom button {
-	transition: color 0.35s ease;
-	cursor: pointer;
-	background-color: transparent;
+.openClose {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: white;
 	border: none;
-	font-size: 25px;
-	font-weight: bolder;
-}
-
-.container-custom button:hover {
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.35s ease;
 	color: var(--deep-blue);
 }
 
-.backgroundColorCustom {
-	display: none;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
-
-.backgroundColorCustom label {
-	font-size: 20px;
-}
-
-.backgroundColorCustom input {
-	width: 50px;
-	height: 50px;
-	border: none;
-	background-color: white;
-	padding: 5px;
-}
-
-.backgroundColorCustom button {
-	background-color: white;
-	border: 1px solid var(--black);
-	padding: 8px;
-	border-radius: 10px;
-	transition: all 0.35s ease;
-	cursor: pointer;
-}
-
-.backgroundColorCustom button:hover {
+.openClose:hover {
 	background-color: var(--deep-blue);
 	color: white;
 	border: none;
 }
 
-.logoCustom {
+.clickHere {
+	color: var(--black);
+}
+
+.openClose:hover .clickHere {
 	display: none;
+}
+
+.arrow {
+	display: inline-block;
+	transform: rotate(90deg);
+	color: var(--black);
+	transition: all 0.35s ease;
+}
+
+.openClose:hover .arrow {
+	transform: rotate(90deg) translateX(30px);
+	color: var(--black);
+}
+
+.backgroundColorCustom,
+.secondBackgroundColorCustom,
+.logoCustom,
+.datesCustom {
+    display: none;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
-}
-
-.logoCustom label {
-	font-size: 20px;
-}
-
-#colorLogo {
-	width: 50px;
-	height: 50px;
-	border: none;
 	background-color: white;
-	padding: 5px;
-}
-
-.logoCustom input {
-	width: 250px;
-	border: none;
-	background-color: white;
-	padding: 10px;
+	padding: 15px;
 	border-radius: 10px;
-}
-
-.logoCustom button {
-	background-color: white;
-	border: 1px solid var(--black);
-	padding: 8px;
-	border-radius: 10px;
-	transition: all 0.35s ease;
-	cursor: pointer;
-}
-
-.logoCustom button:hover {
-	background-color: var(--deep-blue);
-	color: white;
-	border: none;
-}
-
-.secondBackgroundColorCustom {
-	display: none;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
-
-.secondBackgroundColorCustom label {
-	font-size: 20px;
-}
-
-.secondBackgroundColorCustom input {
-	width: 50px;
-	height: 50px;
-	border: none;
-	background-color: white;
-	padding: 5px;
-}
-
-.secondBackgroundColorCustom button {
-	background-color: white;
-	border: 1px solid var(--black);
-	padding: 8px;
-	border-radius: 10px;
-	transition: all 0.35s ease;
-	cursor: pointer;
-}
-
-.secondBackgroundColorCustom button:hover {
-	background-color: var(--deep-blue);
-	color: white;
-	border: none;
 }
 
 .datesCustom {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
 }
 
-.datesCustom input {
-	padding: 5px;
+.backgroundColorCustom label,
+.secondBackgroundColorCustom label,
+.logoCustom label,
+.datesCustom label {
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: var(--black);
+	margin-top: 20px;
+}
+
+.backgroundColorCustom input[type="color"],
+.secondBackgroundColorCustom input[type="color"],
+.logoCustom input[type="color"] {
+	width: 100%;
+	height: 50px;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.logoCustom input[type="text"],
+.datesCustom input[type="text"] {
+	width: 100%;
+	padding: 12px;
 	border-radius: 10px;
+	transition: border 0.3s ease;
+	margin: 15px 0;
 }
 
+.backgroundColorCustom button,
+.secondBackgroundColorCustom button,
+.logoCustom button,
 .datesCustom button {
-	border: 1px solid var(--black);
 	background-color: white;
-	font-size: 15px;
+	border: 1px solid var(--black);
 	padding: 10px;
+	width: 100%;
 	border-radius: 10px;
+	cursor: pointer;
 	transition: all 0.35s ease;
 }
 
+.backgroundColorCustom button:hover,
+.secondBackgroundColorCustom button:hover,
+.logoCustom button:hover,
 .datesCustom button:hover {
-	border: none;
 	background-color: var(--deep-blue);
 	color: white;
+	border: none;
+}
+
+.backgroundColorCustom p,
+.secondBackgroundColorCustom p {
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #666666;
+}
+
+.datesCustom h2 {
+	margin-bottom: 20px;
+	color: var(--deep-blue);
 }
 /* CREAZIONE CSS AREA PERSONALIZZAZIONE */
