@@ -43,17 +43,28 @@ aside {
 
 footer {
 	padding-top: 30px;
+	padding-bottom: 30px;
 	display: flex;
 }
 
-.logoFooter {
+.footer-logo {
 	width: 10%;
 }
 
-.menu {
+.main-menu {
 	list-style: none;
 }
 
-.item {
+.menu {
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+
+.subMenu {
 	list-style: none;
+	font-weight: normal;
+}
+
+.subMenu a {
+	color: black;
 }
