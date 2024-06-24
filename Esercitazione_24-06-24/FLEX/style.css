@@ -1,0 +1,42 @@
+* {
+	box-sizing:border-box;
+}
+
+.app {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.app > * {
+	width:100%;
+	padding:1rem;
+}
+
+.header {background:#f97171}
+.main {background:#fff}
+.left {background:#f5d55f}
+.right {background:#c5ed77}
+.footer {background:#72c2f1}
+
+@media (min-width:768px) {
+	.left,
+	.right {
+		width:50%;
+	}
+}
+
+@media (min-width:1024px) {
+	.header {
+		order:-2;
+	}
+	.left {
+		order:-1; 
+	}
+	.main {
+		width:50%;
+	}
+	.left,
+	.right {
+		width:25%;
+	}
+}
