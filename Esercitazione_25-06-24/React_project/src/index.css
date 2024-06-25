@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	background-color: red;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+}
+
+section {
+	display: flex;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 90%;
+	padding-right: 30px;
+	background-color: aqua;
+	padding-top: 30px;
+}
+
+.card .title, .card .aboutTitle {
+	margin-bottom: 20px;
+	max-width: 200px;
+}
+
+aside {
+	width: 10%;
+	background-color: yellow;
+	padding-top: 30px;
+}
+
+footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: flex;
+}
+
+.footer-logo {
+	width: 10%;
+}
+
+.main-menu {
+	list-style: none;
+}
+
+.menu {
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+
+.subMenu {
+	list-style: none;
+	font-weight: normal;
+}
+
+.subMenu a {
+	color: black;
+}
