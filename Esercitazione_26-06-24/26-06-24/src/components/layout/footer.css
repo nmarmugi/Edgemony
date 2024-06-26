@@ -1,0 +1,37 @@
+footer {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-menu {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.subMenu {
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+.subMenu a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.subMenu a:hover {
+    text-decoration: underline;
+    color: #000;
+}
