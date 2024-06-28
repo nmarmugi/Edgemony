@@ -1,0 +1,17 @@
+.container-cards {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1404px;
+	padding: 80px 20px;
+	gap: 35px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	width: 100%;
+	max-width: 1404px;
+	background-color: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	padding-top: 20px;
+}
