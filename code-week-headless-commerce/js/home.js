@@ -18,7 +18,7 @@ btnHamburgerClose.addEventListener('click', () => {
 //IMG HERO
 const imgScroll = document.querySelector('.img-hero');
 
-const imgArray = ['.././img/first-img.jpg', '.././img/second-img.jpg', '.././img/third-img.jpg'];
+const imgArray = ['./img/first-img.jpg', './img/second-img.jpg', './img/third-img.jpg'];
 const textArray = [document.querySelector('.header1'),
 					document.querySelector('.header2'),
 					document.querySelector('.header3')]
