@@ -12,4 +12,5 @@ function Main({posts}) {
 	)
 }
 
+
 export default Main
