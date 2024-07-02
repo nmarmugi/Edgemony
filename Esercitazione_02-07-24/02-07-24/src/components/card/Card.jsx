@@ -35,3 +35,39 @@ function Card({ posts }) {
 
 export default Card;
 
+// CON USE STATE
+// import styles from './card.module.css';
+// import posts from './../../assets/data/data.json'
+// import { useState } from'react';
+
+// function Card() {
+
+//     function getRandomIndex() {
+//         let randomNumber = Math.floor(Math.random() * posts.length);
+//         return randomNumber
+//     }
+    
+//     const [advice, setAdvice] = useState(posts[getRandomIndex()]);
+    
+// 	function getRandomAdvice() {
+//         let randomIndex = getRandomIndex();
+//         if (advice !== posts[randomIndex]) {
+//             setAdvice(posts[randomIndex]);
+//         } else {
+//             getRandomAdvice();
+//         }
+// 	}
+
+//     return (
+//         <div className={styles.card}>
+//             <h1>ADVICE #{advice.id}</h1>
+//             <p>"{advice.advice}"</p>
+//             <img src="./img/pattern-divider-desktop.svg" alt="Immagine divisoria" />
+//             <button onClick={getRandomAdvice}>
+//                 <img src="./img/icon-dice.svg" alt="Immagine bottone" />
+//             </button>
+//         </div>
+//     )
+// }
+
+// export default Card;
