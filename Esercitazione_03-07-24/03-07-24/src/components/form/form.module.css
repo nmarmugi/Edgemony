@@ -1,0 +1,126 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 25px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 12px;
+	width: 450px;
+}
+
+.nameAndSurname {
+	display: flex;
+	gap: 10px;
+}
+
+.name,
+.surname,
+.email,
+.containerRadioButtons,
+.message {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.name, .surname {
+	width: 50%;
+}
+
+.labelName,
+.labelSurname,
+.labelEmail,
+.labelRadio,
+.labelFirstRadio,
+.labelSecondRadio,
+.labelMessage,
+.checkbox label {
+	font-size: 14px;
+	color: rgb(146, 146, 146);
+}
+
+.inputName, .inputSurname, .inputEmail {
+	height: 30px;
+	border-color: rgb(146, 146, 146);
+	border-radius: 7px;
+	padding: 5px;
+}
+
+.radioButtons {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+}
+
+.firstRadio, .secondRadio {
+	display: flex;
+	gap: 5px;
+	border: 2px solid rgb(146, 146, 146);
+	padding: 5px;
+	width: 50%;
+	border-radius: 6px;
+}
+
+.textarea {
+	resize: none;
+	height: 100px;
+	border-radius: 7px;
+	border: 2px solid rgb(146, 146, 146);
+	padding: 5px;
+}
+
+.checkbox {
+	display: flex;
+	gap: 10px;
+}
+
+.checkbox input[type=checkbox], input[type=radio] {
+	cursor: pointer;
+}
+
+.formButton {
+	background-color: #3F7E6A;
+	border: none;
+	color: white;
+	padding: 10px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.span {
+	color: #3F7E6A;
+	font-weight: bolder;
+}
+
+.result {
+	height: 552px;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 450px;
+	overflow-wrap: break-word;
+	overflow-y: scroll;
+	background-color: white;
+	padding: 20px;
+	border-radius: 14px;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #e1e1e1;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #3F7E6A;
+	border-radius: 10px;
+	border: 3px solid #e1e1e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #356b5a;
+	cursor: pointer;
+}
