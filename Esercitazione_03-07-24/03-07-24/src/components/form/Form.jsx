@@ -1,5 +1,6 @@
 import styles from './form.module.css'
 import { useState } from 'react';
+import Input from '../input/Input';
 
 function Form() {
 
@@ -30,20 +31,10 @@ function Form() {
 		<form className={styles.form}>
 			<h1>Contact Us</h1>
 			<div className={styles.nameAndSurname}>
-				<div className={styles.name}>
-					<label htmlFor='firstName' className={styles.labelName}>First Name <span className={styles.span}>*</span></label>
-					<input id='firstName' onChange={(e) => handleChange(e)} className={styles.inputName} name='firstName' type="text" />
-				</div>
-
-				<div className={styles.surname}>
-					<label htmlFor='lastName' className={styles.labelSurname}>Last Name <span className={styles.span}>*</span></label>
-					<input id='lastName' onChange={(e) => handleChange(e)} className={styles.inputSurname} name='lastName' type="text" />
-				</div>
+				<Input containerClass={styles.name} labelClass={styles.labelName} htmlFor={'firstName'} spanClass={styles.span} idInput={'firstName'} name={'firstName'} onChange={(e) => handleChange(e)} type={'text'} inputClass={styles.inputName}>{'First Name'}</Input>
+				<Input containerClass={styles.surname} labelClass={styles.labelSurname} htmlFor={'lastName'} spanClass={styles.span} idInput={'lastName'} name={'lastName'} onChange={(e) => handleChange(e)} type={'text'} inputClass={styles.inputSurname}>{'Last Name'}</Input>
 			</div>
-			<div className={styles.email}>
-				<label htmlFor='email' className={styles.labelEmail}>Email Address <span className={styles.span}>*</span></label>
-				<input id='email' onChange={(e) => handleChange(e)} className={styles.inputEmail} name='email' type="email" />
-			</div>
+			<Input containerClass={styles.email} labelClass={styles.labelEmail} htmlFor={'email'} spanClass={styles.span} idInput={'email'} name={'email'} onChange={(e) => handleChange(e)} type={'email'} inputClass={styles.inputEmail}>{'Email Address'}</Input>
 			<div className={styles.containerRadioButtons}>
 				<label className={styles.labelRadio}>Query Type <span className={styles.span}>*</span></label>
 				<div className={styles.radioButtons}>
