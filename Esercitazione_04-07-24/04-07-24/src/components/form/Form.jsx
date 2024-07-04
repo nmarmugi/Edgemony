@@ -10,6 +10,8 @@ function Form() {
 	const displayPrev = useRef(null);
 	const firstResult = useRef(null);
 	const secondResult = useRef(null);
+	const checkOne = useRef(null);
+	const checkTwo = useRef(null);
 
 	const [inputValue, setInputValue] = useState({
 		amount: '',
@@ -43,6 +45,8 @@ function Form() {
         inputRefAmount.current.value = '';
 		inputRefRate.current.value = '';
 		inputRefTerm.current.value = '';
+		checkOne.current.checked = false;
+		checkTwo.current.checked = false;
 		displayPrev.current.style.display = 'flex';
 		displayResult.current.style.display = 'none';
 	}
@@ -80,11 +84,11 @@ function Form() {
 				<div className={styles.containerType}>
 					<label className={styles.labelType}>Mortgage Type</label>
 					<div className={styles.containerRepayment}>
-						<input className={styles.inputRepayment} type="radio" name='option' onChange={handleChange} id='repayment' value='yes' />
+						<input ref={checkOne} className={styles.inputRepayment} type="radio" name='option' onChange={handleChange} id='repayment' value='yes' />
 						<label className={styles.labelRepayment} htmlFor="repayment">Repayment</label>
 					</div>
 					<div className={styles.containerInterest}>
-						<input className={styles.inputInterest} type="radio" name='option' onChange={handleChange} id='interest' value='no' />
+						<input ref={checkTwo} className={styles.inputInterest} type="radio" name='option' onChange={handleChange} id='interest' value='no' />
 						<label className={styles.labelInterest} htmlFor="interest">Interest Only</label>
 					</div>
 				</div>
