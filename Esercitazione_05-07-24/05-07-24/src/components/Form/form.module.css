@@ -1,0 +1,164 @@
+.containerForm {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+}
+
+.firstContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.titleForm {
+    font-size: 15px;
+    color: #9aa1af;
+    letter-spacing: 0.2em;
+}
+
+.containerRate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    font-size: 45px;
+    color: #2E2C49;
+}
+
+.spanPrice {
+    color: #9aa1af;
+}
+
+.inputRange {
+    -webkit-appearance: none;
+    background-color: #ECF1FB;
+    height: 8px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.inputRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #77E5C6;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.inputRange::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 10px 10px #77e5c63b;
+    transform: scale(1.3);
+}
+
+.secondContent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	gap: 10px;
+    margin-bottom: 50px;
+}
+
+.labelSwitch, .labelYearly {
+    color: #9aa1af;
+    font-size: 14px;
+}
+
+.containerSwitch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D1D7F1;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.containerSwitch .switch:checked + .slider {
+    background-color: #77E5C6;
+}
+
+.containerSwitch .switch:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.spanDiscount {
+    font-size: 10px;
+    color: rgb(180, 117, 0);
+    background-color: #FCEEEB;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.thirdContent {
+    border-top: 1px solid #e3e6eb;
+    padding: 40px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    color: #9aa1af;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.listItem img {
+    width: 10px;
+    margin-right: 10px;
+}
+
+.submitButton {
+    border: none;
+    padding: 15px 0px;
+    width: 180px;
+    border-radius: 20px;
+    background-color: #273456;
+    color: #b3bddf;
+    font-weight: bold;
+    word-spacing: 0.1em;
+    cursor: pointer;
+}
