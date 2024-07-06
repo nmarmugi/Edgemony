@@ -1,0 +1,72 @@
+.container {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px 10px 80px 10px;
+}
+
+.firstContainer {
+	display: flex;
+	border-bottom: 1px solid #F0F0F0;
+	gap: 20px;
+	position: relative;
+	padding-right: 80px;
+	padding-bottom: 20px;
+}
+
+.containerDate {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.labelDate {
+	font-size: 8px;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	color: #9c9c9c;
+}
+
+.inputDate {
+	width: 60px;
+	height: 25px;
+	border: 1px solid #F0F0F0;;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+
+button {
+	border: none;
+	position: absolute;
+	right: 0;
+	bottom: -25px;
+	padding: 10px;
+	border-radius: 50%;
+	background-color: #C2DEF1;
+	cursor: pointer;
+}
+
+button img {
+	width: 30px;
+	transition: transform 0.35s ease;
+}
+
+button:hover img {
+	transform: translateY(5px);
+}
+
+.results {
+	padding-top: 20px;
+}
+
+.result {
+	font-size: 50px;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+.spanResult {
+	font-size: 55px;
+	font-weight: bolder;
+	font-style: italic;
+	color: #C2DEF1;
+}
