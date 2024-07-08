@@ -1,0 +1,98 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(27, 27, 27);
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 100px 0px black;
+	width: 380px;
+	height: 260px;
+}
+
+.inputText {
+	width: 300px;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	height: 40px;
+	border-radius: 6px;
+}
+
+.buttonAdd {
+	height: 40px;
+	border-radius: 6px;
+	width: 300px;
+	border: none;
+	font-weight: bolder;
+	cursor: pointer;
+	transition: all 0.35s ease;
+}
+
+.buttonAdd:hover {
+	background-color: greenyellow;
+	color: white;
+	width: 280px;
+	height: 30px;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-height: 300px;
+	overflow-y: auto;
+	padding: 0px 20px 20px;
+}
+
+ul::-webkit-scrollbar {
+	width: 12px;
+}
+
+ul::-webkit-scrollbar-track {
+	background: #444; 
+	border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+	background-color: #888; 
+	border-radius: 10px;
+	border: 2px solid #444;
+	cursor: pointer;
+}
+
+.imgSmile {
+    display: block;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.imgSmileTwo {
+    width: 60px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.inputText:focus ~ .imgSmile {
+    display: none;
+}
+
+.inputText:focus ~ .imgSmileTwo {
+    display: block;
+}
+
+.puntina {
+	width: 30px;
+	margin-right: 10px;
+	filter: drop-shadow(5px -5px rgba(0, 0, 0, 0.3));
+}
+
+.puntina:hover {
+	animation: tremolo 0.5s infinite;
+	transform-origin: bottom center;
+}
+
+@keyframes tremolo {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
