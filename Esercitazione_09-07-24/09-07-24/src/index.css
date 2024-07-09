@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  gap: 50px;
+  background-color: rgb(37, 37, 37);
+  padding: 50px;
+}

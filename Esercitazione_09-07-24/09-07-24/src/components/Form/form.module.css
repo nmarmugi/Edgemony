@@ -1,0 +1,126 @@
+.containerCatalog {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.containerCatalog::-webkit-scrollbar {
+    width: 12px;
+}
+
+.containerCatalog::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.containerCatalog::-webkit-scrollbar-thumb {
+    background: #0156B3;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+.containerCatalog::-webkit-scrollbar-thumb:hover {
+    background: #003d80;
+}
+
+.containerCatalog::-webkit-scrollbar-button {
+    display: none;
+}
+
+.form {
+	width: 300px;
+	min-width: 300px;
+	background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+	height: 310px;
+}
+
+::placeholder {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+.containerText {
+    margin-bottom: 16px;
+	position: relative;
+}
+
+.containerTextarea {
+    margin-bottom: 16px;
+	position: relative;
+}
+
+.containerFilter {
+    margin-top: 20px;
+	position: relative;
+}
+
+.labelText,
+.labelTextarea,
+.labelFilter {
+    position: absolute;
+	top: -8px;
+	left: 10px;
+	background-color: white;
+	font-weight: bolder;
+	color: rgb(80, 80, 80);
+    letter-spacing: 0.1em;
+}
+
+.inputText {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    height: 40px;
+}
+
+.inputTextarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 100px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.inputFilter {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    height: 40px;
+}
+
+.inputText:focus,
+.inputTextarea:focus,
+.inputFilter:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button[type='submit'] {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+    background-color: #0056b3;
+}
