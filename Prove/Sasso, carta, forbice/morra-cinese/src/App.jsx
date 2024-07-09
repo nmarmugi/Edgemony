@@ -88,6 +88,7 @@ function App() {
     <div className='containerButtons'>
       {buttons.map(button => (<Button key={button.id} buttonID={button.id} onClick={handleClick}><img src={button.img} alt="Immagine" /></Button>))}
     </div>
+    {result !== '' ? <div className='container'></div> : console.log('GIOCA')}
     <div className='containerScore'>
       <h1 className='score'>SCORE: <span>{count}</span></h1>
       <h2 className='result'>{result}</h2>
