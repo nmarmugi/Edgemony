@@ -1,0 +1,23 @@
+.containerFilter {
+	position: relative;
+}
+
+.inputLabel {
+	position: absolute;
+	top: -8px;
+	left: 35px;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+}
+
+.input {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	transition: border-color 0.3s ease;
+}
+
+.input::placeholder {
+	color: #aaa;
+}

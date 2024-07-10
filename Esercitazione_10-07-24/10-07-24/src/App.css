@@ -1,0 +1,64 @@
+form {
+	position: relative;
+    margin-bottom: 20px;
+    width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	transition: box-shadow 1s ease;
+}
+
+form:hover {
+	animation: tremolo 0.5s forwards;
+	transform-origin: bottom center;
+}
+
+@keyframes tremolo {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+.containerImgPokeball {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.containerImgPokeball img {
+    object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.containerCards {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.containerImgPokeballFixed {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+.containerImgPokeballFixed img {
+	width: 60px;
+	animation: rotateInfinite 1s linear infinite;
+}
+
+@keyframes rotateInfinite {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
