@@ -34,6 +34,7 @@ const products = [
 ]
 
 function App() {
+  const [cart, setCart] = useState(0)
   const [imgs, setImgs] = useState(products[0])// X LAYOUT IMGS
   const [count, setCount] = useState(0);// X LAYOUT PAYMENT
   // LAYOUT PAYMENT
@@ -60,12 +61,24 @@ function App() {
     setImgs(iFind)
   }
   // LAYOUT IMGS
+  // LAYOUT NAVBAR
+  function handleClickCart() {
+    if (cart != 0) {
+      const add = cart + count;
+      setCart(add);
+      setCount(0)
+      return;
+    }
+    setCart(count)
+    setCount(0)
+  }
+  // LAYOUT NAVBAR
 
   return (
     <>
     <div className={styles.mainContainer}>
       <div className={styles.page}>
-        <LayoutNavbar />
+        <LayoutNavbar cartValue={cart == 0 ? '' : cart} />
         <LayoutImgs>
           <MainImg mainImgUrl={imgs.mainImg} />
           <div className={styles.gallery}>
@@ -75,7 +88,7 @@ function App() {
         <LayoutPayment>
           <Product costDiscount={calculateDiscount(price, discount)} discount={discount} originalPrice={price}>
             <Counter count={count} onClick={handleCount} />
-            <Button>
+            <Button onClick={handleClickCart}>
               <IconCart fill={'#181818'} />
               {'Add to cart'}
             </Button>

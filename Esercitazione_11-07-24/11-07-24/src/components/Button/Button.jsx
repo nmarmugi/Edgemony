@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 import styles from './button.module.css'
 
-function Button({children, textButton}) {
+function Button({children, textButton, onClick}) {
 	return (
-		<button className={classNames(styles.button)}>
+		<button onClick={onClick} className={classNames(styles.button)}>
 			{children}
 			{textButton}
 		</button>

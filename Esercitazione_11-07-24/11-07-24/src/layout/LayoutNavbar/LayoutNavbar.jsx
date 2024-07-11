@@ -1,7 +1,7 @@
 import IconCart from '../../components/Icons/IconCart'
 import styles from './layoutNavbar.module.css'
 
-function LayoutNavbar() {
+function LayoutNavbar({cartValue}) {
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.containerLinks}>
@@ -17,6 +17,7 @@ function LayoutNavbar() {
 			</div>
 			<div className={styles.containerAvatarCart}>
 				<IconCart fill={'#7C8084'} />
+				<span className={styles.spanCart}>{cartValue}</span>
 				<img src="./images/image-avatar.png" alt="Avatar immagine" />
 			</div>
 		</div>
