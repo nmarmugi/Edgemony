@@ -1,0 +1,46 @@
+h2 {
+	font-size: 16px;
+	letter-spacing: 0.1em;
+}
+
+h1 {
+	font-size: 35px;
+	margin-bottom: 50px;
+}
+
+p {
+	color: #8f8f8f;
+	margin-bottom: 20px;
+}
+
+.containerDiscount {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.spanDiscount {
+	font-size: 20px;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+}
+
+.spanDiscountTwo {
+	background-color: black;
+	padding: 5px;
+	color: white;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.originalPrice {
+	text-decoration: line-through;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.containerComponents {
+	display: flex;
+}

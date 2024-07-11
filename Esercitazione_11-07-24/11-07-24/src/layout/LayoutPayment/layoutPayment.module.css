@@ -1,0 +1,8 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	max-width: 350px;
+	justify-content: center;
+	align-items: flex-start;
+}

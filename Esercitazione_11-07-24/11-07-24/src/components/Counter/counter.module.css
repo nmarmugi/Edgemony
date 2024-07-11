@@ -1,0 +1,25 @@
+.counter {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.counter .buttonCount {
+	padding: 8px;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.counter div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	background-color: #EFEFEF;
+	min-width: 50px;
+}
