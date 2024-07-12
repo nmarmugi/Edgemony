@@ -1,10 +1,10 @@
-function Card({children}){
+function Card({onClick}){
 	return (
 		<div className="bg-[#09182B] rounded-3xl text-center px-8 pb-28 pt-8">
 			<div className="bg-[#14253F] w-80 pt-5 px-5 flex flex-col rounded-2xl items-start gap-4">
 				<div className="group relative cursor-pointer">
 					<img className="w-72 rounded-xl" src="./img/image-equilibrium.jpg" alt="Immagine card" />
-					<div className="bg-[#7bf9f993] rounded-xl hidden items-center justify-center absolute top-0 left-0 w-full h-full group-hover:flex">
+					<div onClick={onClick} className="bg-[#7bf9f993] rounded-xl hidden items-center justify-center absolute top-0 left-0 w-full h-full group-hover:flex">
 						<img src="./img/icon-view.svg" alt="Icon" />
 					</div>
 				</div>
