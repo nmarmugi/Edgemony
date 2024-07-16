@@ -1,0 +1,33 @@
+.mainContainer {
+	background-color: #9EDDFF;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 16px;
+	padding: 20px;
+	min-width: 600px;
+	min-height: 400px;
+}
+
+.containerPhrases {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border-radius: 16px;
+	min-width: 550px;
+	min-height: 350px;
+}
+
+.containerLetters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.opacity {
+	background-color: black;
+}
