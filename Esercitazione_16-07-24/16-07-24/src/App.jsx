@@ -3,13 +3,14 @@ import CountDown from "./components/CountDown/CountDown";
 import Button from "./components/Button/Button";
 
 const resetState = { days: 0, hours: 0, minutes: 0, seconds: 0 };
-const resetInput = { days: "", hours: "", minutes: "", seconds: "" };
+const resetInput = { days: "", hours: "", minutes: "", seconds: "", message: '' };
 
 function App() {
   const [countDown, setCountDown] = useState(resetState);
   const [inputValue, setInputValue] = useState(resetInput);
   const [isClick, setIsClick] = useState(false);
   const [modal, setModal] = useState(false);
+  const [celebrationMessage, setCelebrationMessage] = useState('');
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -20,9 +21,11 @@ function App() {
   function handleClick() {
     setInputValue(resetInput);
     setIsClick(true);
+    setCelebrationMessage(inputValue.message); // Aggiorna il messaggio di celebrazione
   }
 
   useEffect(() => {
+    console.log(countDown, inputValue);
     if (!isClick) return;
 
     const interval = setInterval(() => {
@@ -119,15 +122,22 @@ function App() {
             type="number"
           />
         </div>
+        <input
+          value={inputValue.message}
+          name="message"
+          onChange={handleChange}
+          placeholder="celebration message"
+          className="relative p-1 rounded placeholder:text-[#46393D] placeholder:text-center no-scrollbar focus:border-[#46393D] focus:outline-none focus:border-2"
+          type="text"
+        />
         <Button onClick={handleClick} isClicked={isClick} />
       </div>
       <div className={modal ? "absolute w-full min-h-screen bg-black bg-opacity-50 top-0 flex justify-center items-center" : 'hidden'}>
         <span onClick={handleCloseModal} className="text-8xl absolute top-7 right-7 mr-7 mt-7 text-[#46393D] hover:text-white transition-all duration-300 ease cursor-pointer">&times;</span>
-        <h2 className="bg-white text-7xl text-center p-12 rounded-3xl">🎉🎉🎉 good end countdown 🎉🎉🎉</h2>
+        <h2 className="bg-white text-7xl text-center p-12 rounded-3xl">{celebrationMessage ? `🎉🎉🎉 ${celebrationMessage} 🎉🎉🎉` : '🎉🎉🎉 happy end countdown 🎉🎉🎉'}</h2>
       </div>
     </>
   );
 }
 
 export default App;
-
