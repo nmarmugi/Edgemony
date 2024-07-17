@@ -4,6 +4,7 @@ import Card from "./components/Card/Card";
 function App() {
   const [products, setProducts] = useState([]);
   const [storage, setStorage] = useState([]);
+  const [prevStorage, setPrevStorage] = useState(null);
 
   async function fetchProducts() {
     const res = await fetch('https://api.escuelajs.co/api/v1/products');
@@ -13,6 +14,10 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
+    const getCartFromStorage = JSON.parse(localStorage.getItem('cart'));
+    if (getCartFromStorage) {
+      setStorage(getCartFromStorage);
+    }
   }, []);
 
   function handleClick(e) {
@@ -23,15 +28,21 @@ function App() {
   }
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(storage));
+    setPrevStorage(storage);
   }, [storage]);
+
+  useEffect(() => {
+    if (prevStorage !== null) {
+      localStorage.setItem('cart', JSON.stringify(prevStorage));
+    }
+  }, [prevStorage]);
 
   return (
     <>
       <div className="w-full flex flex-wrap gap-5 mt-16 justify-around">
         {products.map(product => (
           <Card
-            key={product.id}
+            key={self.crypto.randomUUID()}
             cardId={product.id}
             cardImg={product.images[0].replace(/[\[\]"]/g, '')}
             cardTitle={product.title}
