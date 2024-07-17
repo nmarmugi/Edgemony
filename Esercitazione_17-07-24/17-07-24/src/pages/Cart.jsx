@@ -3,10 +3,13 @@ import Card from "../components/Card/Card";
 
 function Cart() {
     const [cart, setCart] = useState([]);
+	const [prevCart, setPrevCart] = useState(null);
 
 	useEffect(() => {
 		const getCart = JSON.parse(localStorage.getItem('cart'))
-		setCart(getCart)
+		if (getCart) {
+			setCart(getCart)
+		}
 	}, [])
 
 	function handleDelete(id) {
@@ -21,9 +24,15 @@ function Cart() {
 		setCart(updatedCart)
 	}
 
-	// useEffect(() => {
-	// 	localStorage.setItem('cart', JSON.stringify(cart));
-	// }, [cart]);
+	useEffect(() => {
+		setPrevCart(cart);
+	}, [cart]);
+
+	useEffect(() => {
+		if (prevCart !== null) {
+			localStorage.setItem('cart', JSON.stringify(prevCart));
+		}
+	}, [prevCart]);
 
     return (
         <div className="w-full flex flex-wrap gap-5 mt-16 justify-around">
