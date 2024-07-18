@@ -58,18 +58,19 @@ function App() {
 
   return (
     <>
-      <div className={isOpenModal ? "w-full flex flex-wrap gap-5 mt-16 justify-around blur-sm" : "w-full flex flex-wrap gap-5 mt-16 justify-around"}>
+      <div className={isOpenModal ? "w-full flex flex-wrap gap-5 mt-16 justify-around blur-sm p-16" : "p-16 w-full flex flex-wrap gap-5 mt-16 justify-around"}>
         {products.map(product => (
           <Card
             key={self.crypto.randomUUID()}
             clickCard={handleClickCard}
             cardId={product.id}
+            descriptionCard={''}
             cardImg={product.images[0].replace(/[\[\]"]/g, '')}
             cardTitle={product.title}
             cardPrice={product.price}
             cardCategory={product.category.name}
             onClick={handleClick}
-            buttonMessage={'AGGIUNGI AL CARRELLO'}
+            buttonMessage={'ADD TO CART'}
           />
         ))}
         <Modal isOpen={isOpenModal} closeModal={() => setIsOpenModal(false)}>

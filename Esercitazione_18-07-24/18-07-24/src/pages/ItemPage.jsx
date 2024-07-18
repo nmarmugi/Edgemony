@@ -43,9 +43,10 @@ function ItemPage() {
             cardId={pageItem.id}
             cardImg={pageItem.images[0].replace(/[\[\]"]/g, '')}
             cardTitle={pageItem.title}
+			descriptionCard={pageItem.description}
             cardPrice={pageItem.price}
             cardCategory={pageItem.category.name}
-            buttonMessage={'AGGIUNGI AL CARRELLO'}
+            buttonMessage={'ADD TO CART'}
 			onClick={handleClick}
 			/>
 		)
