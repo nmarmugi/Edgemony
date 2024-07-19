@@ -1,0 +1,77 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "L'Ascesa dell'Intelligenza Artificiale: Come i Programmatori Stanno Sfruttando le Nuove Tecnologie",
+      "description": "L'intelligenza artificiale sta rivoluzionando il mondo della programmazione. Scopri come gli sviluppatori stanno integrando l'AI nelle applicazioni quotidiane e quali sono le competenze richieste per rimanere competitivi.",
+      "price": "0.28"
+    },
+    {
+      "id": "2",
+      "title": "Il Futuro del Lavoro: L'Impatto dell'Automazione e del Coding sulla Forza Lavoro",
+      "description": "L'automazione e la programmazione stanno trasformando radicalmente il mercato del lavoro. Esaminiamo quali settori sono più colpiti e quali nuove opportunità si stanno aprendo per i programmatori.",
+      "price": "0.32"
+    },
+    {
+      "id": "3",
+      "title": "Cybersecurity nel 2024: Sfide e Opportunità per gli Sviluppatori",
+      "description": "Con l'aumento delle minacce informatiche, la sicurezza del software è diventata una priorità assoluta. Scopri le ultime tendenze nella cybersecurity e come i programmatori possono proteggere le loro applicazioni.",
+      "price": "0.31"
+    },
+    {
+      "id": "4",
+      "title": "La Programmazione Quantistica: Una Nuova Frontiera per i Software Engineer",
+      "description": "La programmazione quantistica promette di rivoluzionare il calcolo come lo conosciamo. Esploriamo le basi di questa tecnologia emergente e le sue potenziali applicazioni nel mondo reale.",
+      "price": "0.29"
+    },
+    {
+      "id": "5",
+      "title": "Sostenibilità e Tech: Come il Coding può Contribuire a un Futuro più Verde",
+      "description": "La tecnologia può essere un potente alleato nella lotta contro il cambiamento climatico. Scopri come i programmatori stanno sviluppando soluzioni sostenibili per ridurre l'impatto ambientale.",
+      "price": "0.30"
+    },
+    {
+      "id": "6",
+      "title": "Machine Learning: Le Nuove Competenze Richieste per i Programmatori del Domani",
+      "description": "Il machine learning sta diventando una competenza essenziale per i programmatori. Analizziamo i concetti chiave e le migliori pratiche per integrare il machine learning nei tuoi progetti.",
+      "price": "0.33"
+    },
+    {
+      "id": "7",
+      "title": "Open Source: Il Movimento che Sta Rivoluzionando lo Sviluppo Software",
+      "description": "L'open source è diventato il cuore pulsante dell'innovazione tecnologica. Scopri come contribuire a progetti open source può migliorare le tue competenze e ampliare le tue opportunità di carriera.",
+      "price": "0.27"
+    },
+    {
+      "id": "8",
+      "title": "DevOps e Agile: La Trasformazione dei Processi di Sviluppo nelle Aziende",
+      "description": "DevOps e Agile stanno trasformando il modo in cui le aziende sviluppano software. Esploriamo i principi fondamentali e i vantaggi di queste metodologie per migliorare l'efficienza e la qualità del codice.",
+      "price": "0.34"
+    },
+    {
+      "id": "9",
+      "title": "Blockchain Beyond Crypto: Applicazioni Innovative della Tecnologia Blockchain",
+      "description": "La blockchain non è solo criptovalute. Scopri le applicazioni innovative di questa tecnologia in settori come la logistica, la sanità e la proprietà intellettuale.",
+      "price": "0.30"
+    },
+    {
+      "id": "10",
+      "title": "La Carenza di Programmatori: Strategie per Colmare il Divario di Competenze",
+      "description": "La domanda di programmatori supera l'offerta. Analizziamo le strategie per attrarre e formare nuovi talenti nel campo della programmazione.",
+      "price": "0.31"
+    },
+    {
+      "id": "11",
+      "title": "Codici Etici: Il Ruolo dei Programmatori nella Costruzione di Software Etico",
+      "description": "Con il potere di creare software che influenzano milioni di vite, i programmatori hanno la responsabilità di considerare le implicazioni etiche del loro lavoro. Esploriamo i principi etici che dovrebbero guidare lo sviluppo del software.",
+      "price": "0.29"
+    },
+    {
+      "id": "12",
+      "title": "La Programmazione nei Sistemi Embedded: Nuove Sfide e Opportunità",
+      "description": "I sistemi embedded sono ovunque, dai dispositivi medici alle auto intelligenti. Scopri le sfide uniche della programmazione embedded e le opportunità di innovazione in questo campo dinamico.",
+      "price": "0.28"
+    }
+  ],
+  "cart": []
+}
