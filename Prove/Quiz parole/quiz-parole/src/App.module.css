@@ -8,6 +8,7 @@
 	justify-content: center;
 	border-radius: 16px;
 	padding: 20px;
+	width: 600px;
 	min-width: 600px;
 	min-height: 400px;
 }
@@ -30,4 +31,21 @@
 
 .opacity {
 	background-color: black;
+}
+
+.noOpacity {
+	background-color: white;
+}
+
+.alphabeth {
+	display: flex;
+	gap: 5px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.vite {
+	position: absolute;
+	top: -50px;
+	right: 50px;
 }

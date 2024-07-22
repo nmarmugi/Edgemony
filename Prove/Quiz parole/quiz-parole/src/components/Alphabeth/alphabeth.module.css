@@ -1,0 +1,11 @@
+.alphabethLetter {
+	border: 2px solid;
+	padding: 4px;
+	font-size: 30px;
+	cursor: pointer;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+}
