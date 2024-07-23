@@ -8,4 +8,12 @@
 	align-items: center;
 	justify-content: center;
 	background-color: white;
+	transition: all 0.35s ease;
+}
+
+.alphabethLetter:hover {
+	transform: scale(1.1);
+	border: none;
+	background-color: black;
+	color: white;
 }

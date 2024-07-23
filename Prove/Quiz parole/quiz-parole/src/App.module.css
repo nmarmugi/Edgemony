@@ -8,8 +8,6 @@
 	justify-content: center;
 	border-radius: 16px;
 	padding: 20px;
-	width: 600px;
-	min-width: 600px;
 	min-height: 400px;
 }
 
@@ -19,7 +17,6 @@
 	align-items: center;
 	padding: 20px;
 	border-radius: 16px;
-	min-width: 550px;
 	min-height: 350px;
 }
 
@@ -47,5 +44,91 @@
 .vite {
 	position: absolute;
 	top: -50px;
+	right: 25px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+}
+
+.score {
+	position: absolute;
+	top: 1px;
 	right: 50px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	padding: 10px;
+	border: none;
+	background-color: #9EDDFF;
+	font-weight: bolder;
+	color: #04448B;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.35s ease;
+}
+
+.button:hover {
+	background-color: white;
+}
+
+.icon {
+	width: 25px;
+}
+
+.initial {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.initial h2 {
+	font-size: 30px;
+}
+
+.imgCategory {
+	width: 80px;
+}
+
+@media screen and (max-width: 767px) {
+
+	.vite {
+		right: 0;
+	}
+
+	.vite h2 {
+		font-size: 16px;
+	}
+
+	.icon {
+		width: 12px;
+	}
+
+	.score {
+		top: 5px;
+	}
+
+	.score img {
+		width: 20px;
+	}
+
+	.score h2 {
+		font-size: 18px;
+	}
+
+	.initial h2 {
+		font-size: 20px;
+	}
+
+	.imgCategory {
+		width: 50px;
+	}
 }
