@@ -118,6 +118,7 @@
 .messageMatch {
 	color: #072559;
 	letter-spacing: 0.1em;
+	font-size: 20px
 }
 
 .backHome {
@@ -131,16 +132,4 @@
 	padding: 4px;
 	border-radius: 6px;
 	cursor: pointer;
-}
-
-.contentModal div {
-	background-color: white;
-	padding: 5px;
-	text-align: center;
-	width: 300px;
-	max-width: 300px;
-	position: absolute;
-	height: 30px;
-	top: calc(50% - 15px);
-	left: 0;
 }

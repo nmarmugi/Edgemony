@@ -45,7 +45,7 @@
 }
 
 .containerInputText input {
-	width: 200px;
+	width: 214px;
 	height: 40px;
 	border: 2px solid #072559;
 	border-radius: 8px;
@@ -94,6 +94,10 @@
 }
 
 .rating {
+	border: 2px solid #072559;
+	border-radius: 12px;
+	width: 214px;
+	padding: 3px;
 	display: flex;
 	flex-direction: row-reverse;
 	gap: 0.3rem;
