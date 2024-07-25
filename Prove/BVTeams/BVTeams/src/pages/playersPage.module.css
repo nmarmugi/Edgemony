@@ -1,0 +1,45 @@
+.containerPlayers {
+	width: 100%;
+	min-height: 100dvh;
+	background-color: #CADDFD;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.backToHome {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-decoration: none;
+}
+
+.backToHome img {
+	width: 40px;
+}
+
+.backToHome span {
+	font-size: 14px;
+	color: #072559;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+}
+
+.titlePlayers {
+	margin-top: 100px;
+	margin-bottom: 30px;
+	letter-spacing: 0.1em;
+}
+
+.containerCards {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+}

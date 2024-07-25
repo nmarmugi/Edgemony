@@ -1,0 +1,38 @@
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.imgCard {
+	width: 40px;
+	border: 2px solid #072559;
+	border-radius: 50%;
+}
+
+.nameCard {
+	font-weight: bolder;
+	color: #072559;
+	letter-spacing: 0.1em;
+}
+
+.rateCard {
+	font-weight: bolder;
+	color: #072559;
+	letter-spacing: 0.1em;
+}
+
+.buttonCard {
+	border: none;
+	background-color: red;
+	padding: 3px;
+	border-radius: 4px;
+	color: white;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	cursor: pointer;
+}
