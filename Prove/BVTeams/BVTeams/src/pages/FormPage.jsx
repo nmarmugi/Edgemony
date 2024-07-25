@@ -10,6 +10,8 @@ function FormPage() {
     return savedPlayers ? JSON.parse(savedPlayers) : [];
   });
 
+  const [isClick, setIsClick] = useState(false)
+
   function handleChange(e) {
     const { id, value, type } = e.target;
 
@@ -23,7 +25,11 @@ function FormPage() {
   function handleClick() {
     if (inputValue.player && inputValue.rate) {
       setStorage(prevState => [...prevState, inputValue]);
-      setInputValue({ id: crypto.randomUUID(), player: '', rate: '' }); // Clear the input fields
+      setInputValue({ id: crypto.randomUUID(), player: '', rate: '' });
+      setIsClick(true)
+      setTimeout(() => {
+        setIsClick(false)
+      }, 1500)
     }
   }
 
@@ -117,6 +123,7 @@ function FormPage() {
             </svg>
           </label>
         </div>
+        <div className={isClick ? styles.messageAdd : styles.displayNONEADD}><div>i</div>Added player!</div>
         <button 
           onClick={handleClick} 
           className={styles.buttonSend} 

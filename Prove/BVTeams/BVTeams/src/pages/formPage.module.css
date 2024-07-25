@@ -190,3 +190,43 @@
 	width: 200px;
 	cursor: pointer;
 }
+
+.messageAdd {
+	background-color: yellowgreen;
+	color: white;
+	padding: 20px;
+	position: relative;
+	border-radius: 8px;
+	animation: opacityAdd 0.35s linear forwards;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+}
+
+.displayNONEADD {
+	background-color: white;
+	color: white;
+}
+
+@keyframes opacityAdd {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.messageAdd div {
+	border: 1px solid white;
+	font-weight: bolder;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 10px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
