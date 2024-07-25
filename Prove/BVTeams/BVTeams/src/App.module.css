@@ -66,3 +66,79 @@
   letter-spacing: 0.1em;
   border-radius: 6px;
 }
+
+.match {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: opacity 0.35s linear forwards;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.containerSquad {
+  display: flex;
+  gap: 50px;
+}
+
+.squad {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.squadImg {
+  width: 20px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.listItem span {
+  color: #092557;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+}
+
+.logoTeam {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.totalRate {
+  font-weight: bolder;
+  color: #092557;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  margin: 0 auto;
+  background-color: #FAC732;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.buttonMatch {
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  padding: 5px;
+  background-color: #FAC732;
+  color: #092557;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+}
