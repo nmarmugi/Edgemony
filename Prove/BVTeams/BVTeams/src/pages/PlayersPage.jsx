@@ -36,6 +36,10 @@ function PlayersPage() {
 		localStorage.setItem('players', JSON.stringify(storage))
 	}, [storage])
 
+	useEffect(() => {
+		localStorage.setItem('playersTargeted', JSON.stringify(storageTwo))
+	}, [storageTwo])
+
 	function handleDeleteAll() {
 		setStorage([])
 		localStorage.clear()

@@ -257,6 +257,9 @@
 .radioContainer {
 	display: flex;
 	gap: 50px;
+	background-color: #ffc73a;
+	padding: 5px;
+	border-radius: 6px;
 }
 
 .radio {

@@ -135,7 +135,7 @@ function App() {
         </div>
       </div>
       <button onClick={handleGenerateSquads} className={styles.mainPageButton}>GENERETE TEAM</button>
-      {firstSquad.length > 0 && secondSquad.length > 0 && radio === 'random' && isClick &&
+      {firstSquad.length > 0 && secondSquad.length > 0 && radio === 'random' && isClick && storage.length > 0 &&
       <div className={styles.match}>
         <div className={styles.containerSquad}>
         <div className={styles.squad}>
@@ -162,7 +162,7 @@ function App() {
         <NavLink to='match' className={styles.buttonMatch}>🏐 MATCH 🏐</NavLink>
       </div>
       }
-      {firstSquad.length > 0 && secondSquad.length > 0 && radio === 'targeted' && isClick &&
+      {firstSquad.length > 0 && secondSquad.length > 0 && radio === 'targeted' && isClick && storageTwo.length > 0 &&
       <div className={styles.match}>
         <div className={styles.containerSquad}>
         <div className={styles.squad}>
