@@ -133,3 +133,41 @@
 	border-radius: 6px;
 	cursor: pointer;
 }
+
+.squad {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.squadImg {
+	width: 20px;
+}
+
+.listItem {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.listItem span {
+	color: #092557;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+}
+
+.logoTeam {
+	width: 100px;
+	margin: 0 auto;
+}
+
+.spanWin {
+	text-align: center;
+	font-weight: bolder;
+	color: #072559;
+	letter-spacing: 0.1em;
+}

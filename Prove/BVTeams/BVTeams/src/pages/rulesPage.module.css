@@ -1,0 +1,67 @@
+.containerRules {
+	width: 100%;
+	min-height: 100dvh;
+	background-color: #CADDFD;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.backToHome {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-decoration: none;
+}
+
+.backToHome img {
+	width: 40px;
+}
+
+.backToHome span {
+	font-size: 14px;
+	color: #072559;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+}
+
+.containerPage {
+	width: 270px;
+	height: 420px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.containerPage img {
+	width: 100%;
+	height: 100%;
+}
+
+.containerPage button {
+	font-size: 20px;
+	padding: 0px 5px;
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid #072559;
+	background-color: #ffc73a;
+	color: #072559;
+	font-weight: bolder;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.minus {
+	left: -15px;
+}
+
+.plus {
+	right: -15px;
+}

@@ -59,3 +59,30 @@
 	letter-spacing: 0.1em;
 	cursor: pointer;
 }
+
+.radioContainer {
+	display: flex;
+	gap: 50px;
+}
+
+.radio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.radio label {
+	font-size: 12px;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	color: #092557;
+}
+
+.rateCard {
+	font-weight: bolder;
+	color: #072559;
+	letter-spacing: 0.1em;
+	font-size: 12px;
+}

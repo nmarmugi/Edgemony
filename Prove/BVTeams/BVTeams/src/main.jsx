@@ -4,6 +4,7 @@ import App from './App.jsx'
 import FormPage from './pages/FormPage.jsx'
 import PlayersPage from './pages/PlayersPage.jsx'
 import MatchPage from './pages/MatchPage.jsx'
+import RulesPage from './pages/RulesPage.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: 'match',
     element: <MatchPage />
+  },
+  {
+    path: 'rules',
+    element: <RulesPage />
   }
 ])
 

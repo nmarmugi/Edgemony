@@ -9,14 +9,28 @@ function MatchPage() {
 		return savedPlayers ? JSON.parse(savedPlayers) : {firstSquad: 0, secondSquad: 0};
 	})
 
+	const [firstSquad] = useState(() => {
+		const savedPlayers = localStorage.getItem('firstSquad');
+		return savedPlayers ? JSON.parse(savedPlayers) : [];
+	})
+
+	const [secondSquad] = useState(() => {
+		const savedPlayers = localStorage.getItem('secondSquad');
+		return savedPlayers ? JSON.parse(savedPlayers) : [];
+	})
+
 	const [openModal, setOpenModal] = useState(false)
+
+	const [winner, setWinner] = useState(false)
 
 	function handleAddPoint(e) {
 		const teamId = e.target.id;
 		setScore(prevState => {
 			if (teamId === 'firstTeam') {
+				setWinner(false)
 				return { ...prevState, firstSquad: prevState.firstSquad + 1 };
 			} else {
+				setWinner(true)
 				return { ...prevState, secondSquad: prevState.secondSquad + 1 };
 			}
 		});
@@ -66,7 +80,18 @@ function MatchPage() {
 				<div className={styles.modal}>
 					<div className={styles.contentModal}>
 						<h2 className={styles.messageMatch}>MATCH ENDED</h2>
-						<div>🏐🎉🏐🎉🏐</div>
+						<div className={styles.squad}>
+							<span className={styles.spanWin}>WIN</span>
+							<img className={styles.logoTeam} src={winner ? '/img/SECOND_TEAM-removebg-preview.png' : '/img/FIRST_TEAM-removebg-preview.png'} alt="Logo" />
+							{winner ? secondSquad.map((element => <div className={styles.listItem} key={element.id}>
+									<img className={styles.squadImg} src="/img/volleyball.png" alt="" />
+									<span>{element.player}</span>
+								</div>)) :
+								firstSquad.map((element => <div className={styles.listItem} key={element.id}>
+									<img className={styles.squadImg} src="/img/volleyball.png" alt="" />
+									<span>{element.player}</span>
+								</div>))
+							}</div>
 						<NavLink onClick={handleRestStorage} className={styles.backHome} to='/'>BACK TO HOME</NavLink>
 					</div>
 				</div>

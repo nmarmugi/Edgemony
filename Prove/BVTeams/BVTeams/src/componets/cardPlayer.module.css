@@ -9,7 +9,7 @@
 }
 
 .imgCard {
-	width: 40px;
+	width: 30px;
 	border: 2px solid #072559;
 	border-radius: 50%;
 }
@@ -18,12 +18,7 @@
 	font-weight: bolder;
 	color: #072559;
 	letter-spacing: 0.1em;
-}
-
-.rateCard {
-	font-weight: bolder;
-	color: #072559;
-	letter-spacing: 0.1em;
+	font-size: 12px;
 }
 
 .buttonCard {
@@ -35,4 +30,5 @@
 	font-weight: bolder;
 	letter-spacing: 0.1em;
 	cursor: pointer;
+	font-size: 12px;
 }

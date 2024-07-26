@@ -3,14 +3,29 @@ import styles from './formPage.module.css';
 import { NavLink } from 'react-router-dom';
 
 function FormPage() {
-
   const [inputValue, setInputValue] = useState({ id: crypto.randomUUID(), player: '', rate: '' });
   const [storage, setStorage] = useState(() => {
     const savedPlayers = localStorage.getItem('players');
     return savedPlayers ? JSON.parse(savedPlayers) : [];
   });
 
-  const [isClick, setIsClick] = useState(false)
+  const [inputValueTwo, setInputValueTwo] = useState({ id: crypto.randomUUID(), player: '', team: '' });
+  const [storageTwo, setStorageTwo] = useState(() => {
+    const savedPlayers = localStorage.getItem('playersTargeted');
+    return savedPlayers ? JSON.parse(savedPlayers) : [];
+  });
+
+  const [buttonValue, setButtonValue] = useState(true);
+  const [isClick, setIsClick] = useState(false);
+
+  function handleSection(e) {
+    if (e.target.textContent === 'RANDOM PLAYERS') {
+      setButtonValue(true);
+    }
+    if (e.target.textContent === 'TARGETED PLAYERS') {
+      setButtonValue(false);
+    }
+  }
 
   function handleChange(e) {
     const { id, value, type } = e.target;
@@ -22,14 +37,35 @@ function FormPage() {
     }
   }
 
+  function handleChangeTwo(e) {
+    const { id, value, type } = e.target;
+
+    if (type === 'text') {
+      setInputValueTwo(prevState => ({ ...prevState, player: value }));
+    } else if (type === 'radio') {
+      setInputValueTwo(prevState => ({ ...prevState, team: value }));
+    }
+  }
+
   function handleClick() {
     if (inputValue.player && inputValue.rate) {
       setStorage(prevState => [...prevState, inputValue]);
       setInputValue({ id: crypto.randomUUID(), player: '', rate: '' });
-      setIsClick(true)
+      setIsClick(true);
       setTimeout(() => {
-        setIsClick(false)
-      }, 1500)
+        setIsClick(false);
+      }, 1500);
+    }
+  }
+
+  function handleClickTwo() {
+    if (inputValueTwo.player && inputValueTwo.team) {
+      setStorageTwo(prevState => [...prevState, inputValueTwo]);
+      setInputValueTwo({ id: crypto.randomUUID(), player: '', team: '' });
+      setIsClick(true);
+      setTimeout(() => {
+        setIsClick(false);
+      }, 1500);
     }
   }
 
@@ -37,7 +73,12 @@ function FormPage() {
     localStorage.setItem('players', JSON.stringify(storage));
   }, [storage]);
 
+  useEffect(() => {
+    localStorage.setItem('playersTargeted', JSON.stringify(storageTwo));
+  }, [storageTwo]);
+
   const isDisabled = inputValue.player === '' || inputValue.rate === '';
+  const isDisabledTwo = inputValueTwo.player === '' || inputValueTwo.team === '';
 
   return (
     <div className={styles.containerForm}>
@@ -46,6 +87,45 @@ function FormPage() {
         <span>BACK TO HOME</span>
       </NavLink>
       <div className={styles.containerInput}>
+        <div className={styles.containerButton}>
+          <button onClick={handleSection}>RANDOM PLAYERS</button>
+          <button onClick={handleSection}>TARGETED PLAYERS</button>
+        </div>
+        {!buttonValue && 
+        <>
+        <div className={styles.section}>TARGETED PLAYER</div>
+        <div className={styles.containerInputText}>
+          <input 
+            onChange={handleChangeTwo} 
+            id='name' 
+            type="text" 
+            value={inputValueTwo.player}
+          />
+          <label className={inputValueTwo.player ? styles.positionLabel : styles.label} htmlFor="name">Player's Name</label>
+        </div>
+        <div className={styles.radioContainer}>
+        <div className={styles.radio}>
+          <label htmlFor="firstTeam">FIRST TEAM</label>
+          <input onChange={handleChangeTwo} name='team' id='firstTeam' type="radio" value='firstTeam' checked={inputValueTwo.team === 'firstTeam'} />
+        </div>
+        <div className={styles.radio}>
+          <label htmlFor="secondTeam">SECOND TEAM</label>
+          <input onChange={handleChangeTwo} name='team' id='secondTeam' type="radio" value='secondTeam' checked={inputValueTwo.team === 'secondTeam'} />
+        </div>
+        </div>
+        <div className={isClick ? styles.messageAdd : styles.displayNONEADD}><div>i</div>Added player!</div>
+        <button 
+          onClick={handleClickTwo} 
+          className={styles.buttonSend} 
+          disabled={isDisabledTwo}
+        >
+          SEND
+        </button>
+        </>
+        }
+        {buttonValue && 
+        <>
+        <div className={styles.section}>RANDOM PLAYER</div>
         <div className={styles.containerInputText}>
           <input 
             onChange={handleChange} 
@@ -131,6 +211,8 @@ function FormPage() {
         >
           SEND
         </button>
+        </>
+        }
       </div>
     </div>
   );
