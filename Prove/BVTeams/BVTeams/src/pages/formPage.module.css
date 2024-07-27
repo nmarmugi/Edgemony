@@ -259,6 +259,7 @@
 }
 
 .section {
+	font-size: 14px;
 	font-weight: bolder;
 	color: #072559;
 	letter-spacing: 0.1em;

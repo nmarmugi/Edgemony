@@ -82,14 +82,27 @@ function App() {
 
       // Function to balance the teams
       const balanceTeams = () => {
-        while (Math.abs(totalFirstSquad - totalSecondSquad) > 2) {
+        let attempts = 0;
+        let bestDifference = Math.abs(totalFirstSquad - totalSecondSquad);
+        let bestFirstSquad = [...firstSquad];
+        let bestSecondSquad = [...secondSquad];
+        let maxAttempts = 100; // Numero massimo di tentativi di bilanciamento
+
+        while (attempts < maxAttempts) {
+          attempts++;
+          let balanced = false;
+
           for (let i = 0; i < firstSquad.length; i++) {
             for (let j = 0; j < secondSquad.length; j++) {
               const newTotalFirstSquad = totalFirstSquad - Number(firstSquad[i].rate) + Number(secondSquad[j].rate);
               const newTotalSecondSquad = totalSecondSquad - Number(secondSquad[j].rate) + Number(firstSquad[i].rate);
               const newDifference = Math.abs(newTotalFirstSquad - newTotalSecondSquad);
 
-              if (newDifference <= 2) {
+              if (newDifference < bestDifference) {
+                bestDifference = newDifference;
+                bestFirstSquad = [...firstSquad];
+                bestSecondSquad = [...secondSquad];
+
                 const temp = firstSquad[i];
                 firstSquad[i] = secondSquad[j];
                 secondSquad[j] = temp;
@@ -97,11 +110,28 @@ function App() {
                 totalFirstSquad = newTotalFirstSquad;
                 totalSecondSquad = newTotalSecondSquad;
 
-                return; // Le squadre sono ora bilanciate
+                balanced = true;
+              }
+
+              if (bestDifference <= 2) {
+                setFirstSquad(bestFirstSquad);
+                setSecondSquad(bestSecondSquad);
+                setFirstSquadRate(totalFirstSquad);
+                setSecondSquadRate(totalSecondSquad);
+                return;
               }
             }
           }
+
+          if (!balanced) {
+            break;
+          }
         }
+
+        setFirstSquad(bestFirstSquad);
+        setSecondSquad(bestSecondSquad);
+        setFirstSquadRate(totalFirstSquad);
+        setSecondSquadRate(totalSecondSquad);
       };
 
       balanceTeams();
@@ -142,7 +172,8 @@ function App() {
       setFirstSquad(firstSquad);
       setSecondSquad(secondSquad);
     }
-  }
+}
+
 
   useEffect(() => {
     if (radio === 'random') {

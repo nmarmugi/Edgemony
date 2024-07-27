@@ -93,7 +93,7 @@ function FormPage() {
         </div>
         {!buttonValue && 
         <>
-        <div className={styles.section}>TARGETED PLAYER</div>
+        <div className={styles.section}>TOTAL TARGETED PLAYERS {storageTwo.length > 0 && storageTwo.length}</div>
         <div className={styles.containerInputText}>
           <input 
             onChange={handleChangeTwo} 
@@ -125,7 +125,7 @@ function FormPage() {
         }
         {buttonValue && 
         <>
-        <div className={styles.section}>RANDOM PLAYER</div>
+        <div className={styles.section}>TOTAL RANDOM PLAYER {storage.length > 0 && storage.length}</div>
         <div className={styles.containerInputText}>
           <input 
             onChange={handleChange} 
