@@ -236,13 +236,23 @@
 	gap: 30px;
 }
 
-.containerButton button {
+.noActive {
 	border: none;
 	padding: 3px;
 	font-size: 10px;
+	color: #072559;
+	cursor: pointer;
+	letter-spacing: 0.1em;
+	background-color: white;
+}
+
+.active {
+	background-color: #ffc73a;
+	border: none;
+	padding: 3px;
+	font-size: 13px;
 	font-weight: bolder;
 	color: #072559;
-	background-color: #ffc73a;
 	border-radius: 4px;
 	cursor: pointer;
 	letter-spacing: 0.1em;

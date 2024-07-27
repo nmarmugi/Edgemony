@@ -88,8 +88,8 @@ function FormPage() {
       </NavLink>
       <div className={styles.containerInput}>
         <div className={styles.containerButton}>
-          <button onClick={handleSection}>RANDOM PLAYERS</button>
-          <button onClick={handleSection}>TARGETED PLAYERS</button>
+          <button className={buttonValue ? styles.active : styles.noActive} onClick={handleSection}>RANDOM PLAYERS</button>
+          <button className={!buttonValue ? styles.active : styles.noActive} onClick={handleSection}>TARGETED PLAYERS</button>
         </div>
         {!buttonValue && 
         <>

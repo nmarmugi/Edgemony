@@ -42,6 +42,7 @@ function PlayersPage() {
 
 	function handleDeleteAll() {
 		setStorage([])
+		setStorageTwo([])
 		localStorage.clear()
 	}
 
