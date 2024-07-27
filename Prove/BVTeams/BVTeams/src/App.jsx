@@ -51,11 +51,17 @@ function App() {
   }, [])
 
   function handleGenerateSquads() {
+
     let firstSquad = [];
     let secondSquad = [];
     setIsClick(true)
 
     if (radio === 'random') {
+
+      if (storage.length <= 1) {
+        setIsClick(false);
+        return;
+      }
       const players = [...storage];
 
       // Sort players by rate in descending order
