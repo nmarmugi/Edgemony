@@ -125,7 +125,7 @@ function FormPage() {
         }
         {buttonValue && 
         <>
-        <div className={styles.section}>TOTAL RANDOM PLAYER {storage.length > 0 && storage.length}</div>
+        <div className={styles.section}>TOTAL RANDOM PLAYERS {storage.length > 0 && storage.length}</div>
         <div className={styles.containerInputText}>
           <input 
             onChange={handleChange} 
