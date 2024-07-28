@@ -1,6 +1,7 @@
 import styles from './matchPage.module.css'
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import classNames from 'classnames'
 
 function MatchPage() {
 
@@ -106,12 +107,12 @@ function MatchPage() {
 				<div className={styles.score}>
 					<div className={styles.containerPlusMinus}>
 						<button onClick={handleAddPoint} id='firstTeam' className={styles.button}>+</button>
-						<button onClick={handleMinusPoint} id='firstTeamMinus' className={styles.button}>-</button>
+						<button onClick={handleMinusPoint} id='firstTeamMinus' className={classNames(styles.button, styles.buttonMinus)}>-</button>
 					</div>
 					<span>{displayScore.firstSquad} - {displayScore.secondSquad}</span>
 					<div className={styles.containerPlusMinus}>
 						<button onClick={handleAddPoint} id='secondTeam' className={styles.button}>+</button>
-						<button onClick={handleMinusPoint} id='secondTeamMinus' className={styles.button}>-</button>
+						<button onClick={handleMinusPoint} id='secondTeamMinus' className={classNames(styles.button, styles.buttonMinus)}>-</button>
 					</div>
 				</div>
 			{openModal &&
