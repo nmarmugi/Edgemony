@@ -7,6 +7,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 50px;
 }
 
 .backToHome {
@@ -37,7 +38,7 @@
 	gap: 10px;
 	padding: 10px;
 	border-radius: 6px;
-	border: 2px solid #072559;
+	border: 3px solid #072559;
 	background: #FAC732;
 	box-shadow: 3px 3px #072559;
 }
@@ -50,7 +51,7 @@
 	font-weight: bolder;
 	padding: 10px;
 	border-radius: 6px;
-	border: 2px solid #072559;
+	border: 3px solid #072559;
 	background: white;
 	box-shadow: 3px 3px #072559;
 	text-align: center;
@@ -64,7 +65,7 @@
 	font-weight: bolder;
 	padding: 10px;
 	border-radius: 6px;
-	border: 2px solid #072559;
+	border: 3px solid #072559;
 	background: yellowgreen;
 	box-shadow: 3px 3px #072559;
 	cursor: pointer;
@@ -118,7 +119,31 @@
 .messageMatch {
 	color: #072559;
 	letter-spacing: 0.1em;
-	font-size: 20px
+	font-size: 20px;
+	background-color: white;
+	padding: 5px;
+	border-radius: 6px;
+	border: 3px solid #072559;
+	box-shadow: 3px 3px #072559;
+}
+
+.messageMatchResult {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #072559;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+	background-color: #FAC732;
+	padding: 5px;
+	border-radius: 6px;
+	border: 3px solid #072559;
+	box-shadow: 3px 3px #072559;
+}
+
+.messageMatchResult span {
+	font-size: 14px;
 }
 
 .backHome {
@@ -132,6 +157,8 @@
 	padding: 4px;
 	border-radius: 6px;
 	cursor: pointer;
+	border: 3px solid #072559;
+	box-shadow: 3px 3px #072559;
 }
 
 .squad {
@@ -170,4 +197,49 @@
 	font-weight: bolder;
 	color: #072559;
 	letter-spacing: 0.1em;
+}
+
+.containerPlusMinus {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.containerSquad {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+.squad {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 3px 3px #072559;
+	border: 3px solid #072559;
+}
+
+.squadImg {
+	width: 20px;
+}
+
+.listItem {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.listItem span {
+	color: #092557;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+}
+
+.logoTeam {
+	width: 100px;
+	margin: 0 auto;
 }

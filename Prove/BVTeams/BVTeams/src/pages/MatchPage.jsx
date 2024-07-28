@@ -36,6 +36,18 @@ function MatchPage() {
 		});
 	}
 
+	function handleMinusPoint(e) {
+		const teamId = e.target.id;
+		setScore(prevState => {
+			if (teamId === 'firstTeamMinus' && prevState.firstSquad > 0) {
+				return { ...prevState, firstSquad: prevState.firstSquad - 1 };
+			} else if (teamId === 'secondTeamMinus' && prevState.secondSquad > 0) {
+				return { ...prevState, secondSquad: prevState.secondSquad - 1 };
+			}
+			return prevState;
+		});
+	}
+
 	useEffect(() => {
 		if (score.firstSquad >= 21 || score.secondSquad >= 21) {
 			if ((score.firstSquad === 21 && score.secondSquad < 20) || 
@@ -71,15 +83,42 @@ function MatchPage() {
 				<img src="/img/beach-volleyball_7779940.png" alt="Icona Home" />
 				<span>BACK TO HOME</span>
 			</NavLink>
-			<div className={styles.score}>
-				<button onClick={handleAddPoint} id='firstTeam' className={styles.button}>+</button>
-				<span>{displayScore.firstSquad} - {displayScore.secondSquad}</span>
-				<button onClick={handleAddPoint} id='secondTeam' className={styles.button}>+</button>
+			<div className={styles.containerSquad}>
+				<div className={styles.squad}>
+					<img className={styles.logoTeam} src="/img/FIRST_TEAM-removebg-preview.png" alt="Logo" />
+					{firstSquad.map(element => (
+						<div className={styles.listItem} key={element.id}>
+							<img className={styles.squadImg} src="/img/volleyball.png" alt="" />
+							<span>{element.player}</span>
+						</div>
+					))}
+				</div>
+				<div className={styles.squad}>
+					<img className={styles.logoTeam} src="/img/SECOND_TEAM-removebg-preview.png" alt="Logo" />
+					{secondSquad.map(element => (
+						<div className={styles.listItem} key={element.id}>
+							<img className={styles.squadImg} src="/img/volleyball.png" alt="" />
+							<span>{element.player}</span>
+						</div>
+					))}
+				</div>
 			</div>
+				<div className={styles.score}>
+					<div className={styles.containerPlusMinus}>
+						<button onClick={handleAddPoint} id='firstTeam' className={styles.button}>+</button>
+						<button onClick={handleMinusPoint} id='firstTeamMinus' className={styles.button}>-</button>
+					</div>
+					<span>{displayScore.firstSquad} - {displayScore.secondSquad}</span>
+					<div className={styles.containerPlusMinus}>
+						<button onClick={handleAddPoint} id='secondTeam' className={styles.button}>+</button>
+						<button onClick={handleMinusPoint} id='secondTeamMinus' className={styles.button}>-</button>
+					</div>
+				</div>
 			{openModal &&
 				<div className={styles.modal}>
 					<div className={styles.contentModal}>
 						<h2 className={styles.messageMatch}>MATCH ENDED</h2>
+						<h2 className={styles.messageMatchResult}><span>FINAL RESULT</span>{score.firstSquad} - {score.secondSquad}</h2>
 						<div className={styles.squad}>
 							<span className={styles.spanWin}>WIN</span>
 							<img className={styles.logoTeam} src={winner ? '/img/SECOND_TEAM-removebg-preview.png' : '/img/FIRST_TEAM-removebg-preview.png'} alt="Logo" />
@@ -101,4 +140,3 @@ function MatchPage() {
 }
 
 export default MatchPage
-
