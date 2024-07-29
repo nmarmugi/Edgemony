@@ -199,6 +199,11 @@ function App() {
     navigate('/match')
   }
 
+  function handlereturnMatchFinish() {
+    localStorage.clear()
+    window.location.reload()
+  }
+
   return (
     <div className={styles.mainPage}>
       <InitialPage display={display} />
@@ -237,6 +242,7 @@ function App() {
       returnMatch && 
       <>
       <button onClick={handlereturnMatch} className={styles.returnButton}>🏐 RETURNS TO THE MATCH 🏐</button>
+      <button onClick={handlereturnMatchFinish} className={styles.finishEarlier}><img src="/img/sports_15112744.png" alt="fischietto" /> STOP THE MATCH EARLIER <img src="/img/sports_15112744.png" alt="fischietto" /></button>
       <div className={styles.containerLogoMatch}>
         <img className={styles.logoTeamMatch} src="/img/FIRST_TEAM-removebg-preview.png" alt="Logo" />
         <img className={styles.logoTeamMatchVS} src="/img/versus_7960356.png" alt="Logo" />
