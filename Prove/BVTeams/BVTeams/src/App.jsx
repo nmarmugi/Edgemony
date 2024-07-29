@@ -1,7 +1,7 @@
 import styles from './App.module.css'
 import InitialPage from './componets/InitialPage'
 import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 function App() {
   const [isClick, setIsClick] = useState(false)
@@ -36,6 +36,13 @@ function App() {
     const savedPlayers = localStorage.getItem('secondRate');
     return savedPlayers ? JSON.parse(savedPlayers) : 0;
   })
+
+  const [returnMatch, setReturnMatch] = useState(() => {
+    const savedPlayers = localStorage.getItem('returnMatch');
+    return savedPlayers ? JSON.parse(savedPlayers) : false;
+  })
+
+  const navigate = useNavigate()
 
   function handleChangeRadio(e) {
     setIsClick(false)
@@ -188,11 +195,17 @@ function App() {
     }
   }, [firstSquad, secondSquad, firstSquadRate, secondSquadRate])
 
+  function handlereturnMatch() {
+    navigate('/match')
+  }
+
   return (
     <div className={styles.mainPage}>
       <InitialPage display={display} />
       <img className={styles.mainPageLogo} src="/img/BVTeams-removebg-preview.png" alt="Logo" />
       <NavLink className={styles.navRules} to='rules'>i</NavLink>
+      {!returnMatch &&
+      <>
       <div className={styles.containerLinks}>
         <NavLink className={styles.navLink} to='form'>
           <div className={styles.link}>
@@ -217,7 +230,20 @@ function App() {
           <input onChange={handleChangeRadio} name='matchType' id='targeted' type="radio" value='targeted' />
         </div>
       </div>
-      <button onClick={handleGenerateSquads} className={styles.mainPageButton}>GENERATE TEAM</button>
+      <button onClick={handleGenerateSquads} className={styles.mainPageButton}>GENERATE TEAMS</button>
+      </>
+      }
+      {
+      returnMatch && 
+      <>
+      <button onClick={handlereturnMatch} className={styles.returnButton}>🏐 RETURNS TO THE MATCH 🏐</button>
+      <div className={styles.containerLogoMatch}>
+        <img className={styles.logoTeamMatch} src="/img/FIRST_TEAM-removebg-preview.png" alt="Logo" />
+        <img className={styles.logoTeamMatchVS} src="/img/versus_7960356.png" alt="Logo" />
+        <img className={styles.logoTeamMatch} src="/img/SECOND_TEAM-removebg-preview.png" alt="Logo" />
+      </div>
+      </>
+      }
       {firstSquad.length > 0 && secondSquad.length > 0 && radio === 'random' && isClick && storage.length > 0 &&
         <div className={styles.match}>
           <div className={styles.containerSquad}>

@@ -70,6 +70,22 @@
   border: 3px solid #072559;
 }
 
+.returnButton {
+  width: 100%;
+  max-width: 280px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #FAC732;
+  color: #092557;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+  box-shadow: 3px 3px #072559;
+  border: 3px solid #072559;
+  margin-top: 300px;
+}
+
 .match {
   display: flex;
   flex-direction: column;
@@ -252,4 +268,22 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
+}
+
+.logoTeamMatch {
+  width: 150px;
+}
+
+.logoTeamMatchVS {
+  width: 40px;
+}
+
+.containerLogoMatch {
+  background-color: white;
+  border-radius: 12px;
+  border: 3px solid #072559;
+  box-shadow: 3px 3px #072559;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

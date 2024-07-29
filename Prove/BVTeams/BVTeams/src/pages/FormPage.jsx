@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './formPage.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function FormPage() {
   const [inputValue, setInputValue] = useState({ id: crypto.randomUUID(), player: '', rate: '' });
@@ -17,6 +17,9 @@ function FormPage() {
 
   const [buttonValue, setButtonValue] = useState(true);
   const [isClick, setIsClick] = useState(false);
+
+  const [goToPlayers, setGoToPlayers] = useState(false)
+  const navigate = useNavigate()
 
   function handleSection(e) {
     if (e.target.textContent === 'RANDOM PLAYERS') {
@@ -77,6 +80,17 @@ function FormPage() {
     localStorage.setItem('playersTargeted', JSON.stringify(storageTwo));
   }, [storageTwo]);
 
+  useEffect(() => {
+    if (goToPlayers) {
+      localStorage.setItem('goToPlayers', true);
+      navigate('/players');
+    }
+  }, [goToPlayers, navigate]);
+
+  function handleGoToPlayers() {
+    setGoToPlayers(true)
+  }
+
   const isDisabled = inputValue.player === '' || inputValue.rate === '';
   const isDisabledTwo = inputValueTwo.player === '' || inputValueTwo.team === '';
 
@@ -93,7 +107,7 @@ function FormPage() {
         </div>
         {!buttonValue && 
         <>
-        <div className={styles.section}>TOTAL TARGETED PLAYERS {storageTwo.length > 0 && storageTwo.length}</div>
+        <div className={styles.section}>TOTAL TARGETED PLAYERS {storageTwo.length > 0 && storageTwo.length}{storageTwo.length > 0 && <button onClick={handleGoToPlayers} className={styles.view}>VIEW</button>}</div>
         <div className={styles.containerInputText}>
           <input 
             onChange={handleChangeTwo} 
@@ -125,7 +139,7 @@ function FormPage() {
         }
         {buttonValue && 
         <>
-        <div className={styles.section}>TOTAL RANDOM PLAYERS {storage.length > 0 && storage.length}</div>
+        <div className={styles.section}>TOTAL RANDOM PLAYERS {storage.length > 0 && storage.length}{storage.length > 0 && <button onClick={handleGoToPlayers} className={styles.view}>VIEW</button>}</div>
         <div className={styles.containerInputText}>
           <input 
             onChange={handleChange} 

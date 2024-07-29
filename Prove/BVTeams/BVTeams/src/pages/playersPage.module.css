@@ -19,11 +19,31 @@
 	text-decoration: none;
 }
 
-.backToHome img {
+.backToForm {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	border: none;
+	background-color: #CADDFD;
+	cursor: pointer;
+}
+
+.backToHome img, .backToForm img {
 	width: 40px;
 }
 
 .backToHome span {
+	font-size: 14px;
+	color: #072559;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+}
+
+.backToForm span {
 	font-size: 14px;
 	color: #072559;
 	font-weight: bolder;

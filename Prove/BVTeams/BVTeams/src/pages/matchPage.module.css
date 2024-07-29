@@ -19,6 +19,8 @@
 	justify-content: center;
 	gap: 10px;
 	text-decoration: none;
+	border: none;
+	background-color: #CADDFD;
 }
 
 .backToHome img {

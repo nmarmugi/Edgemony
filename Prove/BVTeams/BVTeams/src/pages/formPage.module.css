@@ -272,6 +272,23 @@
 	font-weight: bolder;
 	color: #072559;
 	letter-spacing: 0.1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+
+.view {
+	text-decoration: none;
+	color: #072559;
+	border: 3px solid #072559;
+	padding: 4px;
+	border-radius: 4px;
+	box-shadow: 3px 3px #072559;
+	background-color: #ffc73a;
+	letter-spacing: 0.1em;
+	font-size: 10px;
 }
 
 .radioContainer {

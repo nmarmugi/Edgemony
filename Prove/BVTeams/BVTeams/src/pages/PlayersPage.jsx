@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from './playersPage.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import CardPlayer from '../componets/CardPlayer'
 
 function PlayersPage() {
@@ -15,6 +15,12 @@ function PlayersPage() {
 		const savedPlayers = localStorage.getItem('playersTargeted');
 		return savedPlayers ? JSON.parse(savedPlayers) : [];
 	});
+
+	const [goToPlayers, setGoToPlayers] = useState(() => {
+		const savedPlayers = localStorage.getItem('goToPlayers');
+		return savedPlayers ? JSON.parse(savedPlayers) : false;
+	});
+	const navigate = useNavigate()
 
 	function handleChangeRadio(e) {
 		setRadio(e.target.value)
@@ -51,12 +57,22 @@ function PlayersPage() {
 		return result.charAt(0).toUpperCase() + result.slice(1);
 	}
 
+	function handleGoToForm() {
+		setGoToPlayers(false)
+		localStorage.setItem('goToPlayers', false)
+		navigate('/form')
+	}
+
 	return (
 		<div className={styles.containerPlayers}>
-			<NavLink className={styles.backToHome} to='/'>
+			{!goToPlayers ? <NavLink className={styles.backToHome} to='/'>
 				<img src="/img/beach-volleyball_7779940.png" alt="Icona Home" />
 				<span>BACK TO HOME</span>
-			</NavLink>
+			</NavLink> :
+			<button onClick={handleGoToForm} className={styles.backToForm}>
+				<img src="/img/avatar_14391289.png" alt="Icona Home" />
+				<span>BACK TO ADD PLAYER</span>
+			</button>}
 			{storage.length || storageTwo.length ?
 				<>
 				<button className={styles.deleteAll} onClick={handleDeleteAll}>DELETE ALL</button>

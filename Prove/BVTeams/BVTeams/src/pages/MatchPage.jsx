@@ -1,5 +1,5 @@
 import styles from './matchPage.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import classNames from 'classnames'
 
@@ -23,6 +23,8 @@ function MatchPage() {
 	const [openModal, setOpenModal] = useState(false)
 
 	const [winner, setWinner] = useState(false)
+
+	const navigate = useNavigate()
 
 	function handleAddPoint(e) {
 		const teamId = e.target.id;
@@ -78,12 +80,17 @@ function MatchPage() {
 		localStorage.clear()
 	}
 
+	function handleReturnMatch() {
+		localStorage.setItem('returnMatch', true)
+		navigate('/')
+	}
+
 	return (
 		<div className={styles.containerMatch}>
-			<NavLink className={styles.backToHome} to='/'>
+			<button onClick={handleReturnMatch} className={styles.backToHome}>
 				<img src="/img/beach-volleyball_7779940.png" alt="Icona Home" />
 				<span>BACK TO HOME</span>
-			</NavLink>
+			</button>
 			<div className={styles.containerSquad}>
 				<div className={styles.squad}>
 					<img className={styles.logoTeam} src="/img/FIRST_TEAM-removebg-preview.png" alt="Logo" />
