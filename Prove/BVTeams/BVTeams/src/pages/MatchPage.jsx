@@ -144,9 +144,9 @@ function MatchPage() {
 									<span>{element.player}</span>
 								</div>))
 							}</div>
-							<div className={styles.rematch}>
+							<div onClick={handleRematch} className={styles.rematch}>
 								<img src="/img/refresh_2315633.png" alt="Rematch icona" />
-								<button onClick={handleRematch}>REMATCH</button>
+								<button>REMATCH</button>
 							</div>
 						<NavLink onClick={handleRestStorage} className={styles.backHome} to='/'>BACK TO HOME</NavLink>
 					</div>
