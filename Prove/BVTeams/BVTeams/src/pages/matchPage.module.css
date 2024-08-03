@@ -250,3 +250,30 @@
 	background-color: red;
 	color: white;
 }
+
+.rematch {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	background-color: #FAC732;
+	padding: 10px;
+	border-radius: 12px;
+	box-shadow: 3px 3px #072559;
+	border: 3px solid #072559;
+	cursor: pointer;
+}
+
+.rematch img{
+	width: 30px;
+	border-radius: 50%;
+}
+
+.rematch button {
+	border: none;
+	background-color: #FAC732;
+	font-weight: bolder;
+	color: #072559;
+	letter-spacing: 0.1em;
+}

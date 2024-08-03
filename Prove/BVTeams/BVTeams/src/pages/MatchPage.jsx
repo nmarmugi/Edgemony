@@ -85,6 +85,11 @@ function MatchPage() {
 		navigate('/')
 	}
 
+	function handleRematch() {
+		setOpenModal(false)
+		setScore({firstSquad: 0, secondSquad: 0})
+	}
+
 	return (
 		<div className={styles.containerMatch}>
 			<button onClick={handleReturnMatch} className={styles.backToHome}>
@@ -139,6 +144,10 @@ function MatchPage() {
 									<span>{element.player}</span>
 								</div>))
 							}</div>
+							<div className={styles.rematch}>
+								<img src="/img/refresh_2315633.png" alt="Rematch icona" />
+								<button onClick={handleRematch}>REMATCH</button>
+							</div>
 						<NavLink onClick={handleRestStorage} className={styles.backHome} to='/'>BACK TO HOME</NavLink>
 					</div>
 				</div>
