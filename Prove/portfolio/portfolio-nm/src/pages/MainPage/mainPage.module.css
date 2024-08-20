@@ -1,0 +1,68 @@
+.containerPresentation {
+	position: relative;
+	width: 100%;
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+}
+
+.presentation {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.presentation h1 {
+	color: #DFDFDF;
+	letter-spacing: 0.1em;
+}
+
+.nameSpan {
+	font-size: 40px;
+}
+
+.bar {
+	font-size: 40px;
+	font-weight: lighter;
+}
+
+.barNone {
+	display: none;
+}
+
+.presentation p {
+	color: #DFDFDF;
+	letter-spacing: 0.05em;
+}
+
+.imgPresentation {
+	display: none;
+}
+
+.imgPresentation img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 768px) {
+	.imgPresentation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: imgFloating 2s infinite linear;
+	}
+}
+
+@keyframes imgFloating {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}

@@ -1,0 +1,11 @@
+.btn {
+	background: rgb(9,0,8);
+	background: linear-gradient(90deg, rgba(9,0,8,1) 0%, rgba(171,29,253,1) 100%);
+	padding: 10px;
+	border: 1px solid #DFDFDF;
+	font-size: 20px;
+	color: #DFDFDF;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	width: 335px;
+}

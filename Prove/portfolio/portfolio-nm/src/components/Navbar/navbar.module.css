@@ -1,0 +1,72 @@
+.containerNavbar {
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-right: 30px;
+}
+
+.containerLogo img {
+	width: 120px;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.links a {
+	text-decoration: none;
+	font-size: 30px;
+	color: #DFDFDF;
+	transition: all 0.35s ease;
+}
+
+.links a:hover {
+	font-size: 34px;
+}
+
+.click {
+	border: 2px solid #DFDFDF;
+	border-radius: 6px;
+	animation: underline 0.15s linear forwards;
+}
+
+@keyframes underline {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.containerSocial {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	background-color: #DFDFDF;
+	padding: 10px;
+	padding-bottom: 2px;
+	border-radius: 6px;
+}
+
+.containerSocial a {
+	margin: 0;
+}
+
+.containerSocial img {
+	width: 30px;
+}
+
+@media (max-width: 768px) {
+	.navbarDivNone {
+		display: none;
+	}
+}
