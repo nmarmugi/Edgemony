@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import styles from './navbar.module.css'
 import { useContext } from 'react'
 import { StateContext, SetStateContext } from '../Provider/Provider'
+import Tooltip from '../Tooltip/Tooltip'
 
 export default function Navbar() {
 
@@ -36,10 +37,7 @@ export default function Navbar() {
 					<a onClick={() => handleClick('projects')} href="#projects">PROJECTS</a>
 					<div className={state.projects ? styles.click : ''}></div>
 				</div>
-				<div className={styles.containerSocial}>
-					<a href="https://github.com/" target='_blank'><img src="/img/github_3291695.png" alt="Icona GitHub" /></a>
-					<a href="https://www.linkedin.com/in/nicola-marmugi-2860b022a/" target='_blank'><img src="/img/linkedin_3488334.png" alt="Icona Linkedin" /></a>
-				</div>
+				<Tooltip />
 			</div>
 		</div>
 	)

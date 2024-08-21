@@ -4,7 +4,7 @@ export const StateContext = createContext();
 export const SetStateContext = createContext();
 
 export const initialClick = {
-	home: true,
+	home: false,
 	projects: false,
 	skills: false
 }

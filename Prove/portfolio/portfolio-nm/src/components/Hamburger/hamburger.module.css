@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 2;
+	z-index: 1000;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -61,7 +61,8 @@
 	gap: 5px;
 	border-radius: 0px 0px 0px 8px;
 	animation: dropDown 0.35s linear forwards;
-	max-width: 96px;
+	max-width: 120px;
+	height: 250px;
 }
 
 .dropDown a {
@@ -102,22 +103,6 @@
 	to {
 		width: 100%;
 	}
-}
-
-.containerSocial {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 5px;
-}
-
-.containerSocial a {
-	margin: 0;
-}
-
-.containerSocial img {
-	width: 30px;
 }
 
 @media (min-width: 768px) {
