@@ -40,7 +40,7 @@ export default function SkillsPage() {
 			I have solid skills in <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>, which I use to build interactive and responsive web interfaces. I work with <span>React</span> to create modular and dynamic components, while <span>Tailwind CSS</span> allows me to quickly style projects. I have a basic understanding of <span>Next.js</span>, which I use for server-side rendering projects. Additionally, I have some experience with <span>C</span>, giving me a fundamental grasp of low-level programming.
 		</p>
 		<div className={styles.containerCards}>
-			{skillsObj.map(element => <Card type={element.type} percent={element.percent} />)}
+			{skillsObj.map(element => <Card key={element.type} type={element.type} percent={element.percent} />)}
 		</div>
 	</div>
 	)

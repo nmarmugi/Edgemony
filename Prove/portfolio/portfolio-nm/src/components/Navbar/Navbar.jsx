@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import styles from './navbar.module.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { StateContext, SetStateContext } from '../Provider/Provider'
 import Tooltip from '../Tooltip/Tooltip'
 
@@ -16,6 +16,33 @@ export default function Navbar() {
 			skills: key === 'skills'
 		})
 	}
+
+	useEffect(() => {
+		const handleScroll = () => {
+		  const homeSection = document.getElementById('home');
+		  const skillsSection = document.getElementById('skills');
+		  const projectsSection = document.getElementById('projects');
+	  
+		  const scrollPosition = window.scrollY + window.innerHeight / 2;
+	  
+
+		  if (scrollPosition >= projectsSection.offsetTop) {
+			setState({ home: false, projects: true, skills: false });
+		  } else if (scrollPosition >= skillsSection.offsetTop) {
+			setState({ home: false, projects: false, skills: true });
+		  } else if (scrollPosition >= homeSection.offsetTop) {
+			setState({ home: true, projects: false, skills: false });
+		  }
+		};
+	  
+
+		window.addEventListener('scroll', handleScroll);
+	  
+
+		return () => {
+		  window.removeEventListener('scroll', handleScroll);
+		};
+	  }, [setState]);
 
 	return (
 		<div className={classNames(styles.containerNavbar, styles.navbarDivNone)}>

@@ -1,0 +1,33 @@
+.containerProjectsPage {
+	position: relative;
+	background-color: transparent;
+	backdrop-filter: blur(5px);
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.containerProjectsPage h2 {
+	color: #DFDFDF;
+	font-size: 40px;
+	letter-spacing: 0.1em;
+}
+
+.containerProjectsPage p {
+	color: #DFDFDF;
+	letter-spacing: 0.05em;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.containerProjectCards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 40px;
+}

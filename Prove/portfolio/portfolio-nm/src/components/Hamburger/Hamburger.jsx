@@ -1,6 +1,6 @@
 import styles from './hamburger.module.css'
 import classNames from 'classnames'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { StateContext, SetStateContext } from '../Provider/Provider'
 import TooltipHamburger from '../Tooltip/TooltipHamburger'
 
@@ -17,6 +17,33 @@ export default function Hamburger() {
 			skills: key === 'skills'
 		})
 	}
+
+	useEffect(() => {
+		const handleScroll = () => {
+		  const homeSection = document.getElementById('home');
+		  const skillsSection = document.getElementById('skills');
+		  const projectsSection = document.getElementById('projects');
+	  
+		  const scrollPosition = window.scrollY + window.innerHeight / 2;
+	  
+
+		  if (scrollPosition >= projectsSection.offsetTop) {
+			setState({ home: false, projects: true, skills: false });
+		  } else if (scrollPosition >= skillsSection.offsetTop) {
+			setState({ home: false, projects: false, skills: true });
+		  } else if (scrollPosition >= homeSection.offsetTop) {
+			setState({ home: true, projects: false, skills: false });
+		  }
+		};
+	  
+
+		window.addEventListener('scroll', handleScroll);
+	  
+
+		return () => {
+		  window.removeEventListener('scroll', handleScroll);
+		};
+	  }, [setState]);
 
 	function handleClick() {
 		setClick(true)
