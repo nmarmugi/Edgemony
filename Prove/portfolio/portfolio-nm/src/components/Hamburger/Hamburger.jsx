@@ -11,6 +11,7 @@ export default function Hamburger() {
 	const setState = useContext(SetStateContext)
 
 	function handleClickLine(key) {
+		setClick(false)
 		setState({
 			home: key === 'home',
 			projects: key === 'projects',

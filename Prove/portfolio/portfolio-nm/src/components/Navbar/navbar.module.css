@@ -24,10 +24,11 @@
 	font-size: 30px;
 	color: #DFDFDF;
 	transition: all 0.35s ease;
+	letter-spacing: 0.05em;
 }
 
 .links a:hover {
-	font-size: 34px;
+	font-weight: bolder;
 }
 
 .click {
