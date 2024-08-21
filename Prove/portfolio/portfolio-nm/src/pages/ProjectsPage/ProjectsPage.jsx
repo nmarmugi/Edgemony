@@ -57,6 +57,10 @@ const arrayLinks = [
 	{
 		url: 'https://github.com/nmarmugi/next',
 		img: '/img/next.png'
+	},
+	{
+		url: 'https://github.com/nmarmugi/Edgemony/tree/main/Prove/Responsive',
+		img: '/img/responsive.png'
 	}
 ]
 
