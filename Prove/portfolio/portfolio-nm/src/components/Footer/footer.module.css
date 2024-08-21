@@ -33,3 +33,9 @@
 	background-clip: text;
 	color: transparent;
 }
+
+@media (min-width: 768px) {
+	.containerFooter {
+		gap: 65px;
+	}
+}
