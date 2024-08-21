@@ -6,6 +6,7 @@ import ProjectsPage from './pages/ProjectsPage/ProjectsPage'
 import SkillsPage from './pages/SkillsPage/SkillsPage'
 import { useContext } from 'react'
 import { StateContext, SetStateContext } from './components/Provider/Provider'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <MainPage />
         <SkillsPage />
         <ProjectsPage />
+        <Footer />
       </div>
       <a onClick={() => handleClick('home')} href="#home">
         <img className={styles.rocket} src="/img/startup_1208168.png" alt="Rocket" />
