@@ -46,14 +46,14 @@ const StyledWrapper = styled.div`
   padding-top: 40px;
   font-family: "Poppins", sans-serif;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 .wrapper .icon {
   position: relative;
   background: #fff;
   border-radius: 50%;
-  margin: 10px;
+  margin: 5px;
   width: 40px;
   height: 40px;
   font-size: 18px;
