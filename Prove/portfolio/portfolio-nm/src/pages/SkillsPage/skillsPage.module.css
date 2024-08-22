@@ -1,41 +1,88 @@
 .containerSkillsPage {
 	position: relative;
-	background-color: rgb(27, 27, 27);
-	padding: 20px;
+	background-color: #1B1B1B;
 	border-radius: 30px;
+	padding: 20px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
 	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-.containerSkillsPage h2 {
+	padding-bottom: 200px;
+  }
+  
+  .containerSkillsPage h2 {
 	color: #DFDFDF;
 	font-size: 40px;
 	letter-spacing: 0.1em;
-}
-
-.containerSkillsPage p {
+  }
+  
+  .containerSkillsPage p {
 	color: #DFDFDF;
 	letter-spacing: 0.05em;
 	font-size: 18px;
 	line-height: 25px;
-}
-
-.containerSkillsPage p span {
+  }
+  
+  .containerSkillsPage p span {
 	background: linear-gradient(90deg, rgb(255, 0, 225) 0%, rgb(162, 0, 255) 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 	font-size: 25px;
-}
-
-.containerCards {
+  }
+  
+  .containerCards {
+	width: 100%;
+  }
+  
+  .skillsGridMobile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+  }
+  
+  .skillsGridDesktop {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
 	gap: 30px;
-}
+	justify-content: center;
+  }
+  
+  .card {
+	flex: 1 1 auto;
+	min-width: 200px;
+	max-width: 300px;
+  }
+  
+  .dotsContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+  }
+  
+  .dot {
+	width: 10px;
+	height: 10px;
+	background-color: #DFDFDF;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .activeDot {
+	background-color: #ff00ff;
+  }
+  
+  @media (min-width: 768px) {
+	.dotsContainer {
+	  display: none;
+	}
+  }
+  
