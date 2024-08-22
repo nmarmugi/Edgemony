@@ -35,6 +35,10 @@
   
   .containerCards {
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative; /* Ensure positioning for arrows */
   }
   
   .skillsGridMobile {
@@ -42,7 +46,6 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	position: relative;
 	width: 100%;
   }
   
@@ -80,8 +83,39 @@
 	background-color: #ff00ff;
   }
   
+  .arrowLeft, .arrowRight {
+	background: none;
+	border: none;
+	font-size: 24px;
+	color: #DFDFDF;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1000;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 10px;
+	font-weight: bolder;
+  }
+  
+  .arrowLeft {
+	left: 10px;
+	transition: all 0.35s ease;
+	background-color: #ff00ff36;
+  }
+  
+  .arrowRight {
+	right: 10px;
+	transition: all 0.35s ease;
+	background-color: #ff00ff36;
+  }
+
+  .arrowLeft:hover,
+  .arrowRight:hover {
+	background-color: #ff00ff;
+  }
+  
   @media (min-width: 768px) {
-	.dotsContainer {
+	.dotsContainer, .arrowLeft, .arrowRight {
 	  display: none;
 	}
   }

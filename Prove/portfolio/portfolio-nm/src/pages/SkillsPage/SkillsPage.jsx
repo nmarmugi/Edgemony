@@ -30,6 +30,12 @@ export default function SkillsPage() {
     setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % skillsObj.length);
   };
 
+  const prevSkill = () => {
+    setCurrentSkillIndex((prevIndex) => 
+      (prevIndex - 1 + skillsObj.length) % skillsObj.length
+    );
+  };
+
   useEffect(() => {
     if (isAutoScrolling) {
       const interval = setInterval(nextSkill, 3000);
@@ -42,6 +48,15 @@ export default function SkillsPage() {
     setCurrentSkillIndex(index);
   };
 
+  const handleArrowClick = (direction) => {
+    setIsAutoScrolling(false);
+    if (direction === 'next') {
+      nextSkill();
+    } else if (direction === 'prev') {
+      prevSkill();
+    }
+  };
+
   return (
     <div id='skills' className={styles.containerSkillsPage}>
       <h2>Skills</h2>
@@ -49,14 +64,23 @@ export default function SkillsPage() {
         I have solid skills in <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>, which I use to build interactive and responsive web interfaces. I work with <span>React</span> to create modular and dynamic components, while <span>Tailwind CSS</span> allows me to quickly style projects. I have a basic understanding of <span>Next.js</span>, which I use for server-side rendering projects. Additionally, I have some experience with <span>C</span>, giving me a fundamental grasp of low-level programming.
       </p>
       <div className={styles.containerCards}>
-        {isMobile ? (
-          <div className={styles.skillsGridMobile}>
-            <Card
-              type={skillsObj[currentSkillIndex].type}
-              percent={skillsObj[currentSkillIndex].percent}
-            />
-          </div>
-        ) : (
+        {isMobile && (
+          <>
+            <button onClick={() => handleArrowClick('prev')} className={styles.arrowLeft}>
+              &lt;
+            </button>
+            <div className={styles.skillsGridMobile}>
+              <Card
+                type={skillsObj[currentSkillIndex].type}
+                percent={skillsObj[currentSkillIndex].percent}
+              />
+            </div>
+            <button onClick={() => handleArrowClick('next')} className={styles.arrowRight}>
+              &gt;
+            </button>
+          </>
+        )}
+        {!isMobile && (
           <div className={styles.skillsGridDesktop}>
             {skillsObj.map((skill) => (
               <Card

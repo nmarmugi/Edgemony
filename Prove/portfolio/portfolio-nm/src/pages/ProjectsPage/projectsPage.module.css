@@ -10,57 +10,58 @@
 	gap: 20px;
 	padding-top: 100px;
 	padding-bottom: 200px;
-}
-
-.containerProjectsPage h2 {
+  }
+  
+  .containerProjectsPage h2 {
 	color: #DFDFDF;
 	font-size: 40px;
 	letter-spacing: 0.1em;
-}
-
-.containerProjectsPage p {
+  }
+  
+  .containerProjectsPage p {
 	color: #DFDFDF;
 	letter-spacing: 0.05em;
 	font-size: 18px;
 	line-height: 25px;
-}
-
-.containerProjectCards {
+  }
+  
+  .containerProjectCards {
 	width: 100%;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-}
-
-.projectsGrid {
+	justify-content: center;
+	position: relative;
+  }
+  
+  .projectsGrid {
 	display: flex;
 	width: 100%;
 	gap: 40px;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
-}
-
-.projectCard {
+  }
+  
+  .projectCard {
 	flex: 1 1 calc(100% - 20px);
 	margin: 10px;
 	max-width: 300px;
-}
-
-@media (min-width: 768px) {
+  }
+  
+  @media (min-width: 768px) {
 	.projectCard {
-		flex: 1 1 calc(33.333% - 20px);
+	  flex: 1 1 calc(33.333% - 20px);
 	}
-}
-
-.dotsContainer {
+  }
+  
+  .dotsContainer {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 	flex-wrap: wrap;
-}
-
-.dot {
+  }
+  
+  .dot {
 	width: 14px;
 	height: 14px;
 	background-color: #DFDFDF;
@@ -68,14 +69,51 @@
 	margin: 0 5px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
-}
-
-.activeDot {
+  }
+  
+  .activeDot {
 	background-color: #ff00ff;
-}
-
-@media (min-width: 768px) {
+  }
+  
+  @media (min-width: 768px) {
 	.dotsContainer {
-		display: none;
+	  display: none;
 	}
-}
+  }
+  
+  .arrowLeft,
+  .arrowRight {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #ff00ff36;
+	color: #DFDFDF;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 10px;
+	z-index: 10;
+	font-weight: bolder;
+  }
+  
+  .arrowLeft {
+	left: 10px;
+	transition: all 0.35s ease;
+  }
+  
+  .arrowRight {
+	right: 10px;
+	transition: all 0.35s ease;
+  }
+  
+  .arrowLeft:hover,
+  .arrowRight:hover {
+	background-color: #ff00ff;
+  }
+  
+  @media (min-width: 768px) {
+	.arrowLeft,
+	.arrowRight {
+	  display: none;
+	}
+  }
