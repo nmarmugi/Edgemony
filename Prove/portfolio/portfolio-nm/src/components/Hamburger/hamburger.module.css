@@ -51,7 +51,7 @@
 }
 
 .dropDown {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
 	background-color: #DFDFDF;
@@ -59,10 +59,14 @@
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	border-radius: 0px 0px 0px 8px;
-	animation: dropDown 0.35s linear forwards;
-	width: 160px;
-	height: 330px;
+	width: 250px;
+	height: 100dvh;
+	transform: translateX(100%);
+	transition: transform 0.35s ease;
+}
+
+.dropDown.show {
+	transform: translateX(0);
 }
 
 .dropDown a {
@@ -79,15 +83,6 @@
 
 .dropDown a:hover {
 	font-weight: bolder;
-}
-
-@keyframes dropDown {
-	from {
-		top: -300px;
-	}
-	to {
-		top: 0px;
-	}
 }
 
 .click {

@@ -40,7 +40,7 @@
   width: 40px;
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  left: 10px;
   z-index: 100000;
   animation: rocketShake 0.1s infinite;
   cursor: pointer;

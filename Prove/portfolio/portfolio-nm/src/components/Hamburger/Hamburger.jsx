@@ -66,7 +66,7 @@ export default function Hamburger() {
 				<span></span>
 				<span></span>
 			</div>
-			<div className={click ? styles.dropDown : styles.dropDownNone}>
+			<div className={classNames(styles.dropDown, { [styles.show]: click })}>
 				<div onClick={handleClickClose} className={styles.divClose}>&times;</div>
 				<div>
 					<a onClick={() => handleClickLine('home')} href="#home">HOME</a>
