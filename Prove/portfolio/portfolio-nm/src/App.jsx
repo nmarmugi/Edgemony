@@ -23,6 +23,7 @@ function App() {
 	}
 
   function handleRocket() {
+    if (JSON.stringify(state) === JSON.stringify({home: true, projects: false, skills: false})) return;
     setRocket(false)
     setTimeout(() => {
       setRocket(true)
