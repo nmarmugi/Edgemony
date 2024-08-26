@@ -1,0 +1,7 @@
+1. Parsing, Trasformazione, Generazione del codice.
+
+2. La funzione tokenizer scompone il codice in token, ognuno dei quali rappresenta un componente della sintassi (parentesi, numeri, nomi di funzioni, stringhe) e li organizza in un array che servirà per le fasi successive del compilatore.
+
+3. Il parser trasforma il caos del codice sorgente in una struttura ordinata e gestibile che rappresenta le relazioni tra le diverse parti del programma. Senza un parser, il compilatore non avrebbe modo di comprendere la struttura logica del codice e quindi non potrebbe svolgere le fasi successive.
+
+4. Si può usare l'approccio della tokenizzazione per iterare sul testo, riconoscere caratteri rilevanti o filtrarne alcuni, e contare solo quelli che ti interessano. Le stesse tecniche impiegate nel compilatore per riconoscere e gestire diverse tipologie di token possono essere applicate in modo semplificato per creare un conta caratteri.
