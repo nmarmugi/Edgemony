@@ -17,7 +17,8 @@ const arrayLinks = [
   { url: 'https://github.com/nmarmugi/42-progetti', img: '/img/c.png' },
   { url: 'https://quiz-parole.vercel.app/', img: '/img/quiz.png' },
   { url: 'https://github.com/nmarmugi/next', img: '/img/next.png' },
-  { url: 'https://github.com/nmarmugi/Edgemony/tree/main/Prove/Responsive', img: '/img/responsive.png' }
+  { url: 'https://github.com/nmarmugi/Edgemony/tree/main/Prove/Responsive', img: '/img/responsive.png' },
+  { url: 'https://pokedex-beryl-chi.vercel.app/', img: '/img/pokemon.png' }
 ];
 
 export default function ProjectsPage() {

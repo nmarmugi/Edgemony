@@ -6,6 +6,7 @@ const skillsObj = [
   { type: 'HTML', percent: '93%' },
   { type: 'CSS', percent: '90%' },
   { type: 'JavaScript', percent: '95%' },
+  { type: 'TypeScript', percent: '85%' },
   { type: 'React', percent: '92%' },
   { type: 'Tailwind CSS', percent: '90%' },
   { type: 'Next.js', percent: '60%' },
@@ -61,7 +62,7 @@ export default function SkillsPage() {
     <div id='skills' className={styles.containerSkillsPage}>
       <h2>Skills</h2>
       <p>
-        I have solid skills in <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>, which I use to build interactive and responsive web interfaces. I work with <span>React</span> to create modular and dynamic components, while <span>Tailwind CSS</span> allows me to quickly style projects. I have a basic understanding of <span>Next.js</span>, which I use for server-side rendering projects. Additionally, I have some experience with <span>C</span>, giving me a fundamental grasp of low-level programming.
+        I have solid skills in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span> and <span>TypeScript</span>, which I use to build interactive and responsive web interfaces. I work with <span>React</span> to create modular and dynamic components, while <span>Tailwind CSS</span> allows me to quickly style projects. I have a basic understanding of <span>Next.js</span>, which I use for server-side rendering projects. Additionally, I have some experience with <span>C</span>, giving me a fundamental grasp of low-level programming.
       </p>
       <div className={styles.containerCards}>
         {isMobile && (
