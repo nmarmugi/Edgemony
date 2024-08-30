@@ -441,16 +441,16 @@ export default function Pokemon({params}: IPokemonName) {
 	if (!data) return <Loading />
 
 	return (
-		<div className="w-full h-dvh max-h-dvh bg-[#E85463] relative flex flex-col items-center">
+		<div className="w-full max-h-dvh h-dvh bg-[#E85463] relative flex flex-col items-center pb-12">
 			{data.cries.latest && <audio ref={audioRef} src={data.cries.latest}></audio>}
 			<Link className="fixed top-3 left-3 flex items-center gap-2 text-white font-semibold" href={'/'}><Image width={30} height={30} src='/img/button_2489325.svg' alt="Back to home"  />Home</Link>
 			<div className="fixed top-3 right-3 flex items-center gap-2">
 				<button onClick={handleNoDescription} className={!description ? "bg-white text-[#E85463] p-1 rounded cursor-pointer text-base font-bold" : "bg-white text-[#E85463] p-1 rounded cursor-pointer text-xs"}>Versions in game</button>
 				<button onClick={handleDescription} className={description ? "bg-white text-[#E85463] p-1 rounded cursor-pointer text-base font-bold" : "bg-white text-[#E85463] p-1 rounded cursor-pointer text-xs"}>Description</button>
 			</div>
-			<div className="w-11/12 h-60 mt-12 bg-white rounded-3xl relative flex flex-col items-center">
+			<div className="w-11/12 h-60 min-h-60 mt-12 bg-white rounded-3xl relative flex flex-col items-center">
 				<h2 className="font-bold text-xl mt-4">{data.name.charAt(0).toUpperCase() + data.name.split('-')[0].slice(1)} #{data.order}</h2>
-				{!image && data.sprites.other['official-artwork'].front_shiny && <h2 className="font-bold text-sm">Shiny</h2>}
+				{!image && <span className="text-xs font-semibold">Shiny</span>}
 				<span className="bg-black p-1 rounded-md font-semibold text-white">
 					{data.types.map(pokemon => pokemon.type.name.charAt(0).toUpperCase() + pokemon.type.name.slice(1)).join('/')}
 				</span>
@@ -460,12 +460,12 @@ export default function Pokemon({params}: IPokemonName) {
 					{!image && data.sprites.other['official-artwork'].front_shiny && <img onClick={playAudio} className="w-48 cursor-pointer" src={`${data.sprites.other['official-artwork'].front_shiny}`} alt="Pokemon" />}
 					<span onClick={handleChangeImgGo} className="font-bold text-3xl cursor-pointer">&gt;</span>
 				</div>
-			</div>
-			<div className="w-11/12 mt-20 flex flex-col items-center bg-white rounded-3xl p-3 relative">
-				<div className="w-11/12 flex justify-center gap-5 absolute -top-7">
+				<div className="w-11/12 flex justify-center gap-5 absolute -bottom-20">
 					<span className="font-semibold text-white">Weight: {data.weight}</span>
 					<span className="font-semibold text-white">Height: {data.height}</span>
 				</div>
+			</div>
+			<div className="w-11/12 mt-24 flex flex-col items-center bg-white rounded-3xl p-3 relative h-96 overflow-hidden overflow-y-auto">
 				{!description && (
 					<>
 					<h2 className="font-bold">Versions in game</h2>
@@ -487,7 +487,7 @@ export default function Pokemon({params}: IPokemonName) {
 					<p className="font-bold mb-1">
 						{dataDescription}
 					</p>
-					<Image width={250} height={250} src='/img/game_14079557.png' alt="Pokemon center" />
+					<Image width={150} height={150} src='/img/game_14079557.png' alt="Pokemon center" />
 					</>
 				)}
 			</div>
