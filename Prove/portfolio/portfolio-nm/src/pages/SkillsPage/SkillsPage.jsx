@@ -9,7 +9,7 @@ const skillsObj = [
   { type: 'TypeScript', percent: '85%' },
   { type: 'React', percent: '92%' },
   { type: 'Tailwind CSS', percent: '90%' },
-  { type: 'Next.js', percent: '60%' },
+  { type: 'Next.js', percent: '80%' },
   { type: 'C', percent: '70%' }
 ];
 
