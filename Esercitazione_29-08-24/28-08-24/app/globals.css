@@ -9,6 +9,12 @@
 	box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }

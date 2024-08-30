@@ -441,10 +441,10 @@ export default function Pokemon({params}: IPokemonName) {
 	if (!data) return <Loading />
 
 	return (
-		<div className="w-full max-h-dvh h-dvh bg-[#E85463] relative flex flex-col items-center pb-12">
+		<div className="max-w-[768px] w-full max-h-dvh h-dvh bg-[#E85463] relative flex flex-col items-center pb-12">
 			{data.cries.latest && <audio ref={audioRef} src={data.cries.latest}></audio>}
-			<Link className="fixed top-3 left-3 flex items-center gap-2 text-white font-semibold" href={'/'}><Image width={30} height={30} src='/img/button_2489325.svg' alt="Back to home"  />Home</Link>
-			<div className="fixed top-3 right-3 flex items-center gap-2">
+			<Link className="absolute top-3 left-3 flex items-center gap-2 text-white font-semibold" href={'/'}><Image width={30} height={30} src='/img/button_2489325.svg' alt="Back to home"  />Home</Link>
+			<div className="absolute top-3 right-3 flex items-center gap-2">
 				<button onClick={handleNoDescription} className={!description ? "bg-white text-[#E85463] p-1 rounded cursor-pointer text-base font-bold" : "bg-white text-[#E85463] p-1 rounded cursor-pointer text-xs"}>Versions in game</button>
 				<button onClick={handleDescription} className={description ? "bg-white text-[#E85463] p-1 rounded cursor-pointer text-base font-bold" : "bg-white text-[#E85463] p-1 rounded cursor-pointer text-xs"}>Description</button>
 			</div>
