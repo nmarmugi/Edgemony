@@ -438,10 +438,11 @@ export default function Pokemon({params}: IPokemonName) {
 		setDescription(false)
 	}
 
-	if (!data) return <Loading />
-
 	return (
-		<div className="max-w-[768px] w-full max-h-dvh h-dvh bg-[#E85463] relative flex flex-col items-center pb-12">
+		<div className="max-w-[768px] w-full h-[812px] bg-[#E85463] relative flex flex-col items-center pb-12">
+			{!data && <Loading />}
+			{data &&
+			<>
 			{data.cries.latest && <audio ref={audioRef} src={data.cries.latest}></audio>}
 			<Link className="absolute top-3 left-3 flex items-center gap-2 text-white font-semibold" href={'/'}><Image width={30} height={30} src='/img/button_2489325.svg' alt="Back to home"  />Home</Link>
 			<div className="absolute top-3 right-3 flex items-center gap-2">
@@ -465,11 +466,11 @@ export default function Pokemon({params}: IPokemonName) {
 					<span className="font-semibold text-white">Height: {data.height}</span>
 				</div>
 			</div>
-			<div className="w-11/12 mt-24 flex flex-col items-center bg-white rounded-3xl p-3 relative h-96 overflow-hidden overflow-y-auto">
+			<div className="w-11/12 mt-24 flex flex-col items-center bg-white rounded-3xl p-3 relative">
 				{!description && (
 					<>
 					<h2 className="font-bold">Versions in game</h2>
-					{data.sprites.versions['generation-viii'].icons.front_default && <img className="w-20 h-20 mb-5" src={data.sprites.versions['generation-viii'].icons.front_default} alt="Pokemon" />}
+					{data.sprites.versions['generation-viii'].icons.front_default && <img className="w-20 h-20" src={data.sprites.versions['generation-viii'].icons.front_default} alt="Pokemon" />}
 					<div className="w-full flex flex-wrap justify-around gap-2 p-3">
 						{data.sprites.versions['generation-i']['red-blue'].front_default && <img title="Red-Blue" className="w-20 h-20 border-2 border-black rounded-md p-2 shadow-xl transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl" src={data.sprites.versions['generation-i']['red-blue'].front_default} alt="Pokemon" />}
 						{data.sprites.versions['generation-ii'].crystal.front_default && <img title="Crystal" className="w-20 h-20 border-2 border-black rounded-md p-2 shadow-xl transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl" src={data.sprites.versions['generation-ii'].crystal.front_default} alt="Pokemon" />}
@@ -486,11 +487,13 @@ export default function Pokemon({params}: IPokemonName) {
 					<p className="font-bold mb-1">
 						{dataDescription}
 					</p>
-					<Link className="border-2 p-1 rounded-lg bg-black text-white" href={`https://wiki.pokemoncentral.it/${name.charAt(0).toUpperCase() + name.slice(1)}`} target="_blank">READ MORE</Link>
-					<Image width={150} height={150} src='/img/game_14079557.png' alt="Pokemon center" />
+					<Link className="border-2 p-1 rounded-lg bg-black text-white mb-2" href={`https://wiki.pokemoncentral.it/${name.charAt(0).toUpperCase() + name.slice(1)}`} target="_blank">READ MORE</Link>
+					<Image width={140} height={140} src='/img/game_14079557.png' alt="Pokemon center" />
 					</>
 				)}
 			</div>
+			</>
+			}
 		</div>
 	)
 }
