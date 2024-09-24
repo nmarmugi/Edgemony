@@ -18,7 +18,8 @@ const arrayLinks = [
   { url: 'https://quiz-parole.vercel.app/', img: '/img/quiz.png' },
   { url: 'https://github.com/nmarmugi/next', img: '/img/next.png' },
   { url: 'https://github.com/nmarmugi/Edgemony/tree/main/Prove/Responsive', img: '/img/responsive.png' },
-  { url: 'https://pokedex-beryl-chi.vercel.app/', img: '/img/pokemon.png' }
+  { url: 'https://pokedex-beryl-chi.vercel.app/', img: '/img/pokemon.png' },
+  { url: 'https://www.weschool-app.it/', img: '/img/weschool.png' }
 ];
 
 export default function ProjectsPage() {
